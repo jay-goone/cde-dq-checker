@@ -1,0 +1,51 @@
+dd_id,entity,applies_to,attribute,table,field,ifc_source,required,condition,data_type,allowed_values,pattern,lookup,unit,min_value,max_value,purpose,eir_clause,notes
+DD-001,Floor,ALL,Floor name,Floor,Name,IfcBuildingStorey.Name,Y,,code,,,code_lists:floor,,,,S,LOC-02,
+DD-010,Space,ALL,Space name,Space,Name,IfcSpace.Name,Y,,text,,^00-\d{3}$,space_schedule.space_name,,,,S,NAM-06,Every space in the schedule must exist and no extra spaces
+DD-011,Space,ALL,Room name,Space,Description,IfcSpace.LongName,Y,,text,,,space_schedule.room_name,,,,S,NAM-06,Must match the schedule for that space name
+DD-012,Space,ALL,Classification (SL),Space,Category,IfcClassificationReference on IfcSpace,Y,,code,,^SL_\d{2}_\d{2}(_\d{2})?(_\d{2})? : .+$,space_schedule.uniclass_sl,,,,S,CLS-02;FMT-07,Code part must equal the schedule value for that space
+DD-013,Space,ALL,Floor,Space,FloorName,IfcRelAggregates to IfcBuildingStorey,Y,,code,,,Floor.Name,,,,S,LOC-02,
+DD-014,Space,ALL,Net area,Space,NetArea,Qto_SpaceBaseQuantities.NetFloorArea,Y,,decimal,,,,m2,>0,,S,AIR-27,Uses the native COBie column rather than the Attribute sheet
+DD-015,Space,ALL,Patient area,Attribute (Space),PatientArea,LRHC_AssetData.PatientArea,Y,,boolean,Y|N,,space_schedule.patient_area,,,,S;C,AIR-27,Drives the TMV coverage check (LOC-03)
+DD-020,Component,ALL,Asset name,Component,Name,IfcElement.Name,Y,,text,,^(AHU|FD|FDM|TMV|NCU|EAC|LF|WC|WHB)-00-\d{3}$,,,,,O,AIR-01;NAM-03;NAM-04;NAM-07,Unique across the facility; prefix must match the asset type
+DD-021,Component,ALL,Type name,Component,TypeName,IfcRelDefinesByType to type object Name,Y,,text,,^(AHU|FD|FDM|TMV|NCU|EAC|LF|WC|WHB)-Type\d{2}$,Type.Name,,,,O,AIR-02;NAM-05,
+DD-022,Component,ALL,Description,Component,Description,IfcElement.Description,Y,,text,,,,,,,O,AIR-03;AIR-16,
+DD-023,Component,ALL,Space,Component,Space,IfcRelContainedInSpatialStructure or IfcRelReferencedInSpatialStructure to IfcSpace,Y,,text,,,Space.Name,,,,O;S,AIR-04;LOC-01,Exactly one space; IFC and COBie must name the same space
+DD-024,Component,ALL,GUID,Component,ExtIdentifier,IfcElement.GlobalId,Y,,guid,,^[0-9A-Za-z_$]{22}$,,,,,O,FMT-04,Must equal the GlobalId of the IFC element with the same name
+DD-025,Component,AHU|FDM|TMV|NCU|EAC,Serial number,Component,SerialNumber,Pset_ManufacturerOccurrence.SerialNumber,Y,,text,,,,,,,O;C,AIR-08;AIR-16,
+DD-026,Component,AHU|FD|FDM|TMV|NCU|EAC|LF,Installation date,Component,InstallationDate,LRHC_AssetData.InstallationDate,Y,,date,,,,,,submission_date,O,AIR-09;AIR-18,
+DD-027,Component,AHU|FD|FDM|TMV|NCU|EAC|LF,Warranty start date,Component,WarrantyStartDate,LRHC_AssetData.WarrantyStartDate,Y,,date,,,,,InstallationDate,,O,AIR-10;AIR-17,
+DD-028,Component,FD,Certification number,Attribute (Component),CertificationNumber,LRHC_AssetData.CertificationNumber,Y,,text,,,,,,,C,AIR-21;AIR-16,Third-party doorset certificate reference
+DD-029,Component,TMV,Set temperature,Attribute (Component),SetTemperature,LRHC_AssetData.SetTemperature,Y,,decimal,41,,,degC,,,C,AIR-23,Project requirement for washbasin outlets
+DD-030,Component,TMV,Serves component,Attribute (Component),ServesComponent,LRHC_AssetData.ServesComponent,Y,,text,,^WHB-00-\d{3}$,Component.Name,,,,C,AIR-23;LOC-03,The WHB named must be in the same space as the TMV
+DD-031,Component,AHU,Airflow rate,Attribute (Component),AirflowRate,LRHC_AssetData.AirflowRate,Y,,decimal,,,,m3/s,>0,,O,AIR-26,
+DD-040,Type,ALL,Type name,Type,Name,IfcTypeObject.Name,Y,,text,,^(AHU|FD|FDM|TMV|NCU|EAC|LF|WC|WHB)-Type\d{2}$,,,,,O,AIR-02;NAM-05,
+DD-041,Type,ALL,Classification (Pr),Type,Category,IfcClassificationReference on type object,Y,,code,,^Pr_\d{2}_\d{2}_\d{2}_\d{2} : .+$,asset_types.uniclass_pr,,,,O,AIR-05;CLS-01;CLS-04;FMT-07,Code must be allowed for the asset type and must not be in code_lists:withdrawn_uniclass
+DD-042,Type,ALL,Manufacturer,Type,Manufacturer,Pset_ManufacturerTypeInformation.Manufacturer,Y,,email,,^[^@\s]+@[^@\s]+\.[^@\s]+$,Contact.Email,,,,O,AIR-06;AIR-15,COBie holds the contact email; IFC holds the company name and it must equal Contact.Company for that email
+DD-043,Type,ALL,Model number,Type,ModelNumber,Pset_ManufacturerTypeInformation.ModelReference,Y,,text,,,,,,,O,AIR-07;AIR-16,
+DD-044,Type,AHU|FD|FDM|TMV|NCU|EAC|LF,Warranty duration (parts),Type,WarrantyDurationParts,LRHC_AssetData.WarrantyDurationParts,Y,,decimal,,,,WarrantyDurationUnit,>0,,O,AIR-11,
+DD-045,Type,AHU|FD|FDM|TMV|NCU|EAC|LF,Warranty duration unit,Type,WarrantyDurationUnit,LRHC_AssetData.WarrantyDurationUnit,Y,,code,year|month,,,,,,O,AIR-11,
+DD-046,Type,ALL,Expected life,Type,ExpectedLife,LRHC_AssetData.ExpectedLife,Y,,decimal,,,,DurationUnit,>0,,O,AIR-12,
+DD-047,Type,ALL,Expected life unit,Type,DurationUnit,LRHC_AssetData.DurationUnit,Y,,code,year,,,,,,O,AIR-12,
+DD-048,Type,FD,Fire rating,Attribute (Type),FireRating,Pset_DoorCommon.FireRating,Y,,code,FD30|FD30S|FD60|FD60S,,,,,,C,AIR-20,
+DD-049,Type,FDM,Fire resistance,Attribute (Type),FireResistanceMinutes,LRHC_AssetData.FireResistanceMinutes,Y,,integer,60|120,,,min,,,C,AIR-22,
+DD-050,Type,FDM,Actuation type,Attribute (Type),ActuationType,LRHC_AssetData.ActuationType,Y,,code,FusibleLink|Motorised,,,,,,C,AIR-22,
+DD-051,Type,TMV,TMV approval,Attribute (Type),TMVApproval,LRHC_AssetData.TMVApproval,Y,,code,TMV3,,,,,,C,AIR-23,
+DD-052,Type,NCU,Call type,Attribute (Type),CallType,LRHC_AssetData.CallType,Y,,code,PatientCall|StaffEmergency,,,,,,C,AIR-24,
+DD-053,Type,EAC,Call type,Attribute (Type),CallType,LRHC_AssetData.CallType,Y,,code,EmergencyAssistance,,,,,,C,AIR-24,
+DD-054,Type,LF,Emergency lighting,Attribute (Type),EmergencyLighting,LRHC_AssetData.EmergencyLighting,Y,,boolean,Y|N,,asset_types.emergency,,,,C,AIR-25,Must be Y for Pr_70_70_48_77 and N for Pr_70_70_48_70
+DD-060,Job,AHU|FD|FDM|TMV|NCU|EAC|LF,Maintenance job exists,Job,TypeName,n/a (COBie only),C,"LF only where EmergencyLighting = Y",text,,,Type.Name,,,,O;C,AIR-13,At least one PPM job per type in scope
+DD-061,Job,AHU|FD|FDM|TMV|NCU|EAC|LF,Job category,Job,Category,n/a (COBie only),C,"LF only where EmergencyLighting = Y",code,PPM,,,,,,O,AIR-13,
+DD-062,Job,AHU|FD|FDM|TMV|NCU|EAC|LF,Maintenance frequency,Job,Frequency,n/a (COBie only),C,"LF only where EmergencyLighting = Y",decimal,,,,FrequencyUnit,>0,asset_types.max_interval_months,O;C,AIR-13;AIR-19,Convert to months with code_lists:frequency_unit before comparing with the maximum
+DD-063,Job,AHU|FD|FDM|TMV|NCU|EAC|LF,Frequency unit,Job,FrequencyUnit,n/a (COBie only),C,"LF only where EmergencyLighting = Y",code,day|week|month|year,,code_lists:frequency_unit,,,,O,AIR-13,
+DD-064,Job,AHU|FD|FDM|TMV|NCU|EAC|LF,Maintenance task description,Job,Description,n/a (COBie only),C,"LF only where EmergencyLighting = Y",text,,,,,,,O;C,AIR-14;AIR-16;AIR-28,Free-text review flags only (never pass/fail): TMV must cover outlet temperature check and fail-safe test; FDM must cover drop test and reset; generic text is flagged
+DD-070,Contact,ALL,Email,Contact,Email,n/a (COBie only),Y,,email,,^[^@\s]+@[^@\s]+\.[^@\s]+$,,,,,O,AIR-15,
+DD-071,Contact,ALL,Company,Contact,Company,IfcOrganization.Name,Y,,text,,,,,,,O,AIR-15,
+DD-080,System,ALL,System name,System,Name,IfcDistributionSystem.Name,Y,,text,,,,,,,O,CLS-03,
+DD-081,System,ALL,Classification (Ss),System,Category,IfcClassificationReference on IfcDistributionSystem,Y,,code,,^Ss_\d{2}_\d{2}_\d{2}_\d{2} : .+$,asset_types.uniclass_ss,,,,O,CLS-03;FMT-07,
+DD-082,System,AHU|FDM|TMV|NCU|EAC|LF,System membership,System,ComponentNames,IfcRelAssignsToGroup to IfcDistributionSystem,Y,,text,,,Component.Name,,,,O,CLS-03,Each component must be in a system whose Ss code equals asset_types.uniclass_ss for its type
+DD-090,Document,ALL,Document name (COBie),Document,Name,n/a (COBie only),Y,,text,,^LRHC-(LRV|BMC|FLD|KBS)-(ZZ|XX)-(00|RF|ZZ|XX)-(M3|M2|DR|SH|SP|RP|IE)-(A|E|M|P|W|K|Z)-\d{6}$,code_lists:originator|volume|level|doc_type|role,,,,O,NAM-01,Same convention as the register
+DD-100,Container,ALL,Container name,Register,container_name,n/a (register),Y,,text,,^LRHC-(LRV|BMC|FLD|KBS)-(ZZ|XX)-(00|RF|ZZ|XX)-(M3|M2|DR|SH|SP|RP|IE)-(A|E|M|P|W|K|Z)-\d{6}$,code_lists:originator|volume|level|doc_type|role,,,,O;C;S,NAM-01;NAM-02,Check field by field against code_lists so the message names the wrong field
+DD-101,Container,ALL,Title,Register,title,n/a (register),Y,,text,,,,,,,O,NAM-01,
+DD-102,Container,ALL,Status,Register,status,n/a (register),Y,,code,,^(S[1-4]|A[0-7]|CR)$,code_lists:status,,,,O;C;S,STA-01;STA-04,S0 is never submitted
+DD-103,Container,ALL,Revision,Register,revision,n/a (register),Y,"P for S1-S4; C for A0-A7 and CR",code,,^(P|C)\d{2}$,code_lists:revision_prefix,,,,O,STA-02;STA-03,Revisions only move forward per container
+DD-104,Container,ALL,Status date,Register,status_date,n/a (register),Y,,date,,,,,,,O,STA-04;MID-01,Compared with midp.due_date

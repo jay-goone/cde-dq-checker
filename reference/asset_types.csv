@@ -1,0 +1,12 @@
+asset_code,variant,name,ifc_entity,ifc_predefined_type,ifc_object_type,uniclass_pr,uniclass_pr_title,uniclass_ss,uniclass_ss_title,emergency,safety_critical,max_interval_months,expected_qty,eir_clause
+AHU,,Air handling unit,IfcUnitaryEquipment,AIRHANDLER,,Pr_60_65_03_87,Supply and return air-handling units,Ss_65_40_33_49,Mechanical supply and extract ventilation systems,,N,6,1,CLS-01;CLS-03;AIR-19
+FD,,Fire doorset,IfcDoor,,,Pr_30_59_24_97,Wood doorsets,,,,Y,6,4,CLS-01;CLS-04;AIR-19
+FDM,,Fire damper,IfcDamper,FIREDAMPER,,Pr_65_65_24_30,Fire dampers,Ss_65_40_33_49,Mechanical supply and extract ventilation systems,,Y,12,4,CLS-01;CLS-03;AIR-19
+TMV,,Thermostatic mixing valve,IfcValve,MIXING,,Pr_65_54_95_88,Thermostatic mixing valves,Ss_55_70_38_42,Indirect hot water storage supply systems,,Y,6,11,CLS-01;CLS-03;AIR-19
+NCU,,Nurse call unit,IfcCommunicationsAppliance,USERDEFINED,NURSECALL,Pr_75_75_04_57,Nurse call units,Ss_75_50_11_57,Nurse call systems,,Y,6,4,CLS-01;CLS-03;AIR-19
+EAC,,Emergency assistance call (pull cord),IfcCommunicationsAppliance,USERDEFINED,ASSISTANCECALL,Pr_75_75_04_28,Emergency assistance call pull cord units,Ss_75_50_11_25,Emergency assistance call systems,,Y,6,2,CLS-01;CLS-03;AIR-19
+LF,GEN,Light fitting (general),IfcLightFixture,,,Pr_70_70_48_70,Recessed downlights,Ss_70_80_33_35,Hardwired general lighting systems,N,N,,3,CLS-01;CLS-03;AIR-25
+LF,EM,Light fitting (emergency),IfcLightFixture,,,Pr_70_70_48_77,Self-contained emergency luminaires,Ss_70_80_33_78,Self-contained emergency lighting systems,Y,Y,1,3,CLS-01;CLS-03;AIR-19;AIR-25
+WC,,WC pan,IfcSanitaryTerminal,TOILETPAN,,Pr_40_20_93_94,WC pans,,,,N,,3,CLS-01
+WHB,CLIN,Washbasin (clinical rooms),IfcSanitaryTerminal,WASHHANDBASIN,,Pr_40_20_96_35,Healthcare clinical washbasins,,,,N,,8,CLS-01
+WHB,GEN,Washbasin (WCs and baby change),IfcSanitaryTerminal,WASHHANDBASIN,,Pr_40_20_96_37,Healthcare general washbasins,,,,N,,4,CLS-01

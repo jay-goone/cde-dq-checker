@@ -1,0 +1,14 @@
+error_id,layer,description,file,object,field,seeded_value,correct_value,expected_rules,may_also_trigger,eir_clause,expected_severity
+E01,1,Missing serial number on a TMV (safety-critical),IFC+COBie,TMV-00-007,SerialNumber,(blank),TS-T3-4407,L1-04,,AIR-08,fail
+E02,1,Withdrawn Uniclass code used for a fire door type,IFC+COBie,FD-Type02,Category,Pr_30_59_24_28 : Fire doorsets,Pr_30_59_24_97 : Wood doorsets,L1-15;L1-16,L1-14,CLS-01;CLS-04,fail
+E03,1,Malformed document name in COBie (underscores instead of hyphens),COBie,Document sheet,Name,LRHC_KBS_ZZ_ZZ_RP_M_000002,LRHC-KBS-ZZ-ZZ-RP-M-000002,L1-10,L1-07,NAM-01,fail
+E04,3,"Light fitting not in any space (COBie Space blank; IFC contained in the storey, not a space)",IFC+COBie,LF-00-002,Space,(blank) / IfcBuildingStorey,00-002,L3-04,L1-04,LOC-01;AIR-04,fail
+E05,3,Asset in COBie but missing from the IFC,IFC,WHB-00-012,(whole element),missing from IFC,present in both,L3-02,L3-17,FMT-04,fail
+E06,3,Warranty starts before installation,IFC+COBie,AHU-00-001,WarrantyStartDate,2027-02-01,2027-06-04,L3-11,,AIR-17,fail
+E07,1,TMV maintenance job has no interval,COBie,TMV-Type01 (Job sheet),Frequency / FrequencyUnit,(blank),6 month,L1-05,L1-22,AIR-13;AIR-19,fail
+E08,2,Document at the wrong status for its milestone (S3 at IE3 due date; S4 required),Register,LRHC-KBS-ZZ-ZZ-RP-P-000001,status,S3,S4,L2-02,,STA-04,fail
+E09,1,Duplicate asset name (NCU-00-003 in the paediatric room was named NCU-00-002),IFC+COBie,NCU-00-002 (x2),Name,NCU-00-002,NCU-00-003,L1-12,L3-03,NAM-04,fail
+E10,3,TMV in the nurse room serves the paediatric room basin; nurse room basin left unprotected,IFC+COBie,TMV-00-008,ServesComponent,WHB-00-007,WHB-00-008,L3-13,,LOC-03;AIR-23,fail
+E11,3,COBie GUID does not match the IFC GlobalId,COBie,FDM-00-003,ExtIdentifier,GUID of a different object,IFC GlobalId of FDM-00-003,L3-03,,FMT-04,fail
+E12,2,Revision goes backwards (P01 issued after P02),Register,LRHC-BMC-ZZ-ZZ-RP-W-000001,revision,P02 then P01,P02 then P03,L2-04,,STA-03,fail
+E13,4,Generic maintenance description on fire door type,COBie,FD-Type02 (Job sheet),Description,Inspect as per manufacturer's recommendations.,"Named tasks (closer, seals, gaps, hinges, signage)",L4-01,,AIR-28,flag

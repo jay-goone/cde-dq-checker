@@ -1,0 +1,46 @@
+list_name,code,meaning,value,eir_clause
+project,LRHC,Larch Road Health Centre,,NAM-01
+originator,LRV,Larch Valley ICB (appointing party),,NAM-01
+originator,BMC,Brook & Mason Construction (lead appointed party),,NAM-01
+originator,FLD,Field Architects,,NAM-01
+originator,KBS,Kestrel Building Services,,NAM-01
+volume,ZZ,All volumes,,NAM-01
+volume,XX,No volume,,NAM-01
+level,00,Ground,,NAM-01
+level,RF,Roof,,NAM-01
+level,ZZ,Multiple levels,,NAM-01
+level,XX,No level,,NAM-01
+doc_type,M3,3D model,,NAM-01
+doc_type,M2,2D model,,NAM-01
+doc_type,DR,Drawing,,NAM-01
+doc_type,SH,Schedule,,NAM-01
+doc_type,SP,Specification,,NAM-01
+doc_type,RP,Report,,NAM-01
+doc_type,IE,Information exchange file,,NAM-01
+role,A,Architect,,NAM-01
+role,E,Electrical engineer,,NAM-01
+role,M,Mechanical engineer,,NAM-01
+role,P,Public health engineer,,NAM-01
+role,W,Contractor,,NAM-01
+role,K,Client,,NAM-01
+role,Z,General,,NAM-01
+floor,00,Ground,,LOC-02
+status,S0,Work in progress (never submitted),0,STA-01
+status,S1,Suitable for coordination,1,STA-01;STA-04
+status,S2,Suitable for information,2,STA-01;STA-04
+status,S3,Suitable for review and comment,3,STA-01;STA-04
+status,S4,Suitable for stage approval,4,STA-01;STA-04
+status,A,Authorised and accepted (A0-A7 where the digit is the stage),5,STA-01;STA-04
+status,CR,As-constructed record,6,STA-01;STA-04
+revision_prefix,P,Preliminary revision (S1-S4),,STA-02
+revision_prefix,C,Contractual revision (A0-A7 and CR),,STA-02
+frequency_unit,day,Days,0.0329,AIR-19
+frequency_unit,week,Weeks,0.2301,AIR-19
+frequency_unit,month,Months,1,AIR-19
+frequency_unit,year,Years,12,AIR-19
+placeholder,n/a,Not a real value (case-insensitive),,AIR-16
+placeholder,tbc,Not a real value (case-insensitive),,AIR-16
+placeholder,-,Not a real value,,AIR-16
+placeholder,0,Not a real value (text fields only),,AIR-16
+placeholder,unknown,Not a real value (case-insensitive),,AIR-16
+withdrawn_uniclass,Pr_30_59_24_28,Fire doorsets (withdrawn April 2023),,CLS-04

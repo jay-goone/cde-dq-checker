@@ -1,0 +1,20 @@
+space_name,room_name,uniclass_sl,uniclass_sl_title,floor,patient_area,eir_clause
+00-001,Entrance and reception,SL_20_15_71,Reception areas,00,N,CLS-02;AIR-27
+00-002,Waiting area,SL_90_20_96,Waiting rooms,00,N,CLS-02;AIR-27
+00-003,Children's play area,SL_40_05_43,Indoor play spaces,00,Y,CLS-02;AIR-27
+00-004,Consulting room 1,SL_35_10_15,Consulting rooms,00,Y,CLS-02;AIR-27
+00-005,Consulting room 2,SL_35_10_15,Consulting rooms,00,Y,CLS-02;AIR-27
+00-006,Consulting room 3,SL_35_10_15,Consulting rooms,00,Y,CLS-02;AIR-27
+00-007,Consulting room 4,SL_35_10_15,Consulting rooms,00,Y,CLS-02;AIR-27
+00-008,Treatment room 1,SL_35_10_53,Medical treatment rooms,00,Y,CLS-02;AIR-27;LOC-04
+00-009,Treatment room 2,SL_35_10_53,Medical treatment rooms,00,Y,CLS-02;AIR-27;LOC-04
+00-010,Paediatric clinic room,SL_35_10_15,Consulting rooms,00,Y,CLS-02;AIR-27;LOC-04
+00-011,Nurse room,SL_35_10_53,Medical treatment rooms,00,Y,CLS-02;AIR-27;LOC-04
+00-012,Accessible WC 1,SL_35_80_03,Accessible toilets,00,Y,CLS-02;AIR-27;LOC-04
+00-013,Accessible WC 2,SL_35_80_03,Accessible toilets,00,Y,CLS-02;AIR-27;LOC-04
+00-014,Baby change,SL_35_80_06,Baby changing rooms,00,Y,CLS-02;AIR-27
+00-015,Staff room,SL_90_20,Common spaces,00,N,CLS-02;AIR-27
+00-016,Staff WC,SL_35_80_89,Toilets,00,N,CLS-02;AIR-27
+00-017,Plant room,SL_90_90,Plant and control spaces,00,N,CLS-02;AIR-27;LOC-05
+00-018,Store,SL_90_50_35,General storerooms,00,N,CLS-02;AIR-27
+00-019,Corridor,SL_90_10_15,Corridors,00,N,CLS-02;AIR-27;LOC-05
