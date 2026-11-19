@@ -46,6 +46,43 @@ NET_AREA = {"00-001": 20, "00-002": 40, "00-003": 15, "00-004": 16, "00-005": 16
             "00-013": 4.5, "00-014": 4.0, "00-015": 15, "00-016": 2.5, "00-017": 20, "00-018": 8,
             "00-019": 45}
 
+# Simple plan: rooms either side of a central corridor (x, y, width, depth in metres).
+# Illustrative only: room sizes are not checked against NetArea.
+ROOM_HEIGHT = 3.0
+ROOMS = {
+    "00-001": (0, 12, 5, 4), "00-002": (5, 12, 10, 4), "00-003": (15, 12, 4, 4), "00-004": (19, 12, 4, 4),
+    "00-005": (23, 12, 4, 4), "00-006": (27, 12, 4, 4), "00-007": (31, 12, 4, 4),
+    "00-008": (0, 6, 4.5, 4), "00-009": (4.5, 6, 4.5, 4), "00-010": (9, 6, 4.5, 4), "00-011": (13.5, 6, 4, 4),
+    "00-012": (17.5, 6, 2.25, 4), "00-013": (19.75, 6, 2.25, 4), "00-014": (22, 6, 2, 4), "00-015": (24, 6, 4, 4),
+    "00-016": (28, 6, 1.5, 4), "00-017": (29.5, 6, 5, 4), "00-018": (34.5, 6, 2, 4), "00-019": (0, 10, 36.5, 2),
+}
+
+
+def asset_box(code, space, n):
+    """Where an asset sits in its room (local x, y, z) and its size (w, d, h). n = how many of this code are already in the room."""
+    x0, y0, w, d = ROOMS[space]
+    north = y0 >= 12                       # north rooms open onto the corridor at local y = 0
+    door_y = -0.05 if north else d - 0.05  # corridor wall
+    back_y = d - 0.5 if north else 0.05    # wall away from the corridor
+    if space == "00-019":                  # corridor: items spaced along it
+        xs = {"FD": [12, 24], "FDM": [12.3, 24.3], "LF": [6, 18]}
+        x = xs.get(code, [2 + 4 * n])[n]
+        return {"FD": (x, 0, 0, 0.1, 2.0, 2.1), "FDM": (x, 0.8, 2.6, 0.4, 0.4, 0.4),
+                "LF": (x, 0.7, 2.9, 0.6, 0.6, 0.1)}[code]
+    basin_x = max(w - 1.0, 0.8)
+    return {
+        "AHU": (1.0, 1.0, 0.0, 2.0, 1.0, 1.5),
+        "FD": (0.5, door_y, 0.0, 1.0, 0.1, 2.1),
+        "FDM": (2.5 + 1.0 * n, 0.3 if north else d - 0.7, 2.6, 0.4, 0.4, 0.4),
+        "WHB": (basin_x, back_y, 0.8, 0.6, 0.45, 0.2),
+        "TMV": (basin_x + 0.2, back_y + 0.1, 0.45, 0.15, 0.15, 0.15),
+        "WC": (0.2, back_y if not north else d - 0.65, 0.0, 0.4, 0.6, 0.4),
+        "NCU": (0.2, back_y, 1.3, 0.1, 0.05, 0.15),
+        "EAC": (0.4, d / 2, 2.7, 0.08, 0.08, 0.08),
+        "LF": (w / 2 - 0.3, d / 2 - 0.3, 2.9, 0.6, 0.6, 0.1),
+    }[code]
+
+
 # ---------------------------------------------------------------- clean data
 CONTACTS = [  # email, company, category
     (AUTHOR, "Brook & Mason Construction Ltd", "Contractor"),
@@ -122,6 +159,7 @@ for c in C:
     else:
         c["WarrantyStartDate"] = ""
     c["_key"] = c["Name"]  # fixed key, so renamed or duplicated assets keep their own GUID
+ORIG_SPACE = {c["_key"]: c["Space"] for c in C}
 
 DOCUMENTS = [  # name, category, sheet, row, description
     ("LRHC-BMC-ZZ-ZZ-RP-W-000001", "O&M manual", "Facility", "Larch Road Health Centre", "Operation and maintenance manual"),
@@ -302,6 +340,20 @@ def write_ifc(path):
     def plc(rel):
         return s.add("IFCLOCALPLACEMENT", rel, s.add("IFCAXIS2PLACEMENT3D", origin, None, None))
 
+    z_dir = s.add("IFCDIRECTION", (0.0, 0.0, 1.0))
+
+    def plc_at(rel, x, y, z):
+        return s.add("IFCLOCALPLACEMENT", rel,
+                     s.add("IFCAXIS2PLACEMENT3D", s.add("IFCCARTESIANPOINT", (float(x), float(y), float(z))), None, None))
+
+    def box(w, d, h):
+        """A w x d x h block: a rectangle extruded upwards, as an IFC 'Body' representation."""
+        pos2d = s.add("IFCAXIS2PLACEMENT2D", s.add("IFCCARTESIANPOINT", (w / 2, d / 2)), None)
+        profile = s.add("IFCRECTANGLEPROFILEDEF", Enum("AREA"), None, pos2d, float(w), float(d))
+        solid = s.add("IFCEXTRUDEDAREASOLID", profile, place, z_dir, float(h))
+        rep = s.add("IFCSHAPEREPRESENTATION", ctx, "Body", "SweptSolid", [solid])
+        return s.add("IFCPRODUCTDEFINITIONSHAPE", None, None, [rep])
+
     site_p = plc(None)
     site = s.add("IFCSITE", guid("site"), None, "Site", None, None, site_p, None, None, Enum("ELEMENT"),
                  None, None, None, None, None)
@@ -333,8 +385,9 @@ def write_ifc(path):
     # Spaces
     space_ref, space_plc = {}, {}
     for sp in SPACES:
-        p = plc(st_p)
-        r = s.add("IFCSPACE", guid("space:" + sp["space_name"]), None, sp["space_name"], None, None, p, None,
+        x0, y0, w, d = ROOMS[sp["space_name"]]
+        p = plc_at(st_p, x0, y0, 0)
+        r = s.add("IFCSPACE", guid("space:" + sp["space_name"]), None, sp["space_name"], None, None, p, box(w, d, ROOM_HEIGHT),
                   sp["room_name"], Enum("ELEMENT"), Enum("SPACE"), None)
         space_ref[sp["space_name"]], space_plc[sp["space_name"]] = r, p
         classify(sp["uniclass_sl"], sp["uniclass_sl_title"], r)
@@ -376,21 +429,29 @@ def write_ifc(path):
 
     # Components
     by_type, by_space, storey_only = {}, {}, []
-    comp_ref = {}
+    comp_ref, placed = {}, {}
     for c in ifc["components"]:
         t = ifc["types"][c["TypeName"]]
         _, _, at = pr_for(t[0], t[1])
         entity = at["ifc_entity"]
         sp = c["Space"]
-        p = plc(space_plc[sp] if sp else st_p)
+        room = ORIG_SPACE[c["_key"]]              # where it physically is, even if the space link is missing (E04)
+        n = placed.get((room, t[0]), 0)
+        placed[(room, t[0])] = n + 1
+        lx, ly, lz, bw, bd, bh = asset_box(t[0], room, n)
+        if sp:
+            p = plc_at(space_plc[sp], lx, ly, lz)
+        else:                                     # not linked to a space: place relative to the storey
+            p = plc_at(st_p, ROOMS[room][0] + lx, ROOMS[room][1] + ly, lz)
+        shape = box(bw, bd, bh)
         desc = t[2]
         g = component_guid(c, ifc)
         if entity == "IfcDoor":
-            r = s.add("IFCDOOR", g, None, c["Name"], desc, None, p, None, None, 2.1, 0.926,
+            r = s.add("IFCDOOR", g, None, c["Name"], desc, None, p, shape, None, 2.1, 0.926,
                       Enum("DOOR"), Enum("SINGLE_SWING_LEFT"), None)
         else:
             predef = Enum(at["ifc_predefined_type"]) if at["ifc_predefined_type"] else None
-            r = s.add(entity.upper(), g, None, c["Name"], desc, at["ifc_object_type"] or None, p, None, None, predef)
+            r = s.add(entity.upper(), g, None, c["Name"], desc, at["ifc_object_type"] or None, p, shape, None, predef)
         comp_ref[c["_key"]] = r
         by_type.setdefault(c["TypeName"], []).append(r)
         (by_space.setdefault(sp, []) if sp else storey_only).append(r)

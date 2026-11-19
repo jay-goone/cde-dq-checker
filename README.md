@@ -6,7 +6,7 @@ An end-to-end test of checking information deliveries automatically against an E
 
 | Step | Files |
 |---|---|
-| 1. EIR, written so each requirement can be checked | `01_EIR_Larch_Road_Health_Centre.md` |
+| 1. EIR in Word and Markdown, with a Word-to-data round trip (`docs/`). Revision P02: campus context, OIR, 15 information requirements, LOIN, security), written so each requirement can be checked | `01_EIR_Larch_Road_Health_Centre.md`, `EIR_change_log.md`, `eir_requirements_register.csv` |
 | 2. Data dictionary and rules (57 rules in four layers, plus submission decisions) | `data_dictionary.csv`, `rules.csv`, `reference/`, `README_data_dictionary.md`, `README_rules.md` |
 | 2b. The IFC-side requirements as a buildingSMART IDS | `ids/LRHC_asset_requirements.ids`, `tools/build_ids.py` |
 | 3. Sample IFC, COBie and document register with 13 seeded errors | `sample/`, `seeded_errors.csv`, `tools/generate_sample.py`, `README_stage3.md` |
