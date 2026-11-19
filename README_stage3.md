@@ -4,12 +4,13 @@
 
 | File | What it is |
 |---|---|
-| `sample/LRHC-BMC-ZZ-00-M3-W-000001.ifc` | IFC4 model: 19 spaces, 46 assets (one deliberately missing), 12 types, 6 systems, Uniclass classification, property sets |
+| `sample/LRHC-BMC-ZZ-00-M3-W-000001.ifc` | IFC4 model: 19 spaces, 46 assets (one deliberately missing), 12 types, 6 systems, Uniclass classification, property sets, and simple geometry (rooms as boxes either side of a corridor, assets as small blocks in their rooms) so it opens in a 3D viewer |
 | `sample/LRHC-BMC-ZZ-ZZ-IE-W-000001.xlsx` | COBie 2.4 workbook: Contact, Facility, Floor, Space, Type, Component, System, Job, Document, Attribute |
 | `sample/document_register.csv` | Document register, one row per issue (container, title, originator, status, revision, status date) |
 | `seeded_errors.csv` | The 13 known errors, with the rule expected to catch each one. Used for scoring in Stage 5 |
 | `ids/LRHC_asset_requirements.ids` | buildingSMART IDS 1.0 file: 12 specifications for the IFC-side requirements |
 | `tools/generate_sample.py` | Builds the three sample files from `reference/` plus the clean data and error list in the script |
+| `tools/plan_from_ifc.py` | Draws a plan from the IFC file, with assets that have seeded errors in red: `python tools/plan_from_ifc.py sample/<ifc> seeded_errors.csv plan.png` |
 | `tools/build_ids.py` | Builds the IDS from `data_dictionary.csv` and `asset_types.csv` |
 
 Submission (check) date: **2027-06-04** (IE3 handover).
@@ -17,7 +18,7 @@ Submission (check) date: **2027-06-04** (IE3 handover).
 ## Regenerate
 
 ```
-python tools/generate_sample.py . .
+python tools/generate_sample.py . .            # add --clean for the same files with no seeded errors
 python tools/build_ids.py . ids/LRHC_asset_requirements.ids
 ```
 
