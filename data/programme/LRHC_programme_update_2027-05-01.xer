@@ -1,0 +1,1123 @@
+ERMHDR	19.12	2027-05-01	Project	admin	LRHC Planner	dbxDatabaseNoName	Project Management	GBP
+%T	PROJECT
+%F	proj_id	proj_short_name	clndr_id	plan_start_date	plan_end_date	scd_end_date	last_recalc_date	def_complete_pct_type	def_duration_type
+%R	2	LRHC-UP06	1	2026-11-25 08:00	2027-07-02 17:00	2027-07-02 17:00	2027-05-01 00:00	CP_Drtn	DT_FixedDrtn
+%T	CALENDAR
+%F	clndr_id	default_flag	clndr_name	proj_id	base_clndr_id	clndr_type	day_hr_cnt	week_hr_cnt	month_hr_cnt	year_hr_cnt	clndr_data
+%R	1	Y	LRHC 5-day (England, Christmas shutdown)			CA_Base	8	40	172	2000	(0||CalendarData()((0||DaysOfWeek()((0||1()())(0||2()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||3()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||4()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||5()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||6()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||7()())))(0||VIEW(ShowTotal|Y)())(0||Exceptions()((0||0(d|46380)())(0||1(d|46381)())(0||2(d|46384)())(0||3(d|46385)())(0||4(d|46386)())(0||5(d|46387)())(0||6(d|46388)())(0||7(d|46472)())(0||8(d|46475)())(0||9(d|46510)())(0||10(d|46538)())(0||11(d|46629)())))))
+%R	2	N	LRHC 7-day (continuous tests)			CA_Base	8	56	172	2000	(0||CalendarData()((0||DaysOfWeek()((0||1()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||2()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||3()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||4()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||5()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||6()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))(0||7()((0||0(s|08:00|f|12:00)())(0||1(s|13:00|f|17:00)())))))(0||VIEW(ShowTotal|Y)())(0||Exceptions()())))
+%T	PROJWBS
+%F	wbs_id	proj_id	obs_id	seq_num	proj_node_flag	sum_data_flag	status_code	wbs_short_name	wbs_name	parent_wbs_id
+%R	100	2	1	0	Y	N	WS_Open	LRHC	Larch Road Health Centre: design and build (offsite modular)	
+%R	101	2	1	10	N	N	WS_Open	KEY	Key dates and milestones	100
+%R	102	2	1	20	N	N	WS_Open	4	RIBA Stage 4 Technical Design	100
+%R	103	2	1	30	N	N	WS_Open	GEN	Design management	102
+%R	104	2	1	40	N	N	WS_Open	ARC	Architecture (FLD)	102
+%R	105	2	1	50	N	N	WS_Open	STR	Structure and civils (CKE)	102
+%R	106	2	1	60	N	N	WS_Open	MEP	Building services (KBS)	102
+%R	107	2	1	70	N	N	WS_Open	MOD	Module design (HXM)	102
+%R	108	2	1	80	N	N	WS_Open	COO	Coordination and information management (BMC)	102
+%R	109	2	1	90	N	N	WS_Open	APP	Statutory approvals	102
+%R	110	2	1	100	N	N	WS_Open	5	RIBA Stage 5 Manufacturing and Construction	100
+%R	111	2	1	110	N	N	WS_Open	PRC	Procurement	110
+%R	112	2	1	120	N	N	WS_Open	FAB	Factory production (HXM)	110
+%R	113	2	1	130	N	N	WS_Open	ENB	Enabling works	110
+%R	114	2	1	140	N	N	WS_Open	SUB	Substructure and below-ground drainage	110
+%R	115	2	1	150	N	N	WS_Open	MOD	Module delivery and installation	110
+%R	116	2	1	160	N	N	WS_Open	ENV	Roof and envelope completion	110
+%R	117	2	1	170	N	N	WS_Open	INT	Internal completion by zone	110
+%R	118	2	1	180	N	N	WS_Open	MEP	Building services installation	110
+%R	119	2	1	190	N	N	WS_Open	EXT	External works	110
+%R	120	2	1	200	N	N	WS_Open	COM	Testing and commissioning	110
+%R	121	2	1	210	N	N	WS_Open	INF	Construction information	110
+%R	122	2	1	220	N	N	WS_Open	6	RIBA Stage 6 Handover	100
+%R	123	2	1	230	N	N	WS_Open	INF	Handover information (IE3)	122
+%R	124	2	1	240	N	N	WS_Open	HND	Handover and practical completion	122
+%R	125	2	1	250	N	N	WS_Open	REC	Record information (IE4)	122
+%T	TASK
+%F	task_id	proj_id	wbs_id	clndr_id	phys_complete_pct	complete_pct_type	task_type	duration_type	status_code	task_code	task_name	total_float_hr_cnt	remain_drtn_hr_cnt	target_drtn_hr_cnt	cstr_date	act_start_date	act_end_date	late_start_date	late_end_date	early_start_date	early_end_date	restart_date	reend_date	target_start_date	target_end_date	cstr_type	priority_type
+%R	1000	2	101	1	100	CP_Drtn	TT_Mile	DT_FixedDrtn	TK_Complete	M-203-AW	Contract award and start on site possession date	8	0	0	2026-11-25 08:00	2026-11-25 08:00	2026-11-25 08:00	2026-11-26 08:00	2026-11-26 08:00					2026-11-25 08:00	2026-11-25 08:00	CS_MSOA	PT_Normal
+%R	1001	2	103	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-GEN-1010	Design kick-off and Stage 3 design review	8	0	24		2026-11-25 08:00	2026-11-27 17:00	2026-11-26 08:00	2026-11-30 17:00					2026-11-25 08:00	2026-11-27 17:00		PT_Normal
+%R	1002	2	103	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-GEN-1020	Confirm BEP and design responsibility matrix	48	0	40		2026-11-25 08:00	2026-12-01 17:00	2026-12-03 08:00	2026-12-09 17:00					2026-11-25 08:00	2026-12-01 17:00		PT_Normal
+%R	1003	2	103	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-GEN-1030	Site investigation and survey review	88	0	24		2026-11-25 08:00	2026-11-27 17:00	2026-12-10 08:00	2026-12-14 17:00					2026-11-25 08:00	2026-11-27 17:00		PT_Normal
+%R	1004	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1010	Develop architectural model (Stage 4)	8	0	104		2026-11-30 08:00	2026-12-16 17:00	2026-12-01 08:00	2026-12-17 17:00					2026-11-30 08:00	2026-12-16 17:00		PT_Normal
+%R	1005	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1011	Check and approve architectural model (Stage 4)	72	0	16		2026-12-17 08:00	2026-12-18 17:00	2027-01-08 08:00	2027-01-11 17:00					2026-12-17 08:00	2026-12-18 17:00		PT_Normal
+%R	1006	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1015	Issue architectural model (Stage 4)	72	0	8		2026-12-21 08:00	2026-12-21 17:00	2027-01-12 08:00	2027-01-12 17:00					2026-12-21 08:00	2026-12-21 17:00		PT_Normal
+%R	1007	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1100	Develop GA plan, public zone	72	0	88		2026-12-04 08:00	2026-12-18 17:00	2026-12-17 08:00	2027-01-11 17:00					2026-12-04 08:00	2026-12-18 17:00		PT_Normal
+%R	1008	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1101	Check and approve GA plan, public zone	72	0	16		2026-12-21 08:00	2026-12-22 17:00	2027-01-12 08:00	2027-01-13 17:00					2026-12-21 08:00	2026-12-22 17:00		PT_Normal
+%R	1009	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1102	Client review of GA plan, public zone	72	0	8		2026-12-23 08:00	2026-12-23 17:00	2027-01-14 08:00	2027-01-14 17:00					2026-12-23 08:00	2026-12-23 17:00		PT_Normal
+%R	1010	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1105	Issue GA plan, public zone	72	0	8		2027-01-04 08:00	2027-01-04 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-04 08:00	2027-01-04 17:00		PT_Normal
+%R	1011	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1200	Develop GA plan, clinical zone	56	0	88		2026-12-07 08:00	2026-12-21 17:00	2026-12-16 08:00	2027-01-08 17:00					2026-12-07 08:00	2026-12-21 17:00		PT_Normal
+%R	1012	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1201	Check and approve GA plan, clinical zone	64	0	16		2026-12-22 08:00	2026-12-23 17:00	2027-01-12 08:00	2027-01-13 17:00					2026-12-22 08:00	2026-12-23 17:00		PT_Normal
+%R	1013	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1202	Client review of GA plan, clinical zone	64	0	8		2027-01-04 08:00	2027-01-04 17:00	2027-01-14 08:00	2027-01-14 17:00					2027-01-04 08:00	2027-01-04 17:00		PT_Normal
+%R	1014	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1205	Issue GA plan, clinical zone	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1015	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1300	Develop GA plan, staff and support zone	56	0	88		2026-12-08 08:00	2026-12-22 17:00	2026-12-17 08:00	2027-01-11 17:00					2026-12-08 08:00	2026-12-22 17:00		PT_Normal
+%R	1016	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1301	Check and approve GA plan, staff and support zone	56	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-12 08:00	2027-01-13 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1017	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1302	Client review of GA plan, staff and support zone	56	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-14 08:00	2027-01-14 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1018	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1305	Issue GA plan, staff and support zone	56	0	8		2027-01-06 08:00	2027-01-06 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-06 08:00	2027-01-06 17:00		PT_Normal
+%R	1019	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1400	Develop GA plan, plant zone	48	0	88		2026-12-09 08:00	2026-12-23 17:00	2026-12-17 08:00	2027-01-11 17:00					2026-12-09 08:00	2026-12-23 17:00		PT_Normal
+%R	1020	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1401	Check and approve GA plan, plant zone	48	0	16		2027-01-04 08:00	2027-01-05 17:00	2027-01-12 08:00	2027-01-13 17:00					2027-01-04 08:00	2027-01-05 17:00		PT_Normal
+%R	1021	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1402	Client review of GA plan, plant zone	48	0	8		2027-01-06 08:00	2027-01-06 17:00	2027-01-14 08:00	2027-01-14 17:00					2027-01-06 08:00	2027-01-06 17:00		PT_Normal
+%R	1022	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1405	Issue GA plan, plant zone	48	0	8		2027-01-07 08:00	2027-01-07 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-07 08:00	2027-01-07 17:00		PT_Normal
+%R	1023	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1600	Develop roof plan	80	0	72		2026-12-08 08:00	2026-12-18 17:00	2026-12-22 08:00	2027-01-12 17:00					2026-12-08 08:00	2026-12-18 17:00		PT_Normal
+%R	1024	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1601	Check and approve roof plan	80	0	16		2026-12-21 08:00	2026-12-22 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-21 08:00	2026-12-22 17:00		PT_Normal
+%R	1025	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1605	Issue roof plan	80	0	8		2026-12-23 08:00	2026-12-23 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-23 08:00	2026-12-23 17:00		PT_Normal
+%R	1026	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1700	Develop elevations	72	0	72		2026-12-09 08:00	2026-12-21 17:00	2026-12-22 08:00	2027-01-12 17:00					2026-12-09 08:00	2026-12-21 17:00		PT_Normal
+%R	1027	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1701	Check and approve elevations	72	0	16		2026-12-22 08:00	2026-12-23 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-22 08:00	2026-12-23 17:00		PT_Normal
+%R	1028	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1705	Issue elevations	72	0	8		2027-01-04 08:00	2027-01-04 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-04 08:00	2027-01-04 17:00		PT_Normal
+%R	1029	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1800	Develop sections	64	0	72		2026-12-10 08:00	2026-12-22 17:00	2026-12-22 08:00	2027-01-12 17:00					2026-12-10 08:00	2026-12-22 17:00		PT_Normal
+%R	1030	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1801	Check and approve sections	64	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1031	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1805	Issue sections	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1032	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1900	Develop room data sheets, clinical zone	56	0	80		2026-12-10 08:00	2026-12-23 17:00	2026-12-21 08:00	2027-01-12 17:00					2026-12-10 08:00	2026-12-23 17:00		PT_Normal
+%R	1033	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1901	Check and approve room data sheets, clinical zone	56	0	16		2027-01-04 08:00	2027-01-05 17:00	2027-01-13 08:00	2027-01-14 17:00					2027-01-04 08:00	2027-01-05 17:00		PT_Normal
+%R	1034	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-1905	Issue room data sheets, clinical zone	56	0	8		2027-01-06 08:00	2027-01-06 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-06 08:00	2027-01-06 17:00		PT_Normal
+%R	1035	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2000	Develop door schedule	64	0	72		2026-12-10 08:00	2026-12-22 17:00	2026-12-22 08:00	2027-01-12 17:00					2026-12-10 08:00	2026-12-22 17:00		PT_Normal
+%R	1036	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2001	Check and approve door schedule	64	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1037	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2005	Issue door schedule	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1038	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2100	Develop architectural specification	64	0	128		2026-12-01 08:00	2026-12-22 17:00	2026-12-11 08:00	2027-01-12 17:00					2026-12-01 08:00	2026-12-22 17:00		PT_Normal
+%R	1039	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2101	Check and approve architectural specification	64	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1040	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2105	Issue architectural specification	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1041	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2200	Develop fire strategy report	88	0	88		2026-12-03 08:00	2026-12-17 17:00	2026-12-18 08:00	2027-01-12 17:00					2026-12-03 08:00	2026-12-17 17:00		PT_Normal
+%R	1042	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2201	Check and approve fire strategy report	88	0	16		2026-12-18 08:00	2026-12-21 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-18 08:00	2026-12-21 17:00		PT_Normal
+%R	1043	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2205	Issue fire strategy report	88	0	8		2026-12-22 08:00	2026-12-22 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-22 08:00	2026-12-22 17:00		PT_Normal
+%R	1044	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2300	Develop external works and landscape layout	88	0	112		2026-11-30 08:00	2026-12-17 17:00	2026-12-15 08:00	2027-01-12 17:00					2026-11-30 08:00	2026-12-17 17:00		PT_Normal
+%R	1045	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2301	Check and approve external works and landscape layout	88	0	16		2026-12-18 08:00	2026-12-21 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-18 08:00	2026-12-21 17:00		PT_Normal
+%R	1046	2	104	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-ARC-2305	Issue external works and landscape layout	88	0	8		2026-12-22 08:00	2026-12-22 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-22 08:00	2026-12-22 17:00		PT_Normal
+%R	1047	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1010	Develop structural model (foundations and module interfaces)	64	0	88		2026-12-03 08:00	2026-12-17 17:00	2026-12-15 08:00	2027-01-07 17:00					2026-12-03 08:00	2026-12-17 17:00		PT_Normal
+%R	1048	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1011	Check and approve structural model (foundations and module interfaces)	64	0	16		2026-12-18 08:00	2026-12-21 17:00	2027-01-08 08:00	2027-01-11 17:00					2026-12-18 08:00	2026-12-21 17:00		PT_Normal
+%R	1049	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1015	Issue structural model (foundations and module interfaces)	64	0	8		2026-12-22 08:00	2026-12-22 17:00	2027-01-12 08:00	2027-01-12 17:00					2026-12-22 08:00	2026-12-22 17:00		PT_Normal
+%R	1050	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1100	Develop foundation layout	80	0	72		2026-12-08 08:00	2026-12-18 17:00	2026-12-22 08:00	2027-01-12 17:00					2026-12-08 08:00	2026-12-18 17:00		PT_Normal
+%R	1051	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1101	Check and approve foundation layout	80	0	16		2026-12-21 08:00	2026-12-22 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-21 08:00	2026-12-22 17:00		PT_Normal
+%R	1052	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1105	Issue foundation layout	80	0	8		2026-12-23 08:00	2026-12-23 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-23 08:00	2026-12-23 17:00		PT_Normal
+%R	1053	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1200	Develop structural calculations	64	0	96		2026-12-07 08:00	2026-12-22 17:00	2026-12-17 08:00	2027-01-12 17:00					2026-12-07 08:00	2026-12-22 17:00		PT_Normal
+%R	1054	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1201	Check and approve structural calculations	64	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1055	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1205	Issue structural calculations	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1056	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1300	Develop below-ground drainage layout	104	0	96		2026-11-30 08:00	2026-12-15 17:00	2026-12-17 08:00	2027-01-12 17:00					2026-11-30 08:00	2026-12-15 17:00		PT_Normal
+%R	1057	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1301	Check and approve below-ground drainage layout	104	0	16		2026-12-16 08:00	2026-12-17 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-16 08:00	2026-12-17 17:00		PT_Normal
+%R	1058	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1305	Issue below-ground drainage layout	104	0	8		2026-12-18 08:00	2026-12-18 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-18 08:00	2026-12-18 17:00		PT_Normal
+%R	1059	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1400	Develop drainage and SuDS calculations	104	0	80		2026-12-02 08:00	2026-12-15 17:00	2026-12-21 08:00	2027-01-12 17:00					2026-12-02 08:00	2026-12-15 17:00		PT_Normal
+%R	1060	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1401	Check and approve drainage and SuDS calculations	104	0	16		2026-12-16 08:00	2026-12-17 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-16 08:00	2026-12-17 17:00		PT_Normal
+%R	1061	2	105	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-STR-1405	Issue drainage and SuDS calculations	104	0	8		2026-12-18 08:00	2026-12-18 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-18 08:00	2026-12-18 17:00		PT_Normal
+%R	1062	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1000	Heating, cooling and ventilation load calculations	16	0	40		2026-11-30 08:00	2026-12-04 17:00	2026-12-02 08:00	2026-12-08 17:00					2026-11-30 08:00	2026-12-04 17:00		PT_Normal
+%R	1063	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1001	Plant selection (AHU, air source heat pumps, LV switchgear)	16	0	40		2026-12-07 08:00	2026-12-11 17:00	2026-12-09 08:00	2026-12-15 17:00					2026-12-07 08:00	2026-12-11 17:00		PT_Normal
+%R	1064	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1010	Develop mechanical model	32	0	104		2026-12-07 08:00	2026-12-23 17:00	2026-12-11 08:00	2027-01-07 17:00					2026-12-07 08:00	2026-12-23 17:00		PT_Normal
+%R	1065	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1011	Check and approve mechanical model	32	0	16		2027-01-04 08:00	2027-01-05 17:00	2027-01-08 08:00	2027-01-11 17:00					2027-01-04 08:00	2027-01-05 17:00		PT_Normal
+%R	1066	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1015	Issue mechanical model	32	0	8		2027-01-06 08:00	2027-01-06 17:00	2027-01-12 08:00	2027-01-12 17:00					2027-01-06 08:00	2027-01-06 17:00		PT_Normal
+%R	1067	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1020	Develop electrical model	32	0	104		2026-12-07 08:00	2026-12-23 17:00	2026-12-11 08:00	2027-01-07 17:00					2026-12-07 08:00	2026-12-23 17:00		PT_Normal
+%R	1068	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1021	Check and approve electrical model	32	0	16		2027-01-04 08:00	2027-01-05 17:00	2027-01-08 08:00	2027-01-11 17:00					2027-01-04 08:00	2027-01-05 17:00		PT_Normal
+%R	1069	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1025	Issue electrical model	32	0	8		2027-01-06 08:00	2027-01-06 17:00	2027-01-12 08:00	2027-01-12 17:00					2027-01-06 08:00	2027-01-06 17:00		PT_Normal
+%R	1070	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1030	Develop public health model	32	0	104		2026-12-07 08:00	2026-12-23 17:00	2026-12-11 08:00	2027-01-07 17:00					2026-12-07 08:00	2026-12-23 17:00		PT_Normal
+%R	1071	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1031	Check and approve public health model	32	0	16		2027-01-04 08:00	2027-01-05 17:00	2027-01-08 08:00	2027-01-11 17:00					2027-01-04 08:00	2027-01-05 17:00		PT_Normal
+%R	1072	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1035	Issue public health model	32	0	8		2027-01-06 08:00	2027-01-06 17:00	2027-01-12 08:00	2027-01-12 17:00					2027-01-06 08:00	2027-01-06 17:00		PT_Normal
+%R	1073	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1100	Develop ventilation schematic	64	0	56		2026-12-14 08:00	2026-12-22 17:00	2027-01-04 08:00	2027-01-12 17:00					2026-12-14 08:00	2026-12-22 17:00		PT_Normal
+%R	1074	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1101	Check and approve ventilation schematic	64	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1075	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1105	Issue ventilation schematic	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1076	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1200	Develop electrical distribution schematic	64	0	56		2026-12-14 08:00	2026-12-22 17:00	2027-01-04 08:00	2027-01-12 17:00					2026-12-14 08:00	2026-12-22 17:00		PT_Normal
+%R	1077	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1201	Check and approve electrical distribution schematic	64	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1078	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1205	Issue electrical distribution schematic	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1079	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1300	Develop hot and cold water schematic (TMVs)	64	0	56		2026-12-14 08:00	2026-12-22 17:00	2027-01-04 08:00	2027-01-12 17:00					2026-12-14 08:00	2026-12-22 17:00		PT_Normal
+%R	1080	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1301	Check and approve hot and cold water schematic (TMVs)	64	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1081	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1305	Issue hot and cold water schematic (TMVs)	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1082	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1400	Develop integration specification (connected systems)	16	0	96		2026-12-14 08:00	2027-01-07 17:00	2026-12-16 08:00	2027-01-11 17:00					2026-12-14 08:00	2027-01-07 17:00		PT_Normal
+%R	1083	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1401	Check and approve integration specification (connected systems)	16	0	16		2027-01-08 08:00	2027-01-11 17:00	2027-01-12 08:00	2027-01-13 17:00					2027-01-08 08:00	2027-01-11 17:00		PT_Normal
+%R	1084	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1402	IT/OT security review of integration specification (connected systems)	16	0	8		2027-01-12 08:00	2027-01-12 17:00	2027-01-14 08:00	2027-01-14 17:00					2027-01-12 08:00	2027-01-12 17:00		PT_Normal
+%R	1085	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1405	Issue integration specification (connected systems)	16	0	8		2027-01-13 08:00	2027-01-13 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-13 08:00	2027-01-13 17:00		PT_Normal
+%R	1086	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1500	Develop building services specification	64	0	120		2026-12-02 08:00	2026-12-22 17:00	2026-12-14 08:00	2027-01-12 17:00					2026-12-02 08:00	2026-12-22 17:00		PT_Normal
+%R	1087	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1501	Check and approve building services specification	64	0	16		2026-12-23 08:00	2027-01-04 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-23 08:00	2027-01-04 17:00		PT_Normal
+%R	1088	2	106	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MEP-1505	Issue building services specification	64	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1089	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1000	Module grid, transport envelope and interface design	88	0	40		2026-12-02 08:00	2026-12-08 17:00	2026-12-17 08:00	2026-12-23 17:00					2026-12-02 08:00	2026-12-08 17:00		PT_Normal
+%R	1090	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1010	Develop module fabrication model	88	0	56		2026-12-09 08:00	2026-12-17 17:00	2027-01-04 08:00	2027-01-12 17:00					2026-12-09 08:00	2026-12-17 17:00		PT_Normal
+%R	1091	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1011	Check and approve module fabrication model	88	0	16		2026-12-18 08:00	2026-12-21 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-18 08:00	2026-12-21 17:00		PT_Normal
+%R	1092	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1015	Issue module fabrication model	88	0	8		2026-12-22 08:00	2026-12-22 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-22 08:00	2026-12-22 17:00		PT_Normal
+%R	1093	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1100	Develop module layout and setting-out drawing	96	0	48		2026-12-09 08:00	2026-12-16 17:00	2027-01-05 08:00	2027-01-12 17:00					2026-12-09 08:00	2026-12-16 17:00		PT_Normal
+%R	1094	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1101	Check and approve module layout and setting-out drawing	96	0	16		2026-12-17 08:00	2026-12-18 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-17 08:00	2026-12-18 17:00		PT_Normal
+%R	1095	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1105	Issue module layout and setting-out drawing	96	0	8		2026-12-21 08:00	2026-12-21 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-21 08:00	2026-12-21 17:00		PT_Normal
+%R	1096	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1200	Develop module schedule	104	0	40		2026-12-09 08:00	2026-12-15 17:00	2027-01-06 08:00	2027-01-12 17:00					2026-12-09 08:00	2026-12-15 17:00		PT_Normal
+%R	1097	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1201	Check and approve module schedule	104	0	16		2026-12-16 08:00	2026-12-17 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-16 08:00	2026-12-17 17:00		PT_Normal
+%R	1098	2	107	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-MOD-1205	Issue module schedule	104	0	8		2026-12-18 08:00	2026-12-18 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-18 08:00	2026-12-18 17:00		PT_Normal
+%R	1099	2	107	1	100	CP_Drtn	TT_FinMile	DT_FixedDrtn	TK_Complete	4-MOD-1900	Module design freeze	120	0	0		2026-12-23 17:00	2026-12-23 17:00	2027-01-22 17:00	2027-01-22 17:00					2026-12-23 17:00	2026-12-23 17:00		PT_Normal
+%R	1100	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-1000	Develop first contract programme	152	0	80		2026-11-25 08:00	2026-12-08 17:00	2026-12-22 08:00	2027-01-13 17:00					2026-11-25 08:00	2026-12-08 17:00		PT_Normal
+%R	1101	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-1001	Check and approve first contract programme	152	0	8		2026-12-09 08:00	2026-12-09 17:00	2027-01-14 08:00	2027-01-14 17:00					2026-12-09 08:00	2026-12-09 17:00		PT_Normal
+%R	1102	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-1005	Issue first contract programme	152	0	8		2026-12-10 08:00	2026-12-10 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-10 08:00	2026-12-10 17:00		PT_Normal
+%R	1103	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-1100	Develop construction phase plan	104	0	120		2026-11-25 08:00	2026-12-15 17:00	2026-12-14 08:00	2027-01-12 17:00					2026-11-25 08:00	2026-12-15 17:00		PT_Normal
+%R	1104	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-1101	Check and approve construction phase plan	104	0	16		2026-12-16 08:00	2026-12-17 17:00	2027-01-13 08:00	2027-01-14 17:00					2026-12-16 08:00	2026-12-17 17:00		PT_Normal
+%R	1105	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-1105	Issue construction phase plan	104	0	8		2026-12-18 08:00	2026-12-18 17:00	2027-01-15 08:00	2027-01-15 17:00					2026-12-18 08:00	2026-12-18 17:00		PT_Normal
+%R	1106	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2100	Federate models, clash round 1	8	0	8		2026-12-09 08:00	2026-12-09 17:00	2026-12-10 08:00	2026-12-10 17:00					2026-12-09 08:00	2026-12-09 17:00		PT_Normal
+%R	1107	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2110	Run clash detection, round 1	8	0	8		2026-12-10 08:00	2026-12-10 17:00	2026-12-11 08:00	2026-12-11 17:00					2026-12-10 08:00	2026-12-10 17:00		PT_Normal
+%R	1108	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2120	Coordination workshop, round 1	8	0	8		2026-12-11 08:00	2026-12-11 17:00	2026-12-14 08:00	2026-12-14 17:00					2026-12-11 08:00	2026-12-11 17:00		PT_Normal
+%R	1109	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2130	Resolve clashes, round 1	8	0	24		2026-12-14 08:00	2026-12-16 17:00	2026-12-15 08:00	2026-12-17 17:00					2026-12-14 08:00	2026-12-16 17:00		PT_Normal
+%R	1110	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2200	Federate models, clash round 2	8	0	8		2026-12-17 08:00	2026-12-17 17:00	2026-12-18 08:00	2026-12-18 17:00					2026-12-17 08:00	2026-12-17 17:00		PT_Normal
+%R	1111	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2210	Run clash detection, round 2	8	0	8		2026-12-18 08:00	2026-12-18 17:00	2026-12-21 08:00	2026-12-21 17:00					2026-12-18 08:00	2026-12-18 17:00		PT_Normal
+%R	1112	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2220	Coordination workshop, round 2	8	0	8		2026-12-21 08:00	2026-12-21 17:00	2026-12-22 08:00	2026-12-22 17:00					2026-12-21 08:00	2026-12-21 17:00		PT_Normal
+%R	1113	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2230	Resolve clashes, round 2	8	0	24		2026-12-22 08:00	2027-01-04 17:00	2026-12-23 08:00	2027-01-05 17:00					2026-12-22 08:00	2027-01-04 17:00		PT_Normal
+%R	1114	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2300	Federate models, clash round 3	8	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-06 08:00	2027-01-06 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1115	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2310	Run clash detection, round 3	8	0	8		2027-01-06 08:00	2027-01-06 17:00	2027-01-07 08:00	2027-01-07 17:00					2027-01-06 08:00	2027-01-06 17:00		PT_Normal
+%R	1116	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2320	Coordination workshop, round 3	8	0	8		2027-01-07 08:00	2027-01-07 17:00	2027-01-08 08:00	2027-01-08 17:00					2027-01-07 08:00	2027-01-07 17:00		PT_Normal
+%R	1117	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-2330	Resolve clashes, round 3	8	0	16		2027-01-08 08:00	2027-01-11 17:00	2027-01-11 08:00	2027-01-12 17:00					2027-01-08 08:00	2027-01-11 17:00		PT_Normal
+%R	1118	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-3000	Develop federated model (Stage 4)	8	0	8		2027-01-12 08:00	2027-01-12 17:00	2027-01-13 08:00	2027-01-13 17:00					2027-01-12 08:00	2027-01-12 17:00		PT_Normal
+%R	1119	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-3001	Check and approve federated model (Stage 4)	8	0	8		2027-01-13 08:00	2027-01-13 17:00	2027-01-14 08:00	2027-01-14 17:00					2027-01-13 08:00	2027-01-13 17:00		PT_Normal
+%R	1120	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-3005	Issue federated model (Stage 4)	8	0	8		2027-01-14 08:00	2027-01-14 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-14 08:00	2027-01-14 17:00		PT_Normal
+%R	1121	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-3100	Develop clash detection report (Stage 4)	8	0	8		2027-01-12 08:00	2027-01-12 17:00	2027-01-13 08:00	2027-01-13 17:00					2027-01-12 08:00	2027-01-12 17:00		PT_Normal
+%R	1122	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-3101	Check and approve clash detection report (Stage 4)	8	0	8		2027-01-13 08:00	2027-01-13 17:00	2027-01-14 08:00	2027-01-14 17:00					2027-01-13 08:00	2027-01-13 17:00		PT_Normal
+%R	1123	2	108	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-COO-3105	Issue clash detection report (Stage 4)	8	0	8		2027-01-14 08:00	2027-01-14 17:00	2027-01-15 08:00	2027-01-15 17:00					2027-01-14 08:00	2027-01-14 17:00		PT_Normal
+%R	1124	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1000	Building control full plans submission	168	0	8		2027-01-06 08:00	2027-01-06 17:00	2027-02-04 08:00	2027-02-04 17:00					2027-01-06 08:00	2027-01-06 17:00		PT_Normal
+%R	1125	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1010	Building control plan check	168	0	160		2027-01-07 08:00	2027-02-03 17:00	2027-02-05 08:00	2027-03-04 17:00					2027-01-07 08:00	2027-02-03 17:00		PT_Normal
+%R	1126	2	109	1	100	CP_Drtn	TT_FinMile	DT_FixedDrtn	TK_Complete	4-APP-1020	Building control full plans approval	168	0	0		2027-02-03 17:00	2027-02-03 17:00	2027-03-04 17:00	2027-03-04 17:00					2027-02-03 17:00	2027-02-03 17:00		PT_Normal
+%R	1127	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1100	Submit planning condition discharge: materials and external appearance	136	0	8		2027-01-05 08:00	2027-01-05 17:00	2027-01-28 08:00	2027-01-28 17:00					2027-01-05 08:00	2027-01-05 17:00		PT_Normal
+%R	1128	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1105	Planning authority determination: materials and external appearance	136	0	200		2027-01-06 08:00	2027-02-09 17:00	2027-01-29 08:00	2027-03-04 17:00					2027-01-06 08:00	2027-02-09 17:00		PT_Normal
+%R	1129	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1110	Submit planning condition discharge: drainage and SuDS	168	0	8		2026-12-21 08:00	2026-12-21 17:00	2027-01-28 08:00	2027-01-28 17:00					2026-12-21 08:00	2026-12-21 17:00		PT_Normal
+%R	1130	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1115	Planning authority determination: drainage and SuDS	168	0	200		2026-12-22 08:00	2027-02-03 17:00	2027-01-29 08:00	2027-03-04 17:00					2026-12-22 08:00	2027-02-03 17:00		PT_Normal
+%R	1131	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1120	Submit planning condition discharge: landscaping	152	0	8		2026-12-23 08:00	2026-12-23 17:00	2027-01-28 08:00	2027-01-28 17:00					2026-12-23 08:00	2026-12-23 17:00		PT_Normal
+%R	1132	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1125	Planning authority determination: landscaping	152	0	200		2027-01-04 08:00	2027-02-05 17:00	2027-01-29 08:00	2027-03-04 17:00					2027-01-04 08:00	2027-02-05 17:00		PT_Normal
+%R	1133	2	109	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	4-APP-1200	Client Stage 4 sign-off	248	0	24		2027-01-18 08:00	2027-01-20 17:00	2027-03-02 08:00	2027-03-04 17:00					2027-01-18 08:00	2027-01-20 17:00		PT_Normal
+%R	1134	2	101	1	100	CP_Drtn	TT_FinMile	DT_FixedDrtn	TK_Complete	M-203-S4	M-203-S4 Stage 4 technical design complete (IE1)	0	0	0	2027-01-15 17:00	2027-01-15 17:00	2027-01-15 17:00	2027-01-15 17:00	2027-01-15 17:00					2027-01-15 17:00	2027-01-15 17:00	CS_MEO	PT_Normal
+%R	1135	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1000	Tender and award: Air handling unit	72	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-01-19 08:00	2027-02-01 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1136	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1001	Submittals and approval: Air handling unit	72	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-02-02 08:00	2027-02-08 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1137	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1002	Manufacture: Air handling unit	72	0	320		2027-01-27 08:00	2027-03-23 17:00	2027-02-09 08:00	2027-04-07 17:00					2027-01-27 08:00	2027-03-23 17:00		PT_Normal
+%R	1138	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1003	Deliver: Air handling unit	72	0	8		2027-03-24 08:00	2027-03-24 17:00	2027-04-08 08:00	2027-04-08 17:00					2027-03-24 08:00	2027-03-24 17:00		PT_Normal
+%R	1139	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1010	Tender and award: Air source heat pumps	200	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-02-10 08:00	2027-02-23 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1140	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1011	Submittals and approval: Air source heat pumps	200	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-02-24 08:00	2027-03-02 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1141	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1012	Manufacture: Air source heat pumps	200	0	280		2027-01-27 08:00	2027-03-16 17:00	2027-03-03 08:00	2027-04-22 17:00					2027-01-27 08:00	2027-03-16 17:00		PT_Normal
+%R	1142	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1013	Deliver: Air source heat pumps	200	0	8		2027-03-17 08:00	2027-03-17 17:00	2027-04-23 08:00	2027-04-23 17:00					2027-03-17 08:00	2027-03-17 17:00		PT_Normal
+%R	1143	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1020	Tender and award: LV switchgear and distribution boards	184	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-02-08 08:00	2027-02-19 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1144	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1021	Submittals and approval: LV switchgear and distribution boards	184	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-02-22 08:00	2027-02-26 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1145	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1022	Manufacture: LV switchgear and distribution boards	184	0	240		2027-01-27 08:00	2027-03-09 17:00	2027-03-01 08:00	2027-04-13 17:00					2027-01-27 08:00	2027-03-09 17:00		PT_Normal
+%R	1146	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1023	Deliver: LV switchgear and distribution boards	184	0	8		2027-03-10 08:00	2027-03-10 17:00	2027-04-14 08:00	2027-04-14 17:00					2027-03-10 08:00	2027-03-10 17:00		PT_Normal
+%R	1147	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1030	Tender and award: BMS controls and integration gateway	144	0	80		2027-01-14 08:00	2027-01-27 17:00	2027-02-09 08:00	2027-02-22 17:00					2027-01-14 08:00	2027-01-27 17:00		PT_Normal
+%R	1148	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1031	Submittals and approval: BMS controls and integration gateway	144	0	40		2027-01-28 08:00	2027-02-03 17:00	2027-02-23 08:00	2027-03-01 17:00					2027-01-28 08:00	2027-02-03 17:00		PT_Normal
+%R	1149	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1032	Manufacture: BMS controls and integration gateway	144	0	160		2027-02-04 08:00	2027-03-03 17:00	2027-03-02 08:00	2027-03-31 17:00					2027-02-04 08:00	2027-03-03 17:00		PT_Normal
+%R	1150	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1033	Deliver: BMS controls and integration gateway	144	0	8		2027-03-04 08:00	2027-03-04 17:00	2027-04-01 08:00	2027-04-01 17:00					2027-03-04 08:00	2027-03-04 17:00		PT_Normal
+%R	1151	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1040	Tender and award: Fire detection and alarm	392	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-03-16 08:00	2027-03-31 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1152	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1041	Submittals and approval: Fire detection and alarm	392	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-04-01 08:00	2027-04-07 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1153	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1042	Manufacture: Fire detection and alarm	392	0	160		2027-01-27 08:00	2027-02-23 17:00	2027-04-08 08:00	2027-05-06 17:00					2027-01-27 08:00	2027-02-23 17:00		PT_Normal
+%R	1154	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1043	Deliver: Fire detection and alarm	392	0	8		2027-02-24 08:00	2027-02-24 17:00	2027-05-07 08:00	2027-05-07 17:00					2027-02-24 08:00	2027-02-24 17:00		PT_Normal
+%R	1155	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1050	Tender and award: Nurse call and assistance call	440	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-03-24 08:00	2027-04-08 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1156	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1051	Submittals and approval: Nurse call and assistance call	440	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-04-09 08:00	2027-04-15 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1157	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1052	Manufacture: Nurse call and assistance call	440	0	160		2027-01-27 08:00	2027-02-23 17:00	2027-04-16 08:00	2027-05-14 17:00					2027-01-27 08:00	2027-02-23 17:00		PT_Normal
+%R	1158	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1053	Deliver: Nurse call and assistance call	440	0	8		2027-02-24 08:00	2027-02-24 17:00	2027-05-17 08:00	2027-05-17 17:00					2027-02-24 08:00	2027-02-24 17:00		PT_Normal
+%R	1159	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1060	Tender and award: Emergency lighting	488	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-04-05 08:00	2027-04-16 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1160	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1061	Submittals and approval: Emergency lighting	488	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-04-19 08:00	2027-04-23 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1161	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1062	Manufacture: Emergency lighting	488	0	120		2027-01-27 08:00	2027-02-16 17:00	2027-04-26 08:00	2027-05-17 17:00					2027-01-27 08:00	2027-02-16 17:00		PT_Normal
+%R	1162	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1063	Deliver: Emergency lighting	488	0	8		2027-02-17 08:00	2027-02-17 17:00	2027-05-18 08:00	2027-05-18 17:00					2027-02-17 08:00	2027-02-17 17:00		PT_Normal
+%R	1163	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1070	Tender and award: Luminaires	312	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-03-02 08:00	2027-03-15 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1164	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1071	Submittals and approval: Luminaires	312	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-03-16 08:00	2027-03-22 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1165	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1072	Manufacture: Luminaires	312	0	120		2027-01-27 08:00	2027-02-16 17:00	2027-03-23 08:00	2027-04-14 17:00					2027-01-27 08:00	2027-02-16 17:00		PT_Normal
+%R	1166	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1073	Deliver: Luminaires	312	0	8		2027-02-17 08:00	2027-02-17 17:00	2027-04-15 08:00	2027-04-15 17:00					2027-02-17 08:00	2027-02-17 17:00		PT_Normal
+%R	1167	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1080	Tender and award: TMVs and sanitaryware	416	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-03-19 08:00	2027-04-05 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1168	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1081	Submittals and approval: TMVs and sanitaryware	416	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-04-06 08:00	2027-04-12 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1169	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1082	Manufacture: TMVs and sanitaryware	416	0	120		2027-01-27 08:00	2027-02-16 17:00	2027-04-13 08:00	2027-05-04 17:00					2027-01-27 08:00	2027-02-16 17:00		PT_Normal
+%R	1170	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1083	Deliver: TMVs and sanitaryware	416	0	8		2027-02-17 08:00	2027-02-17 17:00	2027-05-05 08:00	2027-05-05 17:00					2027-02-17 08:00	2027-02-17 17:00		PT_Normal
+%R	1171	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1090	Tender and award: Roof membrane	224	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-02-15 08:00	2027-02-26 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1172	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1091	Submittals and approval: Roof membrane	224	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-03-01 08:00	2027-03-05 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1173	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1092	Manufacture: Roof membrane	224	0	80		2027-01-27 08:00	2027-02-09 17:00	2027-03-08 08:00	2027-03-19 17:00					2027-01-27 08:00	2027-02-09 17:00		PT_Normal
+%R	1174	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1093	Deliver: Roof membrane	224	0	8		2027-02-10 08:00	2027-02-10 17:00	2027-03-22 08:00	2027-03-22 17:00					2027-02-10 08:00	2027-02-10 17:00		PT_Normal
+%R	1175	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1100	Tender and award: Cladding junction kits	472	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-04-01 08:00	2027-04-14 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1176	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1101	Submittals and approval: Cladding junction kits	472	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-04-15 08:00	2027-04-21 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1177	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1102	Manufacture: Cladding junction kits	472	0	120		2027-01-27 08:00	2027-02-16 17:00	2027-04-22 08:00	2027-05-13 17:00					2027-01-27 08:00	2027-02-16 17:00		PT_Normal
+%R	1178	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1103	Deliver: Cladding junction kits	472	0	8		2027-02-17 08:00	2027-02-17 17:00	2027-05-14 08:00	2027-05-14 17:00					2027-02-17 08:00	2027-02-17 17:00		PT_Normal
+%R	1179	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1110	Tender and award: External doors and entrance canopy	464	0	80		2027-01-06 08:00	2027-01-19 17:00	2027-03-31 08:00	2027-04-13 17:00					2027-01-06 08:00	2027-01-19 17:00		PT_Normal
+%R	1180	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1111	Submittals and approval: External doors and entrance canopy	464	0	40		2027-01-20 08:00	2027-01-26 17:00	2027-04-14 08:00	2027-04-20 17:00					2027-01-20 08:00	2027-01-26 17:00		PT_Normal
+%R	1181	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1112	Manufacture: External doors and entrance canopy	464	0	160		2027-01-27 08:00	2027-02-23 17:00	2027-04-21 08:00	2027-05-19 17:00					2027-01-27 08:00	2027-02-23 17:00		PT_Normal
+%R	1182	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1113	Deliver: External doors and entrance canopy	464	0	8		2027-02-24 08:00	2027-02-24 17:00	2027-05-20 08:00	2027-05-20 17:00					2027-02-24 08:00	2027-02-24 17:00		PT_Normal
+%R	1183	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1120	Tender and award: External lighting	576	0	80		2026-12-23 08:00	2027-01-14 17:00	2027-04-15 08:00	2027-04-28 17:00					2026-12-23 08:00	2027-01-14 17:00		PT_Normal
+%R	1184	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1121	Submittals and approval: External lighting	576	0	40		2027-01-15 08:00	2027-01-21 17:00	2027-04-29 08:00	2027-05-06 17:00					2027-01-15 08:00	2027-01-21 17:00		PT_Normal
+%R	1185	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1122	Manufacture: External lighting	576	0	120		2027-01-22 08:00	2027-02-11 17:00	2027-05-07 08:00	2027-05-27 17:00					2027-01-22 08:00	2027-02-11 17:00		PT_Normal
+%R	1186	2	111	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-PRC-1123	Deliver: External lighting	576	0	8		2027-02-12 08:00	2027-02-12 17:00	2027-05-28 08:00	2027-05-28 17:00					2027-02-12 08:00	2027-02-12 17:00		PT_Normal
+%R	1187	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-1000	Factory production slot and jig set-up	120	0	40		2027-01-04 08:00	2027-01-08 17:00	2027-01-25 08:00	2027-01-29 17:00					2027-01-04 08:00	2027-01-08 17:00		PT_Normal
+%R	1188	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-1001	Factory first-fix materials delivered	184	0	24		2027-01-06 08:00	2027-01-08 17:00	2027-02-08 08:00	2027-02-10 17:00					2027-01-06 08:00	2027-01-08 17:00		PT_Normal
+%R	1189	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M010	Module M01 (Z1): Chassis and floor cassette	120	0	32		2027-01-11 08:00	2027-01-14 17:00	2027-02-01 08:00	2027-02-04 17:00					2027-01-11 08:00	2027-01-14 17:00		PT_Normal
+%R	1190	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M011	Module M01 (Z1): Walls, roof and windows	120	0	32		2027-01-15 08:00	2027-01-20 17:00	2027-02-05 08:00	2027-02-10 17:00					2027-01-15 08:00	2027-01-20 17:00		PT_Normal
+%R	1191	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M012	Module M01 (Z1): First-fix M&E and linings	120	0	40		2027-01-21 08:00	2027-01-27 17:00	2027-02-11 08:00	2027-02-17 17:00					2027-01-21 08:00	2027-01-27 17:00		PT_Normal
+%R	1192	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M013	Module M01 (Z1): Factory QA inspection and ready to dispatch	120	0	16		2027-01-28 08:00	2027-01-29 17:00	2027-02-18 08:00	2027-02-19 17:00					2027-01-28 08:00	2027-01-29 17:00		PT_Normal
+%R	1193	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M020	Module M02 (Z1): Chassis and floor cassette	120	0	32		2027-01-13 08:00	2027-01-18 17:00	2027-02-03 08:00	2027-02-08 17:00					2027-01-13 08:00	2027-01-18 17:00		PT_Normal
+%R	1194	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M021	Module M02 (Z1): Walls, roof and windows	120	0	32		2027-01-19 08:00	2027-01-22 17:00	2027-02-09 08:00	2027-02-12 17:00					2027-01-19 08:00	2027-01-22 17:00		PT_Normal
+%R	1195	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M022	Module M02 (Z1): First-fix M&E and linings	120	0	40		2027-01-25 08:00	2027-01-29 17:00	2027-02-15 08:00	2027-02-19 17:00					2027-01-25 08:00	2027-01-29 17:00		PT_Normal
+%R	1196	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M023	Module M02 (Z1): Factory QA inspection and ready to dispatch	120	0	16		2027-02-01 08:00	2027-02-02 17:00	2027-02-22 08:00	2027-02-23 17:00					2027-02-01 08:00	2027-02-02 17:00		PT_Normal
+%R	1197	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M030	Module M03 (Z1): Chassis and floor cassette	120	0	32		2027-01-15 08:00	2027-01-20 17:00	2027-02-05 08:00	2027-02-10 17:00					2027-01-15 08:00	2027-01-20 17:00		PT_Normal
+%R	1198	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M031	Module M03 (Z1): Walls, roof and windows	120	0	32		2027-01-21 08:00	2027-01-26 17:00	2027-02-11 08:00	2027-02-16 17:00					2027-01-21 08:00	2027-01-26 17:00		PT_Normal
+%R	1199	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M032	Module M03 (Z1): First-fix M&E and linings	120	0	40		2027-01-27 08:00	2027-02-02 17:00	2027-02-17 08:00	2027-02-23 17:00					2027-01-27 08:00	2027-02-02 17:00		PT_Normal
+%R	1200	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M033	Module M03 (Z1): Factory QA inspection and ready to dispatch	120	0	16		2027-02-03 08:00	2027-02-04 17:00	2027-02-24 08:00	2027-02-25 17:00					2027-02-03 08:00	2027-02-04 17:00		PT_Normal
+%R	1201	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M040	Module M04 (Z2): Chassis and floor cassette	120	0	32		2027-01-19 08:00	2027-01-22 17:00	2027-02-09 08:00	2027-02-12 17:00					2027-01-19 08:00	2027-01-22 17:00		PT_Normal
+%R	1202	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M041	Module M04 (Z2): Walls, roof and windows	120	0	32		2027-01-25 08:00	2027-01-28 17:00	2027-02-15 08:00	2027-02-18 17:00					2027-01-25 08:00	2027-01-28 17:00		PT_Normal
+%R	1203	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M042	Module M04 (Z2): First-fix M&E and linings	120	0	40		2027-01-29 08:00	2027-02-04 17:00	2027-02-19 08:00	2027-02-25 17:00					2027-01-29 08:00	2027-02-04 17:00		PT_Normal
+%R	1204	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M043	Module M04 (Z2): Factory QA inspection and ready to dispatch	120	0	16		2027-02-05 08:00	2027-02-08 17:00	2027-02-26 08:00	2027-03-01 17:00					2027-02-05 08:00	2027-02-08 17:00		PT_Normal
+%R	1205	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M050	Module M05 (Z2): Chassis and floor cassette	120	0	32		2027-01-21 08:00	2027-01-26 17:00	2027-02-11 08:00	2027-02-16 17:00					2027-01-21 08:00	2027-01-26 17:00		PT_Normal
+%R	1206	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M051	Module M05 (Z2): Walls, roof and windows	120	0	32		2027-01-27 08:00	2027-02-01 17:00	2027-02-17 08:00	2027-02-22 17:00					2027-01-27 08:00	2027-02-01 17:00		PT_Normal
+%R	1207	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M052	Module M05 (Z2): First-fix M&E and linings	120	0	40		2027-02-02 08:00	2027-02-08 17:00	2027-02-23 08:00	2027-03-01 17:00					2027-02-02 08:00	2027-02-08 17:00		PT_Normal
+%R	1208	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M053	Module M05 (Z2): Factory QA inspection and ready to dispatch	120	0	16		2027-02-09 08:00	2027-02-10 17:00	2027-03-02 08:00	2027-03-03 17:00					2027-02-09 08:00	2027-02-10 17:00		PT_Normal
+%R	1209	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M060	Module M06 (Z2): Chassis and floor cassette	120	0	32		2027-01-25 08:00	2027-01-28 17:00	2027-02-15 08:00	2027-02-18 17:00					2027-01-25 08:00	2027-01-28 17:00		PT_Normal
+%R	1210	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M061	Module M06 (Z2): Walls, roof and windows	120	0	32		2027-01-29 08:00	2027-02-03 17:00	2027-02-19 08:00	2027-02-24 17:00					2027-01-29 08:00	2027-02-03 17:00		PT_Normal
+%R	1211	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M062	Module M06 (Z2): First-fix M&E and linings	120	0	40		2027-02-04 08:00	2027-02-10 17:00	2027-02-25 08:00	2027-03-03 17:00					2027-02-04 08:00	2027-02-10 17:00		PT_Normal
+%R	1212	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M063	Module M06 (Z2): Factory QA inspection and ready to dispatch	120	0	16		2027-02-11 08:00	2027-02-12 17:00	2027-03-04 08:00	2027-03-05 17:00					2027-02-11 08:00	2027-02-12 17:00		PT_Normal
+%R	1213	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M070	Module M07 (Z2): Chassis and floor cassette	120	0	32		2027-01-27 08:00	2027-02-01 17:00	2027-02-17 08:00	2027-02-22 17:00					2027-01-27 08:00	2027-02-01 17:00		PT_Normal
+%R	1214	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M071	Module M07 (Z2): Walls, roof and windows	120	0	32		2027-02-02 08:00	2027-02-05 17:00	2027-02-23 08:00	2027-02-26 17:00					2027-02-02 08:00	2027-02-05 17:00		PT_Normal
+%R	1215	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M072	Module M07 (Z2): First-fix M&E and linings	120	0	40		2027-02-08 08:00	2027-02-12 17:00	2027-03-01 08:00	2027-03-05 17:00					2027-02-08 08:00	2027-02-12 17:00		PT_Normal
+%R	1216	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M073	Module M07 (Z2): Factory QA inspection and ready to dispatch	120	0	16		2027-02-15 08:00	2027-02-16 17:00	2027-03-08 08:00	2027-03-09 17:00					2027-02-15 08:00	2027-02-16 17:00		PT_Normal
+%R	1217	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M080	Module M08 (Z2): Chassis and floor cassette	120	0	32		2027-01-29 08:00	2027-02-03 17:00	2027-02-19 08:00	2027-02-24 17:00					2027-01-29 08:00	2027-02-03 17:00		PT_Normal
+%R	1218	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M081	Module M08 (Z2): Walls, roof and windows	120	0	32		2027-02-04 08:00	2027-02-09 17:00	2027-02-25 08:00	2027-03-02 17:00					2027-02-04 08:00	2027-02-09 17:00		PT_Normal
+%R	1219	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M082	Module M08 (Z2): First-fix M&E and linings	120	0	40		2027-02-10 08:00	2027-02-16 17:00	2027-03-03 08:00	2027-03-09 17:00					2027-02-10 08:00	2027-02-16 17:00		PT_Normal
+%R	1220	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M083	Module M08 (Z2): Factory QA inspection and ready to dispatch	120	0	16		2027-02-17 08:00	2027-02-18 17:00	2027-03-10 08:00	2027-03-11 17:00					2027-02-17 08:00	2027-02-18 17:00		PT_Normal
+%R	1221	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M090	Module M09 (Z2): Chassis and floor cassette	120	0	32		2027-02-02 08:00	2027-02-05 17:00	2027-02-23 08:00	2027-02-26 17:00					2027-02-02 08:00	2027-02-05 17:00		PT_Normal
+%R	1222	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M091	Module M09 (Z2): Walls, roof and windows	120	0	32		2027-02-08 08:00	2027-02-11 17:00	2027-03-01 08:00	2027-03-04 17:00					2027-02-08 08:00	2027-02-11 17:00		PT_Normal
+%R	1223	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M092	Module M09 (Z2): First-fix M&E and linings	120	0	40		2027-02-12 08:00	2027-02-18 17:00	2027-03-05 08:00	2027-03-11 17:00					2027-02-12 08:00	2027-02-18 17:00		PT_Normal
+%R	1224	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M093	Module M09 (Z2): Factory QA inspection and ready to dispatch	120	0	16		2027-02-19 08:00	2027-02-22 17:00	2027-03-12 08:00	2027-03-15 17:00					2027-02-19 08:00	2027-02-22 17:00		PT_Normal
+%R	1225	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M100	Module M10 (Z3): Chassis and floor cassette	120	0	32		2027-02-04 08:00	2027-02-09 17:00	2027-02-25 08:00	2027-03-02 17:00					2027-02-04 08:00	2027-02-09 17:00		PT_Normal
+%R	1226	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M101	Module M10 (Z3): Walls, roof and windows	120	0	32		2027-02-10 08:00	2027-02-15 17:00	2027-03-03 08:00	2027-03-08 17:00					2027-02-10 08:00	2027-02-15 17:00		PT_Normal
+%R	1227	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M102	Module M10 (Z3): First-fix M&E and linings	120	0	40		2027-02-16 08:00	2027-02-22 17:00	2027-03-09 08:00	2027-03-15 17:00					2027-02-16 08:00	2027-02-22 17:00		PT_Normal
+%R	1228	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M103	Module M10 (Z3): Factory QA inspection and ready to dispatch	120	0	16		2027-02-23 08:00	2027-02-24 17:00	2027-03-16 08:00	2027-03-17 17:00					2027-02-23 08:00	2027-02-24 17:00		PT_Normal
+%R	1229	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M110	Module M11 (Z3): Chassis and floor cassette	120	0	32		2027-02-08 08:00	2027-02-11 17:00	2027-03-01 08:00	2027-03-04 17:00					2027-02-08 08:00	2027-02-11 17:00		PT_Normal
+%R	1230	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M111	Module M11 (Z3): Walls, roof and windows	120	0	32		2027-02-12 08:00	2027-02-17 17:00	2027-03-05 08:00	2027-03-10 17:00					2027-02-12 08:00	2027-02-17 17:00		PT_Normal
+%R	1231	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M112	Module M11 (Z3): First-fix M&E and linings	120	0	40		2027-02-18 08:00	2027-02-24 17:00	2027-03-11 08:00	2027-03-17 17:00					2027-02-18 08:00	2027-02-24 17:00		PT_Normal
+%R	1232	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M113	Module M11 (Z3): Factory QA inspection and ready to dispatch	120	0	16		2027-02-25 08:00	2027-02-26 17:00	2027-03-18 08:00	2027-03-19 17:00					2027-02-25 08:00	2027-02-26 17:00		PT_Normal
+%R	1233	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M120	Module M12 (Z4): Chassis and floor cassette	120	0	32		2027-02-10 08:00	2027-02-15 17:00	2027-03-03 08:00	2027-03-08 17:00					2027-02-10 08:00	2027-02-15 17:00		PT_Normal
+%R	1234	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M121	Module M12 (Z4): Walls, roof and windows	120	0	32		2027-02-16 08:00	2027-02-19 17:00	2027-03-09 08:00	2027-03-12 17:00					2027-02-16 08:00	2027-02-19 17:00		PT_Normal
+%R	1235	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M122	Module M12 (Z4): First-fix M&E and linings	120	0	40		2027-02-22 08:00	2027-02-26 17:00	2027-03-15 08:00	2027-03-19 17:00					2027-02-22 08:00	2027-02-26 17:00		PT_Normal
+%R	1236	2	112	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-FAB-M123	Module M12 (Z4): Factory QA inspection and ready to dispatch	120	0	16		2027-03-01 08:00	2027-03-02 17:00	2027-03-22 08:00	2027-03-23 17:00					2027-03-01 08:00	2027-03-02 17:00		PT_Normal
+%R	1237	2	113	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENB-1000	Site set-up and welfare	88	0	40	2027-01-04 08:00	2027-01-04 08:00	2027-01-08 17:00	2027-01-19 08:00	2027-01-25 17:00					2027-01-04 08:00	2027-01-08 17:00	CS_MSOA	PT_Normal
+%R	1238	2	113	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENB-1010	Hoarding and site security	112	0	24		2027-01-05 08:00	2027-01-07 17:00	2027-01-25 08:00	2027-01-27 17:00					2027-01-05 08:00	2027-01-07 17:00		PT_Normal
+%R	1239	2	113	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENB-1020	Temporary services	96	0	32		2027-01-06 08:00	2027-01-11 17:00	2027-01-22 08:00	2027-01-27 17:00					2027-01-06 08:00	2027-01-11 17:00		PT_Normal
+%R	1240	2	113	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENB-1030	Setting out from survey control SP-01	88	0	16		2027-01-11 08:00	2027-01-12 17:00	2027-01-26 08:00	2027-01-27 17:00					2027-01-11 08:00	2027-01-12 17:00		PT_Normal
+%R	1241	2	113	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENB-1040	Utilities diversions within the plot	312	0	64		2027-01-13 08:00	2027-01-22 17:00	2027-03-09 08:00	2027-03-18 17:00					2027-01-13 08:00	2027-01-22 17:00		PT_Normal
+%R	1242	2	113	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENB-1050	Haul road and crane hardstanding	264	0	32		2027-01-13 08:00	2027-01-18 17:00	2027-03-01 08:00	2027-03-04 17:00					2027-01-13 08:00	2027-01-18 17:00		PT_Normal
+%R	1243	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1000	Excavate foundations, Z1	88	0	40		2027-01-13 08:00	2027-01-19 17:00	2027-01-28 08:00	2027-02-03 17:00					2027-01-13 08:00	2027-01-19 17:00		PT_Normal
+%R	1244	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1010	Pad foundations and ground beams, Z1	160	0	80		2027-01-20 08:00	2027-02-02 17:00	2027-02-17 08:00	2027-03-02 17:00					2027-01-20 08:00	2027-02-02 17:00		PT_Normal
+%R	1245	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1020	Backfill and module bearing check, Z1	160	0	16		2027-02-03 08:00	2027-02-04 17:00	2027-03-03 08:00	2027-03-04 17:00					2027-02-03 08:00	2027-02-04 17:00		PT_Normal
+%R	1246	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1100	Excavate foundations, Z2	88	0	40		2027-01-18 08:00	2027-01-22 17:00	2027-02-02 08:00	2027-02-08 17:00					2027-01-18 08:00	2027-01-22 17:00		PT_Normal
+%R	1247	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1110	Pad foundations and ground beams, Z2	136	0	80		2027-01-25 08:00	2027-02-05 17:00	2027-02-17 08:00	2027-03-02 17:00					2027-01-25 08:00	2027-02-05 17:00		PT_Normal
+%R	1248	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1120	Backfill and module bearing check, Z2	136	0	16		2027-02-08 08:00	2027-02-09 17:00	2027-03-03 08:00	2027-03-04 17:00					2027-02-08 08:00	2027-02-09 17:00		PT_Normal
+%R	1249	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1200	Excavate foundations, Z3	88	0	40		2027-01-21 08:00	2027-01-27 17:00	2027-02-05 08:00	2027-02-11 17:00					2027-01-21 08:00	2027-01-27 17:00		PT_Normal
+%R	1250	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1210	Pad foundations and ground beams, Z3	112	0	80		2027-01-28 08:00	2027-02-10 17:00	2027-02-17 08:00	2027-03-02 17:00					2027-01-28 08:00	2027-02-10 17:00		PT_Normal
+%R	1251	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1220	Backfill and module bearing check, Z3	112	0	16		2027-02-11 08:00	2027-02-12 17:00	2027-03-03 08:00	2027-03-04 17:00					2027-02-11 08:00	2027-02-12 17:00		PT_Normal
+%R	1252	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1300	Excavate foundations, Z4	88	0	40		2027-01-26 08:00	2027-02-01 17:00	2027-02-10 08:00	2027-02-16 17:00					2027-01-26 08:00	2027-02-01 17:00		PT_Normal
+%R	1253	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1310	Pad foundations and ground beams, Z4	88	0	80		2027-02-02 08:00	2027-02-15 17:00	2027-02-17 08:00	2027-03-02 17:00					2027-02-02 08:00	2027-02-15 17:00		PT_Normal
+%R	1254	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1320	Backfill and module bearing check, Z4	88	0	16		2027-02-16 08:00	2027-02-17 17:00	2027-03-03 08:00	2027-03-04 17:00					2027-02-16 08:00	2027-02-17 17:00		PT_Normal
+%R	1255	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1500	Plant base and roof plant support steelwork	232	0	32		2027-02-16 08:00	2027-02-19 17:00	2027-03-31 08:00	2027-04-05 17:00					2027-02-16 08:00	2027-02-19 17:00		PT_Normal
+%R	1256	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1600	Below-ground drainage	312	0	160		2027-01-25 08:00	2027-02-19 17:00	2027-03-19 08:00	2027-04-19 17:00					2027-01-25 08:00	2027-02-19 17:00		PT_Normal
+%R	1257	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1610	Service ducts and building entry points	312	0	40		2027-01-29 08:00	2027-02-04 17:00	2027-03-25 08:00	2027-04-02 17:00					2027-01-29 08:00	2027-02-04 17:00		PT_Normal
+%R	1258	2	114	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-SUB-1620	Drainage CCTV survey	504	0	16		2027-02-22 08:00	2027-02-23 17:00	2027-05-25 08:00	2027-05-26 17:00					2027-02-22 08:00	2027-02-23 17:00		PT_Normal
+%R	1259	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-1000	Crane mobilisation and lift plan	8	0	16	2027-03-04 08:00	2027-03-04 08:00	2027-03-05 17:00	2027-03-05 08:00	2027-03-08 17:00					2027-03-04 08:00	2027-03-05 17:00	CS_MSOA	PT_Normal
+%R	1260	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M010	Deliver and set module M01 (Z1)	8	0	8		2027-03-08 08:00	2027-03-08 17:00	2027-03-09 08:00	2027-03-09 17:00					2027-03-08 08:00	2027-03-08 17:00		PT_Normal
+%R	1261	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M011	Structural connections and seal joints, module M01	136	0	8		2027-03-09 08:00	2027-03-09 17:00	2027-04-05 08:00	2027-04-05 17:00					2027-03-09 08:00	2027-03-09 17:00		PT_Normal
+%R	1262	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M020	Deliver and set module M02 (Z1)	8	0	8		2027-03-09 08:00	2027-03-09 17:00	2027-03-10 08:00	2027-03-10 17:00					2027-03-09 08:00	2027-03-09 17:00		PT_Normal
+%R	1263	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M021	Structural connections and seal joints, module M02	128	0	8		2027-03-10 08:00	2027-03-10 17:00	2027-04-05 08:00	2027-04-05 17:00					2027-03-10 08:00	2027-03-10 17:00		PT_Normal
+%R	1264	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M030	Deliver and set module M03 (Z1)	8	0	8		2027-03-10 08:00	2027-03-10 17:00	2027-03-11 08:00	2027-03-11 17:00					2027-03-10 08:00	2027-03-10 17:00		PT_Normal
+%R	1265	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M031	Structural connections and seal joints, module M03	120	0	8		2027-03-11 08:00	2027-03-11 17:00	2027-04-05 08:00	2027-04-05 17:00					2027-03-11 08:00	2027-03-11 17:00		PT_Normal
+%R	1266	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M040	Deliver and set module M04 (Z2)	8	0	8		2027-03-11 08:00	2027-03-11 17:00	2027-03-12 08:00	2027-03-12 17:00					2027-03-11 08:00	2027-03-11 17:00		PT_Normal
+%R	1267	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M041	Structural connections and seal joints, module M04	48	0	8		2027-03-12 08:00	2027-03-12 17:00	2027-03-22 08:00	2027-03-22 17:00					2027-03-12 08:00	2027-03-12 17:00		PT_Normal
+%R	1268	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M050	Deliver and set module M05 (Z2)	8	0	8		2027-03-12 08:00	2027-03-12 17:00	2027-03-15 08:00	2027-03-15 17:00					2027-03-12 08:00	2027-03-12 17:00		PT_Normal
+%R	1269	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M051	Structural connections and seal joints, module M05	40	0	8		2027-03-15 08:00	2027-03-15 17:00	2027-03-22 08:00	2027-03-22 17:00					2027-03-15 08:00	2027-03-15 17:00		PT_Normal
+%R	1270	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M060	Deliver and set module M06 (Z2)	8	0	8		2027-03-15 08:00	2027-03-15 17:00	2027-03-16 08:00	2027-03-16 17:00					2027-03-15 08:00	2027-03-15 17:00		PT_Normal
+%R	1271	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M061	Structural connections and seal joints, module M06	32	0	8		2027-03-16 08:00	2027-03-16 17:00	2027-03-22 08:00	2027-03-22 17:00					2027-03-16 08:00	2027-03-16 17:00		PT_Normal
+%R	1272	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M070	Deliver and set module M07 (Z2)	8	0	8		2027-03-16 08:00	2027-03-16 17:00	2027-03-17 08:00	2027-03-17 17:00					2027-03-16 08:00	2027-03-16 17:00		PT_Normal
+%R	1273	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M071	Structural connections and seal joints, module M07	24	0	8		2027-03-17 08:00	2027-03-17 17:00	2027-03-22 08:00	2027-03-22 17:00					2027-03-17 08:00	2027-03-17 17:00		PT_Normal
+%R	1274	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M080	Deliver and set module M08 (Z2)	8	0	8		2027-03-17 08:00	2027-03-17 17:00	2027-03-18 08:00	2027-03-18 17:00					2027-03-17 08:00	2027-03-17 17:00		PT_Normal
+%R	1275	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M081	Structural connections and seal joints, module M08	16	0	8		2027-03-18 08:00	2027-03-18 17:00	2027-03-22 08:00	2027-03-22 17:00					2027-03-18 08:00	2027-03-18 17:00		PT_Normal
+%R	1276	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M090	Deliver and set module M09 (Z2)	8	0	8		2027-03-18 08:00	2027-03-18 17:00	2027-03-19 08:00	2027-03-19 17:00					2027-03-18 08:00	2027-03-18 17:00		PT_Normal
+%R	1277	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M091	Structural connections and seal joints, module M09	8	0	8		2027-03-19 08:00	2027-03-19 17:00	2027-03-22 08:00	2027-03-22 17:00					2027-03-19 08:00	2027-03-19 17:00		PT_Normal
+%R	1278	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M100	Deliver and set module M10 (Z3)	8	0	8		2027-03-19 08:00	2027-03-19 17:00	2027-03-22 08:00	2027-03-22 17:00					2027-03-19 08:00	2027-03-19 17:00		PT_Normal
+%R	1279	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M101	Structural connections and seal joints, module M10	88	0	8		2027-03-22 08:00	2027-03-22 17:00	2027-04-08 08:00	2027-04-08 17:00					2027-03-22 08:00	2027-03-22 17:00		PT_Normal
+%R	1280	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M110	Deliver and set module M11 (Z3)	8	0	8		2027-03-22 08:00	2027-03-22 17:00	2027-03-23 08:00	2027-03-23 17:00					2027-03-22 08:00	2027-03-22 17:00		PT_Normal
+%R	1281	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M111	Structural connections and seal joints, module M11	80	0	8		2027-03-23 08:00	2027-03-23 17:00	2027-04-08 08:00	2027-04-08 17:00					2027-03-23 08:00	2027-03-23 17:00		PT_Normal
+%R	1282	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M120	Deliver and set module M12 (Z4)	8	0	8		2027-03-23 08:00	2027-03-23 17:00	2027-03-24 08:00	2027-03-24 17:00					2027-03-23 08:00	2027-03-23 17:00		PT_Normal
+%R	1283	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-M121	Structural connections and seal joints, module M12	8	0	8		2027-03-24 08:00	2027-03-24 17:00	2027-03-25 08:00	2027-03-25 17:00					2027-03-24 08:00	2027-03-24 17:00		PT_Normal
+%R	1284	2	115	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MOD-1900	Crane demobilisation	176	0	8		2027-03-25 08:00	2027-03-25 17:00	2027-04-28 08:00	2027-04-28 17:00					2027-03-25 08:00	2027-03-25 17:00		PT_Normal
+%R	1285	2	115	1	100	CP_Drtn	TT_FinMile	DT_FixedDrtn	TK_Complete	5-MOD-1910	Modules weathertight	32	0	0		2027-03-24 17:00	2027-03-24 17:00	2027-04-01 17:00	2027-04-01 17:00					2027-03-24 17:00	2027-03-24 17:00		PT_Normal
+%R	1286	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1000	Roof membrane over modules, Z1	120	0	32		2027-03-12 08:00	2027-03-17 17:00	2027-04-06 08:00	2027-04-09 17:00					2027-03-12 08:00	2027-03-17 17:00		PT_Normal
+%R	1287	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1010	Cladding junctions and module joint covers, Z1	344	0	32		2027-03-12 08:00	2027-03-17 17:00	2027-05-17 08:00	2027-05-20 17:00					2027-03-12 08:00	2027-03-17 17:00		PT_Normal
+%R	1288	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1100	Roof membrane over modules, Z2	8	0	32		2027-03-22 08:00	2027-03-25 17:00	2027-03-23 08:00	2027-03-30 17:00					2027-03-22 08:00	2027-03-25 17:00		PT_Normal
+%R	1289	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1110	Cladding junctions and module joint covers, Z2	328	0	32		2027-03-22 08:00	2027-03-25 17:00	2027-05-21 08:00	2027-05-26 17:00					2027-03-22 08:00	2027-03-25 17:00		PT_Normal
+%R	1290	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1200	Roof membrane over modules, Z3	80	0	32		2027-03-24 08:00	2027-03-31 17:00	2027-04-09 08:00	2027-04-14 17:00					2027-03-24 08:00	2027-03-31 17:00		PT_Normal
+%R	1291	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1210	Cladding junctions and module joint covers, Z3	312	0	32		2027-03-24 08:00	2027-03-31 17:00	2027-05-21 08:00	2027-05-26 17:00					2027-03-24 08:00	2027-03-31 17:00		PT_Normal
+%R	1292	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1300	Roof membrane over modules, Z4	16	0	32		2027-03-25 08:00	2027-04-01 17:00	2027-03-31 08:00	2027-04-05 17:00					2027-03-25 08:00	2027-04-01 17:00		PT_Normal
+%R	1293	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1310	Cladding junctions and module joint covers, Z4	304	0	32		2027-03-25 08:00	2027-04-01 17:00	2027-05-21 08:00	2027-05-26 17:00					2027-03-25 08:00	2027-04-01 17:00		PT_Normal
+%R	1294	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1500	Roof plant platform and guarding	16	0	24		2027-04-02 08:00	2027-04-06 17:00	2027-04-06 08:00	2027-04-08 17:00					2027-04-02 08:00	2027-04-06 17:00		PT_Normal
+%R	1295	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1510	Rainwater goods	256	0	24		2027-04-02 08:00	2027-04-06 17:00	2027-05-19 08:00	2027-05-21 17:00					2027-04-02 08:00	2027-04-06 17:00		PT_Normal
+%R	1296	2	116	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-ENV-1520	External doors and entrance canopy	344	0	32		2027-03-18 08:00	2027-03-23 17:00	2027-05-21 08:00	2027-05-26 17:00					2027-03-18 08:00	2027-03-23 17:00		PT_Normal
+%R	1297	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1000	Incoming LV supply connection from campus network	72	0	24		2027-04-06 08:00	2027-04-08 17:00	2027-04-19 08:00	2027-04-21 17:00					2027-04-06 08:00	2027-04-08 17:00		PT_Normal
+%R	1298	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1010	LV switchgear and distribution boards	104	0	40		2027-03-25 08:00	2027-04-02 17:00	2027-04-15 08:00	2027-04-21 17:00					2027-03-25 08:00	2027-04-02 17:00		PT_Normal
+%R	1299	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1020	Plant room fit-out	8	0	120		2027-03-25 08:00	2027-04-16 17:00	2027-03-30 08:00	2027-04-19 17:00					2027-03-25 08:00	2027-04-16 17:00		PT_Normal
+%R	1300	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1030	AHU installation	16	0	24		2027-04-07 08:00	2027-04-09 17:00	2027-04-09 08:00	2027-04-13 17:00					2027-04-07 08:00	2027-04-09 17:00		PT_Normal
+%R	1301	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1040	Air source heat pump installation	104	0	24		2027-04-07 08:00	2027-04-09 17:00	2027-04-26 08:00	2027-04-28 17:00					2027-04-07 08:00	2027-04-09 17:00		PT_Normal
+%R	1302	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1050	Ductwork connections between modules	16	0	96		2027-04-08 08:00	2027-04-23 17:00	2027-04-12 08:00	2027-04-27 17:00					2027-04-08 08:00	2027-04-23 17:00		PT_Normal
+%R	1303	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1060	Pipework connections between modules	40	0	96		2027-03-25 08:00	2027-04-13 17:00	2027-04-05 08:00	2027-04-20 17:00					2027-03-25 08:00	2027-04-13 17:00		PT_Normal
+%R	1304	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1070	Water supply connection and meter	496	0	16		2027-02-05 08:00	2027-02-08 17:00	2027-05-07 08:00	2027-05-10 17:00					2027-02-05 08:00	2027-02-08 17:00		PT_Normal
+%R	1305	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1080	BMS installation and integration gateway	8	0	120		2027-04-01 08:00	2027-04-21 17:00	2027-04-02 08:00	2027-04-22 17:00					2027-04-01 08:00	2027-04-21 17:00		PT_Normal
+%R	1306	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1090	Fire detection and alarm installation	232	0	64		2027-03-25 08:00	2027-04-07 17:00	2027-05-10 08:00	2027-05-19 17:00					2027-03-25 08:00	2027-04-07 17:00		PT_Normal
+%R	1307	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1100	Nurse call and assistance call installation	280	0	40		2027-03-25 08:00	2027-04-02 17:00	2027-05-18 08:00	2027-05-24 17:00					2027-03-25 08:00	2027-04-02 17:00		PT_Normal
+%R	1308	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1110	Emergency lighting installation	288	0	40		2027-03-25 08:00	2027-04-02 17:00	2027-05-19 08:00	2027-05-25 17:00					2027-03-25 08:00	2027-04-02 17:00		PT_Normal
+%R	1309	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1120	Luminaire installation	112	0	32		2027-03-25 08:00	2027-04-01 17:00	2027-04-16 08:00	2027-04-21 17:00					2027-03-25 08:00	2027-04-01 17:00		PT_Normal
+%R	1310	2	118	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-MEP-1130	External lighting installation	280	0	24		2027-04-09 08:00	2027-04-13 17:00	2027-06-01 08:00	2027-06-03 17:00					2027-04-09 08:00	2027-04-13 17:00		PT_Normal
+%R	1311	2	101	1	100	CP_Drtn	TT_Mile	DT_FixedDrtn	TK_Complete	M-204-EN	M-204-EN Campus 11 kV energisation (by others, MA 4920.204)	72	0	0	2027-04-06 08:00	2027-04-06 08:00	2027-04-06 08:00	2027-04-19 08:00	2027-04-19 08:00					2027-04-06 08:00	2027-04-06 08:00	CS_MSOA	PT_Normal
+%R	1312	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1000	Make good module joints, Z1	80	0	48		2027-03-25 08:00	2027-04-05 17:00	2027-04-12 08:00	2027-04-19 17:00					2027-03-25 08:00	2027-04-05 17:00		PT_Normal
+%R	1313	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1010	Second-fix M&E connections, Z1	80	0	80		2027-04-06 08:00	2027-04-19 17:00	2027-04-20 08:00	2027-05-04 17:00					2027-04-06 08:00	2027-04-19 17:00		PT_Normal
+%R	1314	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1020	Finishes at joints and floor coverings, Z1	80	0	64		2027-04-20 08:00	2027-04-29 17:00	2027-05-05 08:00	2027-05-14 17:00					2027-04-20 08:00	2027-04-29 17:00		PT_Normal
+%R	1315	2	117	1	33	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	5-INT-1030	Install sanitaryware and TMVs, Z1	80	16	24		2027-04-30 08:00		2027-05-17 08:00	2027-05-19 17:00	2027-04-30 08:00	2027-05-05 17:00	2027-05-04 08:00	2027-05-05 17:00	2027-04-30 08:00	2027-05-05 17:00		PT_Normal
+%R	1316	2	117	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-INT-1040	Builder's clean, Z1	80	16	16				2027-05-20 08:00	2027-05-21 17:00	2027-05-06 08:00	2027-05-07 17:00	2027-05-06 08:00	2027-05-07 17:00	2027-05-06 08:00	2027-05-07 17:00		PT_Normal
+%R	1317	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1100	Make good module joints, Z2	8	0	48		2027-03-30 08:00	2027-04-06 17:00	2027-03-31 08:00	2027-04-07 17:00					2027-03-30 08:00	2027-04-06 17:00		PT_Normal
+%R	1318	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1110	Second-fix M&E connections, Z2	16	0	80		2027-04-07 08:00	2027-04-20 17:00	2027-04-09 08:00	2027-04-22 17:00					2027-04-07 08:00	2027-04-20 17:00		PT_Normal
+%R	1319	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1120	Finishes at joints and floor coverings, Z2	16	0	64		2027-04-21 08:00	2027-04-30 17:00	2027-04-23 08:00	2027-05-05 17:00					2027-04-21 08:00	2027-04-30 17:00		PT_Normal
+%R	1320	2	117	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-INT-1130	Install sanitaryware and TMVs, Z2	16	24	24				2027-05-06 08:00	2027-05-10 17:00	2027-05-04 08:00	2027-05-06 17:00	2027-05-04 08:00	2027-05-06 17:00	2027-05-04 08:00	2027-05-06 17:00		PT_Normal
+%R	1321	2	117	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-INT-1140	Builder's clean, Z2	72	16	16				2027-05-20 08:00	2027-05-21 17:00	2027-05-07 08:00	2027-05-10 17:00	2027-05-07 08:00	2027-05-10 17:00	2027-05-07 08:00	2027-05-10 17:00		PT_Normal
+%R	1322	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1200	Make good module joints, Z3	80	0	48		2027-04-01 08:00	2027-04-08 17:00	2027-04-15 08:00	2027-04-22 17:00					2027-04-01 08:00	2027-04-08 17:00		PT_Normal
+%R	1323	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1210	Second-fix M&E connections, Z3	80	0	80		2027-04-09 08:00	2027-04-22 17:00	2027-04-23 08:00	2027-05-07 17:00					2027-04-09 08:00	2027-04-22 17:00		PT_Normal
+%R	1324	2	117	1	75	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	5-INT-1220	Finishes at joints and floor coverings, Z3	80	16	64		2027-04-23 08:00		2027-05-10 08:00	2027-05-19 17:00	2027-04-23 08:00	2027-05-05 17:00	2027-05-04 08:00	2027-05-05 17:00	2027-04-23 08:00	2027-05-05 17:00		PT_Normal
+%R	1325	2	117	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-INT-1240	Builder's clean, Z3	80	16	16				2027-05-20 08:00	2027-05-21 17:00	2027-05-06 08:00	2027-05-07 17:00	2027-05-06 08:00	2027-05-07 17:00	2027-05-06 08:00	2027-05-07 17:00		PT_Normal
+%R	1326	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1300	Make good module joints, Z4	72	0	48		2027-04-02 08:00	2027-04-09 17:00	2027-04-15 08:00	2027-04-22 17:00					2027-04-02 08:00	2027-04-09 17:00		PT_Normal
+%R	1327	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1310	Second-fix M&E connections, Z4	72	0	80		2027-04-12 08:00	2027-04-23 17:00	2027-04-23 08:00	2027-05-07 17:00					2027-04-12 08:00	2027-04-23 17:00		PT_Normal
+%R	1328	2	117	1	62	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	5-INT-1320	Finishes at joints and floor coverings, Z4	72	24	64		2027-04-26 08:00		2027-05-10 08:00	2027-05-19 17:00	2027-04-26 08:00	2027-05-06 17:00	2027-05-04 08:00	2027-05-06 17:00	2027-04-26 08:00	2027-05-06 17:00		PT_Normal
+%R	1329	2	117	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-INT-1340	Builder's clean, Z4	72	16	16				2027-05-20 08:00	2027-05-21 17:00	2027-05-07 08:00	2027-05-10 17:00	2027-05-07 08:00	2027-05-10 17:00	2027-05-07 08:00	2027-05-10 17:00		PT_Normal
+%R	1330	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1400	Make good module joints, corridor	16	0	48		2027-03-25 08:00	2027-04-05 17:00	2027-03-31 08:00	2027-04-07 17:00					2027-03-25 08:00	2027-04-05 17:00		PT_Normal
+%R	1331	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1410	Second-fix M&E connections, corridor	16	0	80		2027-04-06 08:00	2027-04-19 17:00	2027-04-08 08:00	2027-04-21 17:00					2027-04-06 08:00	2027-04-19 17:00		PT_Normal
+%R	1332	2	117	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INT-1420	Finishes at joints and floor coverings, corridor	104	0	64		2027-04-20 08:00	2027-04-29 17:00	2027-05-10 08:00	2027-05-19 17:00					2027-04-20 08:00	2027-04-29 17:00		PT_Normal
+%R	1333	2	117	1	50	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	5-INT-1440	Builder's clean, corridor	104	8	16		2027-04-30 08:00		2027-05-20 08:00	2027-05-21 17:00	2027-04-30 08:00	2027-05-04 17:00	2027-05-04 08:00	2027-05-04 17:00	2027-04-30 08:00	2027-05-04 17:00		PT_Normal
+%R	1334	2	119	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-EXT-1000	Drainage connections to campus network	504	0	40		2027-02-24 08:00	2027-03-02 17:00	2027-05-27 08:00	2027-06-03 17:00					2027-02-24 08:00	2027-03-02 17:00		PT_Normal
+%R	1335	2	119	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-EXT-1010	Car park and path sub-base	176	0	64		2027-03-30 08:00	2027-04-08 17:00	2027-04-29 08:00	2027-05-11 17:00					2027-03-30 08:00	2027-04-08 17:00		PT_Normal
+%R	1336	2	119	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-EXT-1020	Car park surfacing	176	0	40		2027-04-09 08:00	2027-04-15 17:00	2027-05-12 08:00	2027-05-18 17:00					2027-04-09 08:00	2027-04-15 17:00		PT_Normal
+%R	1337	2	119	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-EXT-1030	Paths and paving	176	0	48		2027-04-13 08:00	2027-04-20 17:00	2027-05-14 08:00	2027-05-21 17:00					2027-04-13 08:00	2027-04-20 17:00		PT_Normal
+%R	1338	2	119	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-EXT-1040	Soft landscaping	176	0	64		2027-04-21 08:00	2027-04-30 17:00	2027-05-24 08:00	2027-06-03 17:00					2027-04-21 08:00	2027-04-30 17:00		PT_Normal
+%R	1339	2	119	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-EXT-1050	Fencing and gates	264	0	40		2027-04-09 08:00	2027-04-15 17:00	2027-05-27 08:00	2027-06-03 17:00					2027-04-09 08:00	2027-04-15 17:00		PT_Normal
+%R	1340	2	119	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-EXT-1060	Line marking and signage	256	0	8		2027-04-16 08:00	2027-04-16 17:00	2027-06-03 08:00	2027-06-03 17:00					2027-04-16 08:00	2027-04-16 17:00		PT_Normal
+%R	1341	2	120	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-COM-1000	LV electrical testing and certification	16	0	32		2027-04-20 08:00	2027-04-23 17:00	2027-04-22 08:00	2027-04-27 17:00					2027-04-20 08:00	2027-04-23 17:00		PT_Normal
+%R	1342	2	120	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-COM-1010	Emergency lighting test (3-hour duration)	168	0	16		2027-04-26 08:00	2027-04-27 17:00	2027-05-26 08:00	2027-05-27 17:00					2027-04-26 08:00	2027-04-27 17:00		PT_Normal
+%R	1343	2	120	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-COM-1020	Fire alarm commissioning	136	0	32		2027-04-26 08:00	2027-04-29 17:00	2027-05-20 08:00	2027-05-25 17:00					2027-04-26 08:00	2027-04-29 17:00		PT_Normal
+%R	1344	2	120	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-COM-1021	Fire alarm cause and effect witness test	144	0	8		2027-04-30 08:00	2027-04-30 17:00	2027-05-27 08:00	2027-05-27 17:00					2027-04-30 08:00	2027-04-30 17:00		PT_Normal
+%R	1345	2	120	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-COM-1030	Nurse call and assistance call commissioning	160	0	24		2027-04-26 08:00	2027-04-28 17:00	2027-05-25 08:00	2027-05-27 17:00					2027-04-26 08:00	2027-04-28 17:00		PT_Normal
+%R	1346	2	120	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-COM-1040	Ventilation commissioning and air balancing	16	0	40		2027-04-26 08:00	2027-04-30 17:00	2027-04-28 08:00	2027-05-05 17:00					2027-04-26 08:00	2027-04-30 17:00		PT_Normal
+%R	1347	2	120	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-COM-1050	Heat pump and heating commissioning	24	0	32		2027-04-26 08:00	2027-04-29 17:00	2027-04-29 08:00	2027-05-05 17:00					2027-04-26 08:00	2027-04-29 17:00		PT_Normal
+%R	1348	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1060	Water system flush and chlorination	16	24	24				2027-05-11 08:00	2027-05-13 17:00	2027-05-07 08:00	2027-05-11 17:00	2027-05-07 08:00	2027-05-11 17:00	2027-05-07 08:00	2027-05-11 17:00		PT_Normal
+%R	1349	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1061	Water sampling and laboratory results	16	80	80				2027-05-14 08:00	2027-05-27 17:00	2027-05-12 08:00	2027-05-25 17:00	2027-05-12 08:00	2027-05-25 17:00	2027-05-12 08:00	2027-05-25 17:00		PT_Normal
+%R	1350	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1070	TMV commissioning and temperature tests	72	24	24				2027-05-25 08:00	2027-05-27 17:00	2027-05-12 08:00	2027-05-14 17:00	2027-05-12 08:00	2027-05-14 17:00	2027-05-12 08:00	2027-05-14 17:00		PT_Normal
+%R	1351	2	120	1	50	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	5-COM-1080	Fire damper drop tests	136	8	16		2027-04-30 08:00		2027-05-26 08:00	2027-05-27 17:00	2027-04-30 08:00	2027-05-04 17:00	2027-05-04 08:00	2027-05-04 17:00	2027-04-30 08:00	2027-05-04 17:00		PT_Normal
+%R	1352	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1090	BMS commissioning	16	64	64				2027-05-06 08:00	2027-05-17 17:00	2027-05-04 08:00	2027-05-13 17:00	2027-05-04 08:00	2027-05-13 17:00	2027-05-04 08:00	2027-05-13 17:00		PT_Normal
+%R	1353	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1100	Point-to-point test of all BMS and metering points	16	40	40				2027-05-11 08:00	2027-05-17 17:00	2027-05-07 08:00	2027-05-13 17:00	2027-05-07 08:00	2027-05-13 17:00	2027-05-07 08:00	2027-05-13 17:00		PT_Normal
+%R	1354	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1110	End-to-end alarm test (TMV over-temperature to CAFM work order)	96	8	8				2027-06-03 08:00	2027-06-03 17:00	2027-05-17 08:00	2027-05-17 17:00	2027-05-17 08:00	2027-05-17 17:00	2027-05-17 08:00	2027-05-17 17:00		PT_Normal
+%R	1355	2	120	2	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1120	14-day data soak test	32	112	112				2027-05-18 08:00	2027-05-31 17:00	2027-05-14 08:00	2027-05-27 17:00	2027-05-14 08:00	2027-05-27 17:00	2027-05-14 08:00	2027-05-27 17:00		PT_Normal
+%R	1356	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1130	Air tightness test	96	8	8				2027-05-27 08:00	2027-05-27 17:00	2027-05-11 08:00	2027-05-11 17:00	2027-05-11 08:00	2027-05-11 17:00	2027-05-11 08:00	2027-05-11 17:00		PT_Normal
+%R	1357	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1140	Acoustic testing (consulting rooms)	120	16	16				2027-06-02 08:00	2027-06-03 17:00	2027-05-11 08:00	2027-05-12 17:00	2027-05-11 08:00	2027-05-12 17:00	2027-05-11 08:00	2027-05-12 17:00		PT_Normal
+%R	1358	2	120	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	5-COM-1150	Building control completion inspection	96	8	8				2027-05-28 08:00	2027-05-28 17:00	2027-05-12 08:00	2027-05-12 17:00	2027-05-12 08:00	2027-05-12 17:00	2027-05-12 08:00	2027-05-12 17:00		PT_Normal
+%R	1359	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1000	Develop factory inspection and test records	200	0	24		2027-03-03 08:00	2027-03-05 17:00	2027-04-09 08:00	2027-04-13 17:00					2027-03-03 08:00	2027-03-05 17:00		PT_Normal
+%R	1360	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1001	Check and approve factory inspection and test records	200	0	16		2027-03-08 08:00	2027-03-09 17:00	2027-04-14 08:00	2027-04-15 17:00					2027-03-08 08:00	2027-03-09 17:00		PT_Normal
+%R	1361	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1005	Issue factory inspection and test records	200	0	8		2027-03-10 08:00	2027-03-10 17:00	2027-04-16 08:00	2027-04-16 17:00					2027-03-10 08:00	2027-03-10 17:00		PT_Normal
+%R	1362	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1100	Develop commissioning plan	32	0	64		2027-03-25 08:00	2027-04-07 17:00	2027-04-02 08:00	2027-04-13 17:00					2027-03-25 08:00	2027-04-07 17:00		PT_Normal
+%R	1363	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1101	Check and approve commissioning plan	32	0	16		2027-04-08 08:00	2027-04-09 17:00	2027-04-14 08:00	2027-04-15 17:00					2027-04-08 08:00	2027-04-09 17:00		PT_Normal
+%R	1364	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1105	Issue commissioning plan	32	0	8		2027-04-12 08:00	2027-04-12 17:00	2027-04-16 08:00	2027-04-16 17:00					2027-04-12 08:00	2027-04-12 17:00		PT_Normal
+%R	1365	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1200	Develop points schedule (draft)	8	0	48		2027-04-05 08:00	2027-04-12 17:00	2027-04-06 08:00	2027-04-13 17:00					2027-04-05 08:00	2027-04-12 17:00		PT_Normal
+%R	1366	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1201	Check and approve points schedule (draft)	8	0	16		2027-04-13 08:00	2027-04-14 17:00	2027-04-14 08:00	2027-04-15 17:00					2027-04-13 08:00	2027-04-14 17:00		PT_Normal
+%R	1367	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1205	Issue points schedule (draft)	8	0	8		2027-04-15 08:00	2027-04-15 17:00	2027-04-16 08:00	2027-04-16 17:00					2027-04-15 08:00	2027-04-15 17:00		PT_Normal
+%R	1368	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1300	Develop COBie (draft)	8	0	72		2027-03-31 08:00	2027-04-12 17:00	2027-04-01 08:00	2027-04-13 17:00					2027-03-31 08:00	2027-04-12 17:00		PT_Normal
+%R	1369	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1301	Check and approve COBie (draft)	8	0	16		2027-04-13 08:00	2027-04-14 17:00	2027-04-14 08:00	2027-04-15 17:00					2027-04-13 08:00	2027-04-14 17:00		PT_Normal
+%R	1370	2	121	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	5-INF-1305	Issue COBie (draft)	8	0	8		2027-04-15 08:00	2027-04-15 17:00	2027-04-16 08:00	2027-04-16 17:00					2027-04-15 08:00	2027-04-15 17:00		PT_Normal
+%R	1371	2	101	1	100	CP_Drtn	TT_FinMile	DT_FixedDrtn	TK_Complete	M-203-IE2	M-203-IE2 Pre-handover information (IE2)	0	0	0	2027-04-16 17:00	2027-04-16 17:00	2027-04-16 17:00	2027-04-16 17:00	2027-04-16 17:00					2027-04-16 17:00	2027-04-16 17:00	CS_MEO	PT_Normal
+%R	1372	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1000	Develop points schedule (final)	72	24	24				2027-05-27 08:00	2027-06-01 17:00	2027-05-14 08:00	2027-05-18 17:00	2027-05-14 08:00	2027-05-18 17:00	2027-05-14 08:00	2027-05-18 17:00		PT_Normal
+%R	1373	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1001	Check and approve points schedule (final)	72	16	16				2027-06-02 08:00	2027-06-03 17:00	2027-05-19 08:00	2027-05-20 17:00	2027-05-19 08:00	2027-05-20 17:00	2027-05-19 08:00	2027-05-20 17:00		PT_Normal
+%R	1374	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1005	Issue points schedule (final)	72	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-21 08:00	2027-05-21 17:00	2027-05-21 08:00	2027-05-21 17:00	2027-05-21 08:00	2027-05-21 17:00		PT_Normal
+%R	1375	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1100	Develop data soak test report	8	16	16				2027-06-01 08:00	2027-06-02 17:00	2027-05-28 08:00	2027-06-01 17:00	2027-05-28 08:00	2027-06-01 17:00	2027-05-28 08:00	2027-06-01 17:00		PT_Normal
+%R	1376	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1101	Check and approve data soak test report	8	8	8				2027-06-03 08:00	2027-06-03 17:00	2027-06-02 08:00	2027-06-02 17:00	2027-06-02 08:00	2027-06-02 17:00	2027-06-02 08:00	2027-06-02 17:00		PT_Normal
+%R	1377	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1105	Issue data soak test report	8	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-06-03 08:00	2027-06-03 17:00	2027-06-03 08:00	2027-06-03 17:00	2027-06-03 08:00	2027-06-03 17:00		PT_Normal
+%R	1378	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1200	Develop network and device schedule	72	24	24				2027-05-27 08:00	2027-06-01 17:00	2027-05-14 08:00	2027-05-18 17:00	2027-05-14 08:00	2027-05-18 17:00	2027-05-14 08:00	2027-05-18 17:00		PT_Normal
+%R	1379	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1201	Check and approve network and device schedule	72	16	16				2027-06-02 08:00	2027-06-03 17:00	2027-05-19 08:00	2027-05-20 17:00	2027-05-19 08:00	2027-05-20 17:00	2027-05-19 08:00	2027-05-20 17:00		PT_Normal
+%R	1380	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1205	Issue network and device schedule	72	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-21 08:00	2027-05-21 17:00	2027-05-21 08:00	2027-05-21 17:00	2027-05-21 08:00	2027-05-21 17:00		PT_Normal
+%R	1381	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1300	Develop TMV commissioning report	16	16	16				2027-05-28 08:00	2027-06-01 17:00	2027-05-26 08:00	2027-05-27 17:00	2027-05-26 08:00	2027-05-27 17:00	2027-05-26 08:00	2027-05-27 17:00		PT_Normal
+%R	1382	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1301	Check and approve TMV commissioning report	16	16	16				2027-06-02 08:00	2027-06-03 17:00	2027-05-28 08:00	2027-06-01 17:00	2027-05-28 08:00	2027-06-01 17:00	2027-05-28 08:00	2027-06-01 17:00		PT_Normal
+%R	1383	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1305	Issue TMV commissioning report	16	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-06-02 08:00	2027-06-02 17:00	2027-06-02 08:00	2027-06-02 17:00	2027-06-02 08:00	2027-06-02 17:00		PT_Normal
+%R	1384	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1400	Develop fire damper drop-test report	136	16	16				2027-05-28 08:00	2027-06-01 17:00	2027-05-05 08:00	2027-05-06 17:00	2027-05-05 08:00	2027-05-06 17:00	2027-05-05 08:00	2027-05-06 17:00		PT_Normal
+%R	1385	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1401	Check and approve fire damper drop-test report	136	16	16				2027-06-02 08:00	2027-06-03 17:00	2027-05-07 08:00	2027-05-10 17:00	2027-05-07 08:00	2027-05-10 17:00	2027-05-07 08:00	2027-05-10 17:00		PT_Normal
+%R	1386	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1405	Issue fire damper drop-test report	136	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-11 08:00	2027-05-11 17:00	2027-05-11 08:00	2027-05-11 17:00	2027-05-11 08:00	2027-05-11 17:00		PT_Normal
+%R	1387	2	123	1	100	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Complete	6-INF-1500	Develop electrical and emergency lighting test certificates	168	0	16		2027-04-28 08:00	2027-04-29 17:00	2027-05-28 08:00	2027-06-01 17:00					2027-04-28 08:00	2027-04-29 17:00		PT_Normal
+%R	1388	2	123	1	50	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	6-INF-1501	Check and approve electrical and emergency lighting test certificates	168	8	16		2027-04-30 08:00		2027-06-02 08:00	2027-06-03 17:00	2027-04-30 08:00	2027-05-04 17:00	2027-05-04 08:00	2027-05-04 17:00	2027-04-30 08:00	2027-05-04 17:00		PT_Normal
+%R	1389	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1505	Issue electrical and emergency lighting test certificates	168	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-05 08:00	2027-05-05 17:00	2027-05-05 08:00	2027-05-05 17:00	2027-05-05 08:00	2027-05-05 17:00		PT_Normal
+%R	1390	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1600	Develop COBie (handover)	80	80	80				2027-05-18 08:00	2027-06-01 17:00	2027-05-04 08:00	2027-05-17 17:00	2027-05-04 08:00	2027-05-17 17:00	2027-05-04 08:00	2027-05-17 17:00		PT_Normal
+%R	1391	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1601	Check and approve COBie (handover)	80	16	16				2027-06-02 08:00	2027-06-03 17:00	2027-05-18 08:00	2027-05-19 17:00	2027-05-18 08:00	2027-05-19 17:00	2027-05-18 08:00	2027-05-19 17:00		PT_Normal
+%R	1392	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1605	Issue COBie (handover)	80	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-20 08:00	2027-05-20 17:00	2027-05-20 08:00	2027-05-20 17:00	2027-05-20 08:00	2027-05-20 17:00		PT_Normal
+%R	1393	2	123	1	60	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	6-INF-1700	Develop as-constructed federated model	112	48	120		2027-04-20 08:00		2027-05-11 08:00	2027-06-01 17:00	2027-04-20 08:00	2027-05-11 17:00	2027-05-04 08:00	2027-05-11 17:00	2027-04-20 08:00	2027-05-11 17:00		PT_Normal
+%R	1394	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1701	Check and approve as-constructed federated model	112	16	16				2027-06-02 08:00	2027-06-03 17:00	2027-05-12 08:00	2027-05-13 17:00	2027-05-12 08:00	2027-05-13 17:00	2027-05-12 08:00	2027-05-13 17:00		PT_Normal
+%R	1395	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1705	Issue as-constructed federated model	112	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-14 08:00	2027-05-14 17:00	2027-05-14 08:00	2027-05-14 17:00	2027-05-14 08:00	2027-05-14 17:00		PT_Normal
+%R	1396	2	123	1	45	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	6-INF-1800	Develop O&M manual	64	88	160		2027-04-20 08:00		2027-04-30 08:00	2027-05-28 17:00	2027-04-20 08:00	2027-05-18 17:00	2027-05-04 08:00	2027-05-18 17:00	2027-04-20 08:00	2027-05-18 17:00		PT_Normal
+%R	1397	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1801	Check and approve O&M manual	64	24	24				2027-06-01 08:00	2027-06-03 17:00	2027-05-19 08:00	2027-05-21 17:00	2027-05-19 08:00	2027-05-21 17:00	2027-05-19 08:00	2027-05-21 17:00		PT_Normal
+%R	1398	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1805	Issue O&M manual	64	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-24 08:00	2027-05-24 17:00	2027-05-24 08:00	2027-05-24 17:00	2027-05-24 08:00	2027-05-24 17:00		PT_Normal
+%R	1399	2	123	1	50	CP_Drtn	TT_Task	DT_FixedDrtn	TK_Active	6-INF-1900	Develop health and safety file	88	72	144		2027-04-20 08:00		2027-05-06 08:00	2027-06-01 17:00	2027-04-20 08:00	2027-05-14 17:00	2027-05-04 08:00	2027-05-14 17:00	2027-04-20 08:00	2027-05-14 17:00		PT_Normal
+%R	1400	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1901	Check and approve health and safety file	88	16	16				2027-06-02 08:00	2027-06-03 17:00	2027-05-17 08:00	2027-05-18 17:00	2027-05-17 08:00	2027-05-18 17:00	2027-05-17 08:00	2027-05-18 17:00		PT_Normal
+%R	1401	2	123	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-INF-1905	Issue health and safety file	88	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-19 08:00	2027-05-19 17:00	2027-05-19 08:00	2027-05-19 17:00	2027-05-19 08:00	2027-05-19 17:00		PT_Normal
+%R	1402	2	124	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-HND-1000	Client and FM training	80	40	40				2027-05-28 08:00	2027-06-04 17:00	2027-05-14 08:00	2027-05-20 17:00	2027-05-14 08:00	2027-05-20 17:00	2027-05-14 08:00	2027-05-20 17:00		PT_Normal
+%R	1403	2	124	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-HND-1010	Pre-completion snagging inspection	72	24	24				2027-05-24 08:00	2027-05-26 17:00	2027-05-11 08:00	2027-05-13 17:00	2027-05-11 08:00	2027-05-13 17:00	2027-05-11 08:00	2027-05-13 17:00		PT_Normal
+%R	1404	2	124	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-HND-1020	Snag rectification	72	40	40				2027-05-27 08:00	2027-06-03 17:00	2027-05-14 08:00	2027-05-20 17:00	2027-05-14 08:00	2027-05-20 17:00	2027-05-14 08:00	2027-05-20 17:00		PT_Normal
+%R	1405	2	124	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-HND-1030	Building control completion certificate	96	24	24				2027-06-01 08:00	2027-06-03 17:00	2027-05-13 08:00	2027-05-17 17:00	2027-05-13 08:00	2027-05-17 17:00	2027-05-13 08:00	2027-05-17 17:00		PT_Normal
+%R	1406	2	124	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-HND-1040	Practical completion inspection	72	8	8				2027-06-04 08:00	2027-06-04 17:00	2027-05-21 08:00	2027-05-21 17:00	2027-05-21 08:00	2027-05-21 17:00	2027-05-21 08:00	2027-05-21 17:00		PT_Normal
+%R	1407	2	101	1	0	CP_Drtn	TT_FinMile	DT_FixedDrtn	TK_NotStart	M-203-PC	M-203-PC Practical completion and handover information (IE3)	0	0	0	2027-06-04 17:00			2027-06-04 17:00	2027-06-04 17:00	2027-06-04 17:00	2027-06-04 17:00	2027-06-04 17:00	2027-06-04 17:00	2027-06-04 17:00	2027-06-04 17:00	CS_MEO	PT_Normal
+%R	1408	2	124	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-HND-1050	Handover of keys, access cards and BMS credentials (to IT/OT security)	152	8	8				2027-07-02 08:00	2027-07-02 17:00	2027-06-07 08:00	2027-06-07 17:00	2027-06-07 08:00	2027-06-07 17:00	2027-06-07 08:00	2027-06-07 17:00		PT_Normal
+%R	1409	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1000	Develop COBie (record)	72	64	64				2027-06-18 08:00	2027-06-29 17:00	2027-06-07 08:00	2027-06-16 17:00	2027-06-07 08:00	2027-06-16 17:00	2027-06-07 08:00	2027-06-16 17:00		PT_Normal
+%R	1410	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1001	Check and approve COBie (record)	72	16	16				2027-06-30 08:00	2027-07-01 17:00	2027-06-17 08:00	2027-06-18 17:00	2027-06-17 08:00	2027-06-18 17:00	2027-06-17 08:00	2027-06-18 17:00		PT_Normal
+%R	1411	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1005	Issue COBie (record)	72	8	8				2027-07-02 08:00	2027-07-02 17:00	2027-06-21 08:00	2027-06-21 17:00	2027-06-21 08:00	2027-06-21 17:00	2027-06-21 08:00	2027-06-21 17:00		PT_Normal
+%R	1412	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1100	Develop as-constructed federated model (record)	56	80	80				2027-06-16 08:00	2027-06-29 17:00	2027-06-07 08:00	2027-06-18 17:00	2027-06-07 08:00	2027-06-18 17:00	2027-06-07 08:00	2027-06-18 17:00		PT_Normal
+%R	1413	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1101	Check and approve as-constructed federated model (record)	56	16	16				2027-06-30 08:00	2027-07-01 17:00	2027-06-21 08:00	2027-06-22 17:00	2027-06-21 08:00	2027-06-22 17:00	2027-06-21 08:00	2027-06-22 17:00		PT_Normal
+%R	1414	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1105	Issue as-constructed federated model (record)	56	8	8				2027-07-02 08:00	2027-07-02 17:00	2027-06-23 08:00	2027-06-23 17:00	2027-06-23 08:00	2027-06-23 17:00	2027-06-23 08:00	2027-06-23 17:00		PT_Normal
+%R	1415	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1200	Develop O&M manual (record)	72	64	64				2027-06-18 08:00	2027-06-29 17:00	2027-06-07 08:00	2027-06-16 17:00	2027-06-07 08:00	2027-06-16 17:00	2027-06-07 08:00	2027-06-16 17:00		PT_Normal
+%R	1416	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1201	Check and approve O&M manual (record)	72	16	16				2027-06-30 08:00	2027-07-01 17:00	2027-06-17 08:00	2027-06-18 17:00	2027-06-17 08:00	2027-06-18 17:00	2027-06-17 08:00	2027-06-18 17:00		PT_Normal
+%R	1417	2	125	1	0	CP_Drtn	TT_Task	DT_FixedDrtn	TK_NotStart	6-REC-1205	Issue O&M manual (record)	72	8	8				2027-07-02 08:00	2027-07-02 17:00	2027-06-21 08:00	2027-06-21 17:00	2027-06-21 08:00	2027-06-21 17:00	2027-06-21 08:00	2027-06-21 17:00		PT_Normal
+%R	1418	2	101	1	0	CP_Drtn	TT_FinMile	DT_FixedDrtn	TK_NotStart	M-203-REC	M-203-REC Record information (IE4)	0	0	0	2027-07-02 17:00			2027-07-02 17:00	2027-07-02 17:00	2027-07-02 17:00	2027-07-02 17:00	2027-07-02 17:00	2027-07-02 17:00	2027-07-02 17:00	2027-07-02 17:00	CS_MEO	PT_Normal
+%T	TASKPRED
+%F	task_pred_id	task_id	pred_task_id	proj_id	pred_proj_id	pred_type	lag_hr_cnt
+%R	1	1001	1000	2	2	PR_FS	0
+%R	2	1002	1000	2	2	PR_FS	0
+%R	3	1003	1000	2	2	PR_FS	0
+%R	4	1004	1001	2	2	PR_FS	0
+%R	5	1005	1004	2	2	PR_FS	0
+%R	6	1006	1005	2	2	PR_FS	0
+%R	7	1007	1004	2	2	PR_SS	32
+%R	8	1008	1007	2	2	PR_FS	0
+%R	9	1009	1008	2	2	PR_FS	0
+%R	10	1010	1009	2	2	PR_FS	0
+%R	11	1011	1004	2	2	PR_SS	40
+%R	12	1012	1011	2	2	PR_FS	0
+%R	13	1013	1012	2	2	PR_FS	0
+%R	14	1014	1013	2	2	PR_FS	0
+%R	15	1015	1004	2	2	PR_SS	48
+%R	16	1016	1015	2	2	PR_FS	0
+%R	17	1017	1016	2	2	PR_FS	0
+%R	18	1018	1017	2	2	PR_FS	0
+%R	19	1019	1004	2	2	PR_SS	56
+%R	20	1020	1019	2	2	PR_FS	0
+%R	21	1021	1020	2	2	PR_FS	0
+%R	22	1022	1021	2	2	PR_FS	0
+%R	23	1023	1004	2	2	PR_SS	48
+%R	24	1024	1023	2	2	PR_FS	0
+%R	25	1025	1024	2	2	PR_FS	0
+%R	26	1026	1004	2	2	PR_SS	56
+%R	27	1027	1026	2	2	PR_FS	0
+%R	28	1028	1027	2	2	PR_FS	0
+%R	29	1029	1004	2	2	PR_SS	64
+%R	30	1030	1029	2	2	PR_FS	0
+%R	31	1031	1030	2	2	PR_FS	0
+%R	32	1032	1011	2	2	PR_SS	24
+%R	33	1033	1032	2	2	PR_FS	0
+%R	34	1034	1033	2	2	PR_FS	0
+%R	35	1035	1004	2	2	PR_SS	64
+%R	36	1036	1035	2	2	PR_FS	0
+%R	37	1037	1036	2	2	PR_FS	0
+%R	38	1038	1001	2	2	PR_SS	32
+%R	39	1039	1038	2	2	PR_FS	0
+%R	40	1040	1039	2	2	PR_FS	0
+%R	41	1041	1004	2	2	PR_SS	24
+%R	42	1042	1041	2	2	PR_FS	0
+%R	43	1043	1042	2	2	PR_FS	0
+%R	44	1044	1003	2	2	PR_FS	0
+%R	45	1045	1044	2	2	PR_FS	0
+%R	46	1046	1045	2	2	PR_FS	0
+%R	47	1047	1004	2	2	PR_SS	24
+%R	48	1047	1003	2	2	PR_FS	0
+%R	49	1048	1047	2	2	PR_FS	0
+%R	50	1049	1048	2	2	PR_FS	0
+%R	51	1050	1047	2	2	PR_SS	24
+%R	52	1051	1050	2	2	PR_FS	0
+%R	53	1052	1051	2	2	PR_FS	0
+%R	54	1053	1047	2	2	PR_SS	16
+%R	55	1054	1053	2	2	PR_FS	0
+%R	56	1055	1054	2	2	PR_FS	0
+%R	57	1056	1003	2	2	PR_FS	0
+%R	58	1057	1056	2	2	PR_FS	0
+%R	59	1058	1057	2	2	PR_FS	0
+%R	60	1059	1056	2	2	PR_SS	16
+%R	61	1060	1059	2	2	PR_FS	0
+%R	62	1061	1060	2	2	PR_FS	0
+%R	63	1062	1001	2	2	PR_FS	0
+%R	64	1063	1062	2	2	PR_FS	0
+%R	65	1064	1062	2	2	PR_FS	0
+%R	66	1064	1004	2	2	PR_SS	24
+%R	67	1065	1064	2	2	PR_FS	0
+%R	68	1066	1065	2	2	PR_FS	0
+%R	69	1067	1062	2	2	PR_FS	0
+%R	70	1067	1004	2	2	PR_SS	24
+%R	71	1068	1067	2	2	PR_FS	0
+%R	72	1069	1068	2	2	PR_FS	0
+%R	73	1070	1062	2	2	PR_FS	0
+%R	74	1070	1004	2	2	PR_SS	24
+%R	75	1071	1070	2	2	PR_FS	0
+%R	76	1072	1071	2	2	PR_FS	0
+%R	77	1073	1063	2	2	PR_FS	0
+%R	78	1074	1073	2	2	PR_FS	0
+%R	79	1075	1074	2	2	PR_FS	0
+%R	80	1076	1063	2	2	PR_FS	0
+%R	81	1077	1076	2	2	PR_FS	0
+%R	82	1078	1077	2	2	PR_FS	0
+%R	83	1079	1063	2	2	PR_FS	0
+%R	84	1080	1079	2	2	PR_FS	0
+%R	85	1081	1080	2	2	PR_FS	0
+%R	86	1082	1063	2	2	PR_FS	0
+%R	87	1083	1082	2	2	PR_FS	0
+%R	88	1084	1083	2	2	PR_FS	0
+%R	89	1085	1084	2	2	PR_FS	0
+%R	90	1086	1062	2	2	PR_SS	16
+%R	91	1087	1086	2	2	PR_FS	0
+%R	92	1088	1087	2	2	PR_FS	0
+%R	93	1089	1004	2	2	PR_SS	16
+%R	94	1090	1089	2	2	PR_FS	0
+%R	95	1091	1090	2	2	PR_FS	0
+%R	96	1092	1091	2	2	PR_FS	0
+%R	97	1093	1089	2	2	PR_FS	0
+%R	98	1094	1093	2	2	PR_FS	0
+%R	99	1095	1094	2	2	PR_FS	0
+%R	100	1096	1089	2	2	PR_FS	0
+%R	101	1097	1096	2	2	PR_FS	0
+%R	102	1098	1097	2	2	PR_FS	0
+%R	103	1099	1092	2	2	PR_FS	0
+%R	104	1099	1095	2	2	PR_FS	0
+%R	105	1099	1098	2	2	PR_FS	0
+%R	106	1099	1052	2	2	PR_FS	0
+%R	107	1100	1000	2	2	PR_FS	0
+%R	108	1101	1100	2	2	PR_FS	0
+%R	109	1102	1101	2	2	PR_FS	0
+%R	110	1103	1000	2	2	PR_FS	0
+%R	111	1104	1103	2	2	PR_FS	0
+%R	112	1105	1104	2	2	PR_FS	0
+%R	113	1106	1004	2	2	PR_SS	56
+%R	114	1106	1002	2	2	PR_FS	0
+%R	115	1107	1106	2	2	PR_FS	0
+%R	116	1108	1107	2	2	PR_FS	0
+%R	117	1109	1108	2	2	PR_FS	0
+%R	118	1110	1004	2	2	PR_SS	96
+%R	119	1110	1109	2	2	PR_FS	0
+%R	120	1111	1110	2	2	PR_FS	0
+%R	121	1112	1111	2	2	PR_FS	0
+%R	122	1113	1112	2	2	PR_FS	0
+%R	123	1114	1004	2	2	PR_SS	136
+%R	124	1114	1113	2	2	PR_FS	0
+%R	125	1115	1114	2	2	PR_FS	0
+%R	126	1116	1115	2	2	PR_FS	0
+%R	127	1117	1116	2	2	PR_FS	0
+%R	128	1118	1117	2	2	PR_FS	0
+%R	129	1118	1006	2	2	PR_FS	0
+%R	130	1118	1049	2	2	PR_FS	0
+%R	131	1118	1066	2	2	PR_FS	0
+%R	132	1118	1069	2	2	PR_FS	0
+%R	133	1118	1072	2	2	PR_FS	0
+%R	134	1119	1118	2	2	PR_FS	0
+%R	135	1120	1119	2	2	PR_FS	0
+%R	136	1121	1117	2	2	PR_FS	0
+%R	137	1122	1121	2	2	PR_FS	0
+%R	138	1123	1122	2	2	PR_FS	0
+%R	139	1124	1006	2	2	PR_FS	0
+%R	140	1124	1043	2	2	PR_FS	0
+%R	141	1124	1055	2	2	PR_FS	0
+%R	142	1125	1124	2	2	PR_FS	0
+%R	143	1126	1125	2	2	PR_FS	0
+%R	144	1127	1028	2	2	PR_FS	0
+%R	145	1128	1127	2	2	PR_FS	0
+%R	146	1129	1061	2	2	PR_FS	0
+%R	147	1130	1129	2	2	PR_FS	0
+%R	148	1131	1046	2	2	PR_FS	0
+%R	149	1132	1131	2	2	PR_FS	0
+%R	150	1133	1134	2	2	PR_FS	0
+%R	151	1134	1006	2	2	PR_FS	0
+%R	152	1134	1010	2	2	PR_FS	0
+%R	153	1134	1014	2	2	PR_FS	0
+%R	154	1134	1018	2	2	PR_FS	0
+%R	155	1134	1022	2	2	PR_FS	0
+%R	156	1134	1025	2	2	PR_FS	0
+%R	157	1134	1028	2	2	PR_FS	0
+%R	158	1134	1031	2	2	PR_FS	0
+%R	159	1134	1034	2	2	PR_FS	0
+%R	160	1134	1037	2	2	PR_FS	0
+%R	161	1134	1040	2	2	PR_FS	0
+%R	162	1134	1043	2	2	PR_FS	0
+%R	163	1134	1046	2	2	PR_FS	0
+%R	164	1134	1049	2	2	PR_FS	0
+%R	165	1134	1052	2	2	PR_FS	0
+%R	166	1134	1055	2	2	PR_FS	0
+%R	167	1134	1058	2	2	PR_FS	0
+%R	168	1134	1061	2	2	PR_FS	0
+%R	169	1134	1066	2	2	PR_FS	0
+%R	170	1134	1069	2	2	PR_FS	0
+%R	171	1134	1072	2	2	PR_FS	0
+%R	172	1134	1075	2	2	PR_FS	0
+%R	173	1134	1078	2	2	PR_FS	0
+%R	174	1134	1081	2	2	PR_FS	0
+%R	175	1134	1085	2	2	PR_FS	0
+%R	176	1134	1088	2	2	PR_FS	0
+%R	177	1134	1092	2	2	PR_FS	0
+%R	178	1134	1095	2	2	PR_FS	0
+%R	179	1134	1098	2	2	PR_FS	0
+%R	180	1134	1102	2	2	PR_FS	0
+%R	181	1134	1105	2	2	PR_FS	0
+%R	182	1134	1120	2	2	PR_FS	0
+%R	183	1134	1123	2	2	PR_FS	0
+%R	184	1135	1075	2	2	PR_FS	0
+%R	185	1136	1135	2	2	PR_FS	0
+%R	186	1137	1136	2	2	PR_FS	0
+%R	187	1138	1137	2	2	PR_FS	0
+%R	188	1139	1075	2	2	PR_FS	0
+%R	189	1140	1139	2	2	PR_FS	0
+%R	190	1141	1140	2	2	PR_FS	0
+%R	191	1142	1141	2	2	PR_FS	0
+%R	192	1143	1078	2	2	PR_FS	0
+%R	193	1144	1143	2	2	PR_FS	0
+%R	194	1145	1144	2	2	PR_FS	0
+%R	195	1146	1145	2	2	PR_FS	0
+%R	196	1147	1085	2	2	PR_FS	0
+%R	197	1148	1147	2	2	PR_FS	0
+%R	198	1149	1148	2	2	PR_FS	0
+%R	199	1150	1149	2	2	PR_FS	0
+%R	200	1151	1088	2	2	PR_FS	0
+%R	201	1152	1151	2	2	PR_FS	0
+%R	202	1153	1152	2	2	PR_FS	0
+%R	203	1154	1153	2	2	PR_FS	0
+%R	204	1155	1088	2	2	PR_FS	0
+%R	205	1156	1155	2	2	PR_FS	0
+%R	206	1157	1156	2	2	PR_FS	0
+%R	207	1158	1157	2	2	PR_FS	0
+%R	208	1159	1088	2	2	PR_FS	0
+%R	209	1160	1159	2	2	PR_FS	0
+%R	210	1161	1160	2	2	PR_FS	0
+%R	211	1162	1161	2	2	PR_FS	0
+%R	212	1163	1088	2	2	PR_FS	0
+%R	213	1164	1163	2	2	PR_FS	0
+%R	214	1165	1164	2	2	PR_FS	0
+%R	215	1166	1165	2	2	PR_FS	0
+%R	216	1167	1081	2	2	PR_FS	0
+%R	217	1168	1167	2	2	PR_FS	0
+%R	218	1169	1168	2	2	PR_FS	0
+%R	219	1170	1169	2	2	PR_FS	0
+%R	220	1171	1040	2	2	PR_FS	0
+%R	221	1172	1171	2	2	PR_FS	0
+%R	222	1173	1172	2	2	PR_FS	0
+%R	223	1174	1173	2	2	PR_FS	0
+%R	224	1175	1040	2	2	PR_FS	0
+%R	225	1176	1175	2	2	PR_FS	0
+%R	226	1177	1176	2	2	PR_FS	0
+%R	227	1178	1177	2	2	PR_FS	0
+%R	228	1179	1040	2	2	PR_FS	0
+%R	229	1180	1179	2	2	PR_FS	0
+%R	230	1181	1180	2	2	PR_FS	0
+%R	231	1182	1181	2	2	PR_FS	0
+%R	232	1183	1046	2	2	PR_FS	0
+%R	233	1184	1183	2	2	PR_FS	0
+%R	234	1185	1184	2	2	PR_FS	0
+%R	235	1186	1185	2	2	PR_FS	0
+%R	236	1187	1099	2	2	PR_FS	0
+%R	237	1188	1099	2	2	PR_FS	0
+%R	238	1188	1088	2	2	PR_FS	0
+%R	239	1189	1187	2	2	PR_FS	0
+%R	240	1190	1189	2	2	PR_FS	0
+%R	241	1191	1190	2	2	PR_FS	0
+%R	242	1191	1188	2	2	PR_FS	0
+%R	243	1192	1191	2	2	PR_FS	0
+%R	244	1193	1187	2	2	PR_FS	0
+%R	245	1193	1189	2	2	PR_SS	16
+%R	246	1194	1193	2	2	PR_FS	0
+%R	247	1194	1190	2	2	PR_SS	16
+%R	248	1195	1194	2	2	PR_FS	0
+%R	249	1195	1188	2	2	PR_FS	0
+%R	250	1195	1191	2	2	PR_SS	16
+%R	251	1196	1195	2	2	PR_FS	0
+%R	252	1196	1192	2	2	PR_SS	16
+%R	253	1197	1187	2	2	PR_FS	0
+%R	254	1197	1193	2	2	PR_SS	16
+%R	255	1198	1197	2	2	PR_FS	0
+%R	256	1198	1194	2	2	PR_SS	16
+%R	257	1199	1198	2	2	PR_FS	0
+%R	258	1199	1188	2	2	PR_FS	0
+%R	259	1199	1195	2	2	PR_SS	16
+%R	260	1200	1199	2	2	PR_FS	0
+%R	261	1200	1196	2	2	PR_SS	16
+%R	262	1201	1187	2	2	PR_FS	0
+%R	263	1201	1197	2	2	PR_SS	16
+%R	264	1202	1201	2	2	PR_FS	0
+%R	265	1202	1198	2	2	PR_SS	16
+%R	266	1203	1202	2	2	PR_FS	0
+%R	267	1203	1188	2	2	PR_FS	0
+%R	268	1203	1199	2	2	PR_SS	16
+%R	269	1204	1203	2	2	PR_FS	0
+%R	270	1204	1200	2	2	PR_SS	16
+%R	271	1205	1187	2	2	PR_FS	0
+%R	272	1205	1201	2	2	PR_SS	16
+%R	273	1206	1205	2	2	PR_FS	0
+%R	274	1206	1202	2	2	PR_SS	16
+%R	275	1207	1206	2	2	PR_FS	0
+%R	276	1207	1188	2	2	PR_FS	0
+%R	277	1207	1203	2	2	PR_SS	16
+%R	278	1208	1207	2	2	PR_FS	0
+%R	279	1208	1204	2	2	PR_SS	16
+%R	280	1209	1187	2	2	PR_FS	0
+%R	281	1209	1205	2	2	PR_SS	16
+%R	282	1210	1209	2	2	PR_FS	0
+%R	283	1210	1206	2	2	PR_SS	16
+%R	284	1211	1210	2	2	PR_FS	0
+%R	285	1211	1188	2	2	PR_FS	0
+%R	286	1211	1207	2	2	PR_SS	16
+%R	287	1212	1211	2	2	PR_FS	0
+%R	288	1212	1208	2	2	PR_SS	16
+%R	289	1213	1187	2	2	PR_FS	0
+%R	290	1213	1209	2	2	PR_SS	16
+%R	291	1214	1213	2	2	PR_FS	0
+%R	292	1214	1210	2	2	PR_SS	16
+%R	293	1215	1214	2	2	PR_FS	0
+%R	294	1215	1188	2	2	PR_FS	0
+%R	295	1215	1211	2	2	PR_SS	16
+%R	296	1216	1215	2	2	PR_FS	0
+%R	297	1216	1212	2	2	PR_SS	16
+%R	298	1217	1187	2	2	PR_FS	0
+%R	299	1217	1213	2	2	PR_SS	16
+%R	300	1218	1217	2	2	PR_FS	0
+%R	301	1218	1214	2	2	PR_SS	16
+%R	302	1219	1218	2	2	PR_FS	0
+%R	303	1219	1188	2	2	PR_FS	0
+%R	304	1219	1215	2	2	PR_SS	16
+%R	305	1220	1219	2	2	PR_FS	0
+%R	306	1220	1216	2	2	PR_SS	16
+%R	307	1221	1187	2	2	PR_FS	0
+%R	308	1221	1217	2	2	PR_SS	16
+%R	309	1222	1221	2	2	PR_FS	0
+%R	310	1222	1218	2	2	PR_SS	16
+%R	311	1223	1222	2	2	PR_FS	0
+%R	312	1223	1188	2	2	PR_FS	0
+%R	313	1223	1219	2	2	PR_SS	16
+%R	314	1224	1223	2	2	PR_FS	0
+%R	315	1224	1220	2	2	PR_SS	16
+%R	316	1225	1187	2	2	PR_FS	0
+%R	317	1225	1221	2	2	PR_SS	16
+%R	318	1226	1225	2	2	PR_FS	0
+%R	319	1226	1222	2	2	PR_SS	16
+%R	320	1227	1226	2	2	PR_FS	0
+%R	321	1227	1188	2	2	PR_FS	0
+%R	322	1227	1223	2	2	PR_SS	16
+%R	323	1228	1227	2	2	PR_FS	0
+%R	324	1228	1224	2	2	PR_SS	16
+%R	325	1229	1187	2	2	PR_FS	0
+%R	326	1229	1225	2	2	PR_SS	16
+%R	327	1230	1229	2	2	PR_FS	0
+%R	328	1230	1226	2	2	PR_SS	16
+%R	329	1231	1230	2	2	PR_FS	0
+%R	330	1231	1188	2	2	PR_FS	0
+%R	331	1231	1227	2	2	PR_SS	16
+%R	332	1232	1231	2	2	PR_FS	0
+%R	333	1232	1228	2	2	PR_SS	16
+%R	334	1233	1187	2	2	PR_FS	0
+%R	335	1233	1229	2	2	PR_SS	16
+%R	336	1234	1233	2	2	PR_FS	0
+%R	337	1234	1230	2	2	PR_SS	16
+%R	338	1235	1234	2	2	PR_FS	0
+%R	339	1235	1188	2	2	PR_FS	0
+%R	340	1235	1231	2	2	PR_SS	16
+%R	341	1236	1235	2	2	PR_FS	0
+%R	342	1236	1232	2	2	PR_SS	16
+%R	343	1237	1105	2	2	PR_FS	0
+%R	344	1238	1237	2	2	PR_SS	8
+%R	345	1239	1237	2	2	PR_SS	16
+%R	346	1240	1237	2	2	PR_FS	0
+%R	347	1241	1240	2	2	PR_FS	0
+%R	348	1242	1240	2	2	PR_FS	0
+%R	349	1243	1240	2	2	PR_FS	0
+%R	350	1243	1052	2	2	PR_FS	0
+%R	351	1243	1238	2	2	PR_FS	0
+%R	352	1243	1239	2	2	PR_FS	0
+%R	353	1244	1243	2	2	PR_FS	0
+%R	354	1245	1244	2	2	PR_FS	0
+%R	355	1246	1240	2	2	PR_FS	0
+%R	356	1246	1052	2	2	PR_FS	0
+%R	357	1246	1243	2	2	PR_SS	24
+%R	358	1247	1246	2	2	PR_FS	0
+%R	359	1248	1247	2	2	PR_FS	0
+%R	360	1249	1240	2	2	PR_FS	0
+%R	361	1249	1052	2	2	PR_FS	0
+%R	362	1249	1246	2	2	PR_SS	24
+%R	363	1250	1249	2	2	PR_FS	0
+%R	364	1251	1250	2	2	PR_FS	0
+%R	365	1252	1240	2	2	PR_FS	0
+%R	366	1252	1052	2	2	PR_FS	0
+%R	367	1252	1249	2	2	PR_SS	24
+%R	368	1253	1252	2	2	PR_FS	0
+%R	369	1254	1253	2	2	PR_FS	0
+%R	370	1255	1253	2	2	PR_FS	0
+%R	371	1256	1241	2	2	PR_FS	0
+%R	372	1256	1058	2	2	PR_FS	0
+%R	373	1257	1256	2	2	PR_SS	32
+%R	374	1258	1256	2	2	PR_FS	0
+%R	375	1259	1242	2	2	PR_FS	0
+%R	376	1259	1245	2	2	PR_FS	0
+%R	377	1259	1248	2	2	PR_FS	0
+%R	378	1259	1251	2	2	PR_FS	0
+%R	379	1259	1254	2	2	PR_FS	0
+%R	380	1259	1126	2	2	PR_FS	0
+%R	381	1259	1128	2	2	PR_FS	0
+%R	382	1259	1130	2	2	PR_FS	0
+%R	383	1259	1132	2	2	PR_FS	0
+%R	384	1259	1133	2	2	PR_FS	0
+%R	385	1260	1259	2	2	PR_FS	0
+%R	386	1260	1192	2	2	PR_FS	0
+%R	387	1261	1260	2	2	PR_FS	0
+%R	388	1262	1260	2	2	PR_FS	0
+%R	389	1262	1196	2	2	PR_FS	0
+%R	390	1263	1262	2	2	PR_FS	0
+%R	391	1264	1262	2	2	PR_FS	0
+%R	392	1264	1200	2	2	PR_FS	0
+%R	393	1265	1264	2	2	PR_FS	0
+%R	394	1266	1264	2	2	PR_FS	0
+%R	395	1266	1204	2	2	PR_FS	0
+%R	396	1267	1266	2	2	PR_FS	0
+%R	397	1268	1266	2	2	PR_FS	0
+%R	398	1268	1208	2	2	PR_FS	0
+%R	399	1269	1268	2	2	PR_FS	0
+%R	400	1270	1268	2	2	PR_FS	0
+%R	401	1270	1212	2	2	PR_FS	0
+%R	402	1271	1270	2	2	PR_FS	0
+%R	403	1272	1270	2	2	PR_FS	0
+%R	404	1272	1216	2	2	PR_FS	0
+%R	405	1273	1272	2	2	PR_FS	0
+%R	406	1274	1272	2	2	PR_FS	0
+%R	407	1274	1220	2	2	PR_FS	0
+%R	408	1275	1274	2	2	PR_FS	0
+%R	409	1276	1274	2	2	PR_FS	0
+%R	410	1276	1224	2	2	PR_FS	0
+%R	411	1277	1276	2	2	PR_FS	0
+%R	412	1278	1276	2	2	PR_FS	0
+%R	413	1278	1228	2	2	PR_FS	0
+%R	414	1279	1278	2	2	PR_FS	0
+%R	415	1280	1278	2	2	PR_FS	0
+%R	416	1280	1232	2	2	PR_FS	0
+%R	417	1281	1280	2	2	PR_FS	0
+%R	418	1282	1280	2	2	PR_FS	0
+%R	419	1282	1236	2	2	PR_FS	0
+%R	420	1283	1282	2	2	PR_FS	0
+%R	421	1284	1283	2	2	PR_FS	0
+%R	422	1285	1283	2	2	PR_FS	0
+%R	423	1286	1265	2	2	PR_FS	0
+%R	424	1286	1174	2	2	PR_FS	0
+%R	425	1286	1261	2	2	PR_FS	0
+%R	426	1286	1263	2	2	PR_FS	0
+%R	427	1286	1265	2	2	PR_FS	0
+%R	428	1287	1265	2	2	PR_FS	0
+%R	429	1287	1178	2	2	PR_FS	0
+%R	430	1288	1277	2	2	PR_FS	0
+%R	431	1288	1174	2	2	PR_FS	0
+%R	432	1288	1267	2	2	PR_FS	0
+%R	433	1288	1269	2	2	PR_FS	0
+%R	434	1288	1271	2	2	PR_FS	0
+%R	435	1288	1273	2	2	PR_FS	0
+%R	436	1288	1275	2	2	PR_FS	0
+%R	437	1288	1277	2	2	PR_FS	0
+%R	438	1289	1277	2	2	PR_FS	0
+%R	439	1289	1178	2	2	PR_FS	0
+%R	440	1290	1281	2	2	PR_FS	0
+%R	441	1290	1174	2	2	PR_FS	0
+%R	442	1290	1279	2	2	PR_FS	0
+%R	443	1290	1281	2	2	PR_FS	0
+%R	444	1291	1281	2	2	PR_FS	0
+%R	445	1291	1178	2	2	PR_FS	0
+%R	446	1292	1283	2	2	PR_FS	0
+%R	447	1292	1174	2	2	PR_FS	0
+%R	448	1292	1283	2	2	PR_FS	0
+%R	449	1293	1283	2	2	PR_FS	0
+%R	450	1293	1178	2	2	PR_FS	0
+%R	451	1294	1292	2	2	PR_FS	0
+%R	452	1294	1255	2	2	PR_FS	0
+%R	453	1295	1292	2	2	PR_FS	0
+%R	454	1296	1287	2	2	PR_FS	0
+%R	455	1296	1182	2	2	PR_FS	0
+%R	456	1297	1311	2	2	PR_FS	0
+%R	457	1297	1257	2	2	PR_FS	0
+%R	458	1298	1146	2	2	PR_FS	0
+%R	459	1298	1283	2	2	PR_FS	0
+%R	460	1299	1283	2	2	PR_FS	0
+%R	461	1300	1138	2	2	PR_FS	0
+%R	462	1300	1294	2	2	PR_FS	0
+%R	463	1301	1142	2	2	PR_FS	0
+%R	464	1301	1294	2	2	PR_FS	0
+%R	465	1302	1283	2	2	PR_FS	0
+%R	466	1302	1300	2	2	PR_SS	8
+%R	467	1303	1283	2	2	PR_FS	0
+%R	468	1303	1257	2	2	PR_FS	0
+%R	469	1304	1257	2	2	PR_FS	0
+%R	470	1305	1150	2	2	PR_FS	0
+%R	471	1305	1299	2	2	PR_SS	24
+%R	472	1306	1154	2	2	PR_FS	0
+%R	473	1306	1283	2	2	PR_FS	0
+%R	474	1307	1158	2	2	PR_FS	0
+%R	475	1307	1283	2	2	PR_FS	0
+%R	476	1308	1162	2	2	PR_FS	0
+%R	477	1308	1283	2	2	PR_FS	0
+%R	478	1309	1166	2	2	PR_FS	0
+%R	479	1309	1283	2	2	PR_FS	0
+%R	480	1310	1186	2	2	PR_FS	0
+%R	481	1310	1335	2	2	PR_FS	0
+%R	482	1312	1283	2	2	PR_FS	0
+%R	483	1312	1286	2	2	PR_FS	0
+%R	484	1313	1312	2	2	PR_FS	0
+%R	485	1313	1303	2	2	PR_SS	24
+%R	486	1314	1313	2	2	PR_FS	0
+%R	487	1315	1314	2	2	PR_FS	0
+%R	488	1315	1170	2	2	PR_FS	0
+%R	489	1316	1315	2	2	PR_FS	0
+%R	490	1317	1283	2	2	PR_FS	0
+%R	491	1317	1288	2	2	PR_FS	0
+%R	492	1318	1317	2	2	PR_FS	0
+%R	493	1318	1303	2	2	PR_SS	24
+%R	494	1319	1318	2	2	PR_FS	0
+%R	495	1320	1319	2	2	PR_FS	0
+%R	496	1320	1170	2	2	PR_FS	0
+%R	497	1321	1320	2	2	PR_FS	0
+%R	498	1322	1283	2	2	PR_FS	0
+%R	499	1322	1290	2	2	PR_FS	0
+%R	500	1323	1322	2	2	PR_FS	0
+%R	501	1323	1303	2	2	PR_SS	24
+%R	502	1324	1323	2	2	PR_FS	0
+%R	503	1325	1324	2	2	PR_FS	0
+%R	504	1326	1283	2	2	PR_FS	0
+%R	505	1326	1292	2	2	PR_FS	0
+%R	506	1327	1326	2	2	PR_FS	0
+%R	507	1327	1303	2	2	PR_SS	24
+%R	508	1328	1327	2	2	PR_FS	0
+%R	509	1329	1328	2	2	PR_FS	0
+%R	510	1330	1283	2	2	PR_FS	0
+%R	511	1331	1330	2	2	PR_FS	0
+%R	512	1331	1303	2	2	PR_SS	24
+%R	513	1332	1331	2	2	PR_FS	0
+%R	514	1333	1332	2	2	PR_FS	0
+%R	515	1334	1258	2	2	PR_FS	0
+%R	516	1335	1256	2	2	PR_FS	0
+%R	517	1335	1284	2	2	PR_FS	0
+%R	518	1336	1335	2	2	PR_FS	0
+%R	519	1337	1336	2	2	PR_SS	16
+%R	520	1338	1337	2	2	PR_FS	0
+%R	521	1339	1335	2	2	PR_FS	0
+%R	522	1340	1336	2	2	PR_FS	0
+%R	523	1341	1297	2	2	PR_FS	0
+%R	524	1341	1298	2	2	PR_FS	0
+%R	525	1341	1331	2	2	PR_FS	0
+%R	526	1341	1309	2	2	PR_FS	0
+%R	527	1342	1341	2	2	PR_FS	0
+%R	528	1342	1308	2	2	PR_FS	0
+%R	529	1343	1341	2	2	PR_FS	0
+%R	530	1343	1306	2	2	PR_FS	0
+%R	531	1344	1343	2	2	PR_FS	0
+%R	532	1345	1341	2	2	PR_FS	0
+%R	533	1345	1307	2	2	PR_FS	0
+%R	534	1346	1341	2	2	PR_FS	0
+%R	535	1346	1302	2	2	PR_FS	0
+%R	536	1346	1300	2	2	PR_FS	0
+%R	537	1347	1341	2	2	PR_FS	0
+%R	538	1347	1301	2	2	PR_FS	0
+%R	539	1347	1303	2	2	PR_FS	0
+%R	540	1348	1304	2	2	PR_FS	0
+%R	541	1348	1320	2	2	PR_FS	0
+%R	542	1349	1348	2	2	PR_FS	0
+%R	543	1350	1348	2	2	PR_FS	0
+%R	544	1350	1347	2	2	PR_FS	0
+%R	545	1351	1302	2	2	PR_FS	0
+%R	546	1351	1343	2	2	PR_FS	0
+%R	547	1352	1305	2	2	PR_FS	0
+%R	548	1352	1346	2	2	PR_FS	0
+%R	549	1352	1347	2	2	PR_FS	0
+%R	550	1353	1352	2	2	PR_SS	24
+%R	551	1354	1353	2	2	PR_FS	0
+%R	552	1354	1350	2	2	PR_FS	0
+%R	553	1355	1353	2	2	PR_FS	0
+%R	554	1356	1296	2	2	PR_FS	0
+%R	555	1356	1316	2	2	PR_FS	0
+%R	556	1356	1321	2	2	PR_FS	0
+%R	557	1356	1287	2	2	PR_FS	0
+%R	558	1356	1289	2	2	PR_FS	0
+%R	559	1356	1291	2	2	PR_FS	0
+%R	560	1356	1293	2	2	PR_FS	0
+%R	561	1357	1321	2	2	PR_FS	0
+%R	562	1358	1344	2	2	PR_FS	0
+%R	563	1358	1342	2	2	PR_FS	0
+%R	564	1358	1356	2	2	PR_FS	0
+%R	565	1359	1236	2	2	PR_FS	0
+%R	566	1360	1359	2	2	PR_FS	0
+%R	567	1361	1360	2	2	PR_FS	0
+%R	568	1362	1285	2	2	PR_FS	0
+%R	569	1363	1362	2	2	PR_FS	0
+%R	570	1364	1363	2	2	PR_FS	0
+%R	571	1365	1305	2	2	PR_SS	16
+%R	572	1365	1085	2	2	PR_FS	0
+%R	573	1366	1365	2	2	PR_FS	0
+%R	574	1367	1366	2	2	PR_FS	0
+%R	575	1368	1317	2	2	PR_SS	8
+%R	576	1369	1368	2	2	PR_FS	0
+%R	577	1370	1369	2	2	PR_FS	0
+%R	578	1371	1361	2	2	PR_FS	0
+%R	579	1371	1364	2	2	PR_FS	0
+%R	580	1371	1367	2	2	PR_FS	0
+%R	581	1371	1370	2	2	PR_FS	0
+%R	582	1372	1353	2	2	PR_FS	0
+%R	583	1372	1367	2	2	PR_FS	0
+%R	584	1373	1372	2	2	PR_FS	0
+%R	585	1374	1373	2	2	PR_FS	0
+%R	586	1375	1355	2	2	PR_FS	0
+%R	587	1376	1375	2	2	PR_FS	0
+%R	588	1377	1376	2	2	PR_FS	0
+%R	589	1378	1352	2	2	PR_FS	0
+%R	590	1379	1378	2	2	PR_FS	0
+%R	591	1380	1379	2	2	PR_FS	0
+%R	592	1381	1350	2	2	PR_FS	0
+%R	593	1381	1349	2	2	PR_FS	0
+%R	594	1382	1381	2	2	PR_FS	0
+%R	595	1383	1382	2	2	PR_FS	0
+%R	596	1384	1351	2	2	PR_FS	0
+%R	597	1385	1384	2	2	PR_FS	0
+%R	598	1386	1385	2	2	PR_FS	0
+%R	599	1387	1341	2	2	PR_FS	0
+%R	600	1387	1342	2	2	PR_FS	0
+%R	601	1388	1387	2	2	PR_FS	0
+%R	602	1389	1388	2	2	PR_FS	0
+%R	603	1390	1370	2	2	PR_FS	0
+%R	604	1390	1352	2	2	PR_SS	0
+%R	605	1390	1371	2	2	PR_FS	0
+%R	606	1391	1390	2	2	PR_FS	0
+%R	607	1392	1391	2	2	PR_FS	0
+%R	608	1393	1285	2	2	PR_FS	0
+%R	609	1393	1341	2	2	PR_SS	0
+%R	610	1394	1393	2	2	PR_FS	0
+%R	611	1395	1394	2	2	PR_FS	0
+%R	612	1396	1341	2	2	PR_SS	0
+%R	613	1397	1396	2	2	PR_FS	0
+%R	614	1398	1397	2	2	PR_FS	0
+%R	615	1399	1341	2	2	PR_SS	0
+%R	616	1400	1399	2	2	PR_FS	0
+%R	617	1401	1400	2	2	PR_FS	0
+%R	618	1402	1352	2	2	PR_FS	0
+%R	619	1402	1345	2	2	PR_FS	0
+%R	620	1403	1316	2	2	PR_FS	0
+%R	621	1403	1321	2	2	PR_FS	0
+%R	622	1403	1325	2	2	PR_FS	0
+%R	623	1403	1295	2	2	PR_FS	0
+%R	624	1403	1329	2	2	PR_FS	0
+%R	625	1403	1333	2	2	PR_FS	0
+%R	626	1404	1403	2	2	PR_FS	0
+%R	627	1405	1358	2	2	PR_FS	0
+%R	628	1406	1404	2	2	PR_FS	0
+%R	629	1406	1405	2	2	PR_FS	0
+%R	630	1406	1354	2	2	PR_FS	0
+%R	631	1406	1338	2	2	PR_FS	0
+%R	632	1406	1340	2	2	PR_FS	0
+%R	633	1406	1357	2	2	PR_FS	0
+%R	634	1406	1344	2	2	PR_FS	0
+%R	635	1406	1310	2	2	PR_FS	0
+%R	636	1406	1334	2	2	PR_FS	0
+%R	637	1406	1339	2	2	PR_FS	0
+%R	638	1407	1374	2	2	PR_FS	0
+%R	639	1407	1377	2	2	PR_FS	0
+%R	640	1407	1380	2	2	PR_FS	0
+%R	641	1407	1383	2	2	PR_FS	0
+%R	642	1407	1386	2	2	PR_FS	0
+%R	643	1407	1389	2	2	PR_FS	0
+%R	644	1407	1392	2	2	PR_FS	0
+%R	645	1407	1395	2	2	PR_FS	0
+%R	646	1407	1398	2	2	PR_FS	0
+%R	647	1407	1401	2	2	PR_FS	0
+%R	648	1407	1406	2	2	PR_FS	0
+%R	649	1407	1402	2	2	PR_FS	0
+%R	650	1408	1407	2	2	PR_FS	0
+%R	651	1409	1407	2	2	PR_FS	0
+%R	652	1410	1409	2	2	PR_FS	0
+%R	653	1411	1410	2	2	PR_FS	0
+%R	654	1412	1407	2	2	PR_FS	0
+%R	655	1413	1412	2	2	PR_FS	0
+%R	656	1414	1413	2	2	PR_FS	0
+%R	657	1415	1407	2	2	PR_FS	0
+%R	658	1416	1415	2	2	PR_FS	0
+%R	659	1417	1416	2	2	PR_FS	0
+%R	660	1418	1411	2	2	PR_FS	0
+%R	661	1418	1414	2	2	PR_FS	0
+%R	662	1418	1417	2	2	PR_FS	0
+%R	663	1418	1408	2	2	PR_FS	0
+%E
