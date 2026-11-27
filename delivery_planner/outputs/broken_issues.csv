@@ -1,0 +1,35 @@
+check_id,check_name,dimension,severity,source,midp_id,container,field,found,expected,message
+R01,MIDP codes are in the reference library and approved,Validity,error,MIDP,MIDP-006,LRHC-FLD-Z4-00-DR-A-000104,volume,Z4,approved volume code,"Z4 is proposed in the volume list, not approved"
+R01,MIDP codes are in the reference library and approved,Validity,error,MIDP,MIDP-041,LRHC-KBS-ZZ-ZZ-RP-P-000001,required_suitability,S5,approved suitability code,S5 is not in the suitability list
+R01,MIDP codes are in the reference library and approved,Validity,error,MIDP,MIDP-042,LRHC-KBS-ZZ-ZZ-RP-M-00001,number,00001,6 digits,number 00001 is not 6 digits
+R02,CDE attribute codes are in the reference library and approved,Validity,error,CDE,,LRHC-FLD-Z4-00-DR-A-000104,volume,Z4,approved volume code,"version 1: Z4 is proposed in the volume list, not approved"
+R02,CDE attribute codes are in the reference library and approved,Validity,error,CDE,,LRHC-FLD-Z4-00-DR-A-000104,volume,Z4,approved volume code,"version 2: Z4 is proposed in the volume list, not approved"
+R02,CDE attribute codes are in the reference library and approved,Validity,error,CDE,,LRHC-FLD-Z4-00-DR-A-000104,volume,Z4,approved volume code,"version 3: Z4 is proposed in the volume list, not approved"
+R02,CDE attribute codes are in the reference library and approved,Validity,error,CDE,,LRHC-FLD-ZZ-RF-DR-A-000105,suitability,S5,approved suitability code,version 1: S5 is not in the suitability list
+R03,Codes used in the CDE only after the client approved them,Validity,error,CDE,,LRHC-FLD-Z3-00-DR-A-000103,volume,2026-12-02,on or after 2026-12-04,"version 1 used volume Z3 on 02 Dec 2026, before it was approved on 04 Dec 2026"
+R04,MIDP container name matches its own fields,Consistency,error,MIDP,MIDP-022,LRHC-KBS-ZZ-ZZ-DR-M-000001,container_name,LRHC-KBS-ZZ-ZZ-DR-M-000001,LRHC-KBS-Z1-ZZ-DR-M-000001,container name does not match the MIDP's own fields
+P01,MIDP row links to an activity that exists in the programme,Integrity,error,MIDP,MIDP-021,LRHC-KBS-ZZ-00-M3-P-000001,linked_p6_activity,4-MEP-9999,an activity in the baseline,activity 4-MEP-9999 is not in the baseline programme
+P01,MIDP row links to an activity that exists in the programme,Integrity,error,MIDP,MIDP-021,LRHC-KBS-ZZ-00-M3-P-000001,linked_p6_activity,4-MEP-9999,an activity in the current update,activity 4-MEP-9999 is not in the current update programme
+P02,MIDP stage matches the stage of the linked activity,Consistency,error,MIDP,MIDP-024,LRHC-KBS-ZZ-ZZ-DR-P-000001,stage,5,4,"MIDP says Stage 5, but 4-MEP-1305 sits in Stage 4"
+P03,Linked activity finishes on or before its exchange milestone,Reasonability,error,MIDP,MIDP-033,LRHC-BMC-ZZ-ZZ-HS-W-000001,linked_p6_activity,2027-01-20,on or before 2027-01-15,"due 20 Jan 2027, after IE1 (M-203-S4) on 15 Jan 2027"
+C01,Due deliverables are in the CDE,Completeness,error,MIDP,MIDP-009,LRHC-FLD-ZZ-ZZ-DR-A-000202,,no versions,S4 by 2027-01-05,due 05 Jan 2027 (IE1) but not in the CDE
+C02,Every container in the CDE is planned in the MIDP,Integrity,error,CDE,,LRHC-FLD-Z2-00-DR-A-000150,,not in MIDP,planned in the MIDP,1 version(s) in the CDE but not in the MIDP
+C03,No duplicate MIDP rows,Uniqueness,error,MIDP,MIDP-051,LRHC-HXM-ZZ-ZZ-SH-X-000001,container_name+exchange,LRHC-HXM-ZZ-ZZ-SH-X-000001 / IE1,unique,duplicate container and exchange
+C04,Required MIDP fields are filled,Completeness,error,MIDP,MIDP-008,LRHC-FLD-ZZ-ZZ-DR-A-000201,title,,a value,title is blank
+C05,Required CDE fields are filled,Completeness,error,CDE,,LRHC-BMC-ZZ-ZZ-RP-W-000002,updated_by,,a value,version 2: updated_by is blank or unreadable
+C06,No duplicate CDE version records,Uniqueness,error,CDE,,LRHC-CKE-EW-00-DR-C-000001,version,1,one record per version,version 1 appears more than once
+T01,Delivered by the baseline due date,Timeliness,error,CDE,MIDP-012,LRHC-FLD-ZZ-ZZ-RP-A-000001,status_date,2027-01-05,S4 by 2026-12-22,"reached S4 on 05 Jan 2027, 14 days after the baseline due date 22 Dec 2026"
+T01,Delivered by the baseline due date,Timeliness,error,CDE,MIDP-035,LRHC-BMC-ZZ-ZZ-RP-W-000003,status_date,2027-04-17,S4 by 2027-04-12,"reached S4 on 17 Apr 2027, 5 days after the baseline due date 12 Apr 2027"
+T01,Delivered by the baseline due date,Timeliness,error,CDE,MIDP-037,LRHC-BMC-ZZ-ZZ-IE-W-000001,status_date,,S3 by 2027-04-15,not at S3 yet; baseline due date was 15 Apr 2027 (16 days overdue at the data date)
+T02,Delivered by the current forecast due date,Timeliness,warning,CDE,MIDP-012,LRHC-FLD-ZZ-ZZ-RP-A-000001,status_date,2027-01-05,S4 by 2026-12-22,"reached S4 on 05 Jan 2027, 14 days after the forecast due date 22 Dec 2026"
+T02,Delivered by the current forecast due date,Timeliness,warning,CDE,MIDP-037,LRHC-BMC-ZZ-ZZ-IE-W-000001,status_date,,S3 by 2027-04-15,not at S3 yet; forecast due date was 15 Apr 2027 (16 days overdue at the data date)
+T03,Early warning: forecast due date has slipped past the baseline,Timeliness,warning,P6,MIDP-046,LRHC-BMC-ZZ-ZZ-RP-W-000001,linked_p6_activity,2027-06-03,2027-05-24,"forecast due 03 Jun 2027, 10 days later than the baseline 24 May 2027"
+T04,CDE export is current at the data date,Timeliness,error,CDE,,,exported,2027-04-24 06:00,within 1 day of 2027-05-01,CDE export taken 24 Apr 2027 06:00; the data date is 01 May 2027
+M01,CDE container name matches its attribute fields,Consistency,error,CDE,,LRHC-CKE-ZZ-ZZ-CA-S-000001,attributes,LRHC-FLD-ZZ-ZZ-CA-S-000001,LRHC-CKE-ZZ-ZZ-CA-S-000001,version 2: name and attributes disagree
+M02,File name matches the container name,Accuracy,error,CDE,,LRHC-FLD-ZZ-00-M3-A-000001,file_name,LRHC-FLD-ZZ-00-M3-A-000001_P02.ifc,LRHC-FLD-ZZ-00-M3-A-000001.*,version 2: file name differs from the container name
+M03,CDE description and title attribute agree,Accuracy,error,CDE,,LRHC-FLD-ZZ-ZZ-SP-A-000001,title,Architectural spec,Architectural specification,version 2: description and title attribute differ
+M04,CDE title matches the MIDP title,Consistency,error,CDE,,LRHC-FLD-ZZ-ZZ-SH-A-000001,title,Door and ironmongery schedule,Door schedule,title in the CDE differs from the MIDP
+M05,"Revision type matches suitability (S → P, A/CR → C)",Consistency,error,CDE,,LRHC-CKE-ZZ-00-DR-S-000001,revision,P03,"P.. for S codes, C.. for A codes and CR",version 3: A4 with revision P03
+M06,"Workflow state matches suitability (Shared for S, Published for A/CR)",Consistency,error,CDE,,LRHC-KBS-ZZ-ZZ-DR-E-000001,workflow_state,Published,Shared,version 2: S4 should be Shared
+M07,"Revisions run in order with no gaps, and dates go forward",Reasonability,error,CDE,,LRHC-KBS-ZZ-00-M3-M-000001,revision,P01 P03,P01 P02,"P revisions run P01, P03"
+M08,Status dates fall between project start and the data date,Reasonability,error,CDE,,LRHC-KBS-ZZ-ZZ-RP-E-000001,status_date,2027-05-15,2026-11-25 to 2027-05-01,version 1: status date 15 May 2027 is outside 25 Nov 2026 to 01 May 2027

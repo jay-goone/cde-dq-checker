@@ -1,0 +1,29 @@
+fault_id,fault,target,expected,fired,caught,missed,false_alarms,issues
+F01,"MIDP asks for suitability S5, which is not a code",LRHC-KBS-ZZ-ZZ-RP-P-000001,R01,R01,yes,,,1
+F02,MIDP number has 5 digits,LRHC-KBS-ZZ-ZZ-RP-M-00001,R01,R01,yes,,,1
+F03,Client has not approved zone Z4 (still 'proposed'),LRHC-FLD-Z4-00-DR-A-000104,"R01, R02","R01, R02",yes,,,4
+F04,CDE version carries suitability S5,LRHC-FLD-ZZ-RF-DR-A-000105,R02,R02,yes,,,1
+F05,"Zone Z3 used on 2 Dec, before the client approved it on 4 Dec",LRHC-FLD-Z3-00-DR-A-000103,R03,R03,yes,,,1
+F06,MIDP volume says Z1 but the container name says ZZ,LRHC-KBS-ZZ-ZZ-DR-M-000001,R04,R04,yes,,,1
+F07,MIDP links to an activity that does not exist,LRHC-KBS-ZZ-00-M3-P-000001,P01,P01,yes,,,2
+F08,MIDP says Stage 5 for a Stage 4 deliverable,LRHC-KBS-ZZ-ZZ-DR-P-000001,P02,P02,yes,,,1
+F09,MIDP links an IE1 deliverable to an activity after IE1,LRHC-BMC-ZZ-ZZ-HS-W-000001,P03,P03,yes,,,1
+F10,A due deliverable is missing from the CDE,LRHC-FLD-ZZ-ZZ-DR-A-000202,C01,C01,yes,,,1
+F11,An unplanned container appears in the CDE,LRHC-FLD-Z2-00-DR-A-000150,C02,C02,yes,,,1
+F12,MIDP row entered twice,LRHC-HXM-ZZ-ZZ-SH-X-000001,C03,C03,yes,,,1
+F13,MIDP title left blank,LRHC-FLD-ZZ-ZZ-DR-A-000201,C04,C04,yes,,,1
+F14,CDE version has no 'Updated By',LRHC-BMC-ZZ-ZZ-RP-W-000002,C05,C05,yes,,,1
+F15,Same CDE version exported twice,LRHC-CKE-EW-00-DR-C-000001,C06,C06,yes,,,1
+F16,Delivered 2 weeks late (no change to the programme),LRHC-FLD-ZZ-ZZ-RP-A-000001,"T01, T02","T01, T02",yes,,,2
+F17,Issued at S2 when the MIDP asks for S3,LRHC-BMC-ZZ-ZZ-IE-W-000001,"T01, T02","T01, T02",yes,,,2
+F18,Issue activity slipped 5 days and the delivery followed it,LRHC-BMC-ZZ-ZZ-RP-W-000003,T01,T01,yes,,,1
+F19,Programme forecast for the O&M manual slipped 10 days,LRHC-BMC-ZZ-ZZ-RP-W-000001,T03,T03,yes,,,1
+F20,CDE export is a week old,,T04,T04,yes,,,1
+F21,Originator attribute says FLD on a CKE container,LRHC-CKE-ZZ-ZZ-CA-S-000001,M01,M01,yes,,,1
+F22,File name carries the revision,LRHC-FLD-ZZ-00-M3-A-000001,M02,M02,yes,,,1
+F23,Description and title attribute disagree on one version,LRHC-FLD-ZZ-ZZ-SP-A-000001,M03,M03,yes,,,1
+F24,CDE title differs from the MIDP title,LRHC-FLD-ZZ-ZZ-SH-A-000001,M04,M04,yes,,,1
+F25,A4 version given a P revision,LRHC-CKE-ZZ-00-DR-S-000001,M05,M05,yes,,,1
+F26,S4 version left in the Published state,LRHC-KBS-ZZ-ZZ-DR-E-000001,M06,M06,yes,,,1
+F27,Revision jumps from P01 to P03,LRHC-KBS-ZZ-00-M3-M-000001,M07,M07,yes,,,1
+F28,Status date after the data date,LRHC-KBS-ZZ-ZZ-RP-E-000001,M08,M08,yes,,,1
