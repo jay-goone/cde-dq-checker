@@ -1,0 +1,94 @@
+list_name,code,description,status,approved_date,introduced_by,source,notes
+project,LRHC,Larch Road Health Centre (MA 4920.203),approved,2026-11-25,LRV,Client,
+originator,LRV,Larch Valley ICB (appointing party),approved,2026-11-25,LRV,Client,
+originator,BMC,Brook & Mason Construction (lead appointed party),approved,2026-11-25,LRV,Client,
+originator,FLD,Field Architects,approved,2026-11-25,LRV,Client,
+originator,KBS,Kestrel Building Services,approved,2026-11-25,LRV,Client,
+originator,CKE,Corbel Keel Engineers (structural and civil engineer),approved,2026-11-25,LRV,Client,Roles S and C
+originator,HXM,Hexmodule Offsite Ltd (volumetric module manufacturer),approved,2026-11-25,LRV,Client,Role X (subcontractor to BMC)
+volume,ZZ,Zone: all zones,approved,2026-11-25,LRV,UK NA,"Also used for the corridor (00-019), which serves every zone"
+volume,XX,Zone: none applies,approved,2026-11-25,LRV,UK NA,
+volume,Z1,Zone: public,approved,2026-12-04,FLD,Project,"Entrance, reception, waiting, play area, accessible WCs, baby change (00-001 to 00-003, 00-012 to 00-014). Proposed by FLD at Stage 4 start (30 Nov 2026), approved by LRV 4 Dec 2026"
+volume,Z2,Zone: clinical,approved,2026-12-04,FLD,Project,"Consulting, treatment, paediatric and nurse rooms (00-004 to 00-011). Proposed by FLD at Stage 4 start (30 Nov 2026), approved by LRV 4 Dec 2026"
+volume,Z3,Zone: staff and support,approved,2026-12-04,FLD,Project,"Staff room, staff WC, store (00-015, 00-016, 00-018). Proposed by FLD at Stage 4 start (30 Nov 2026), approved by LRV 4 Dec 2026"
+volume,Z4,Zone: plant,proposed,,FLD,Project,"Plant room and roof plant (00-017, RF). Proposed by FLD at Stage 4 start (30 Nov 2026), approved by LRV 4 Dec 2026"
+volume,EW,Zone: external works,approved,2026-12-04,FLD,Project,"Site within the red line: drainage, utilities, hard and soft landscaping. Proposed by FLD at Stage 4 start (30 Nov 2026), approved by LRV 4 Dec 2026"
+level,00,Ground floor,approved,2026-11-25,LRV,Project,
+level,RF,Roof,approved,2026-11-25,LRV,Project,
+level,ZZ,Multiple levels,approved,2026-11-25,LRV,Project,
+level,XX,No level applies,approved,2026-11-25,LRV,Project,
+type,AF,Animation file of a model,approved,2026-11-25,LRV,UK NA (confirm),
+type,BQ,Bill of quantities,approved,2026-11-25,LRV,UK NA (confirm),
+type,CA,Calculations,approved,2026-11-25,LRV,UK NA (confirm),
+type,CM,Combined model,approved,2026-11-25,LRV,UK NA (confirm),
+type,CO,Correspondence,approved,2026-11-25,LRV,UK NA (confirm),
+type,CP,Cost plan,approved,2026-11-25,LRV,UK NA (confirm),
+type,CR,Clash rendition,approved,2026-11-25,LRV,UK NA (confirm),
+type,DB,Database,approved,2026-11-25,LRV,UK NA (confirm),
+type,DR,Drawing,approved,2026-11-25,LRV,UK NA (confirm),
+type,FN,File note,approved,2026-11-25,LRV,UK NA (confirm),
+type,HS,Health and safety,approved,2026-11-25,LRV,UK NA (confirm),
+type,IE,Information exchange file,approved,2026-11-25,LRV,UK NA (confirm),
+type,M2,Two-dimensional model,approved,2026-11-25,LRV,UK NA (confirm),
+type,M3,Three-dimensional model,approved,2026-11-25,LRV,UK NA (confirm),
+type,MI,Minutes and action notes,approved,2026-11-25,LRV,UK NA (confirm),
+type,MR,Model rendition,approved,2026-11-25,LRV,UK NA (confirm),
+type,MS,Method statement,approved,2026-11-25,LRV,UK NA (confirm),
+type,PP,Presentation,approved,2026-11-25,LRV,UK NA (confirm),
+type,PR,Programme,approved,2026-11-25,LRV,UK NA (confirm),
+type,RD,Room data sheet,approved,2026-11-25,LRV,UK NA (confirm),
+type,RI,Request for information,approved,2026-11-25,LRV,UK NA (confirm),
+type,RP,Report,approved,2026-11-25,LRV,UK NA (confirm),
+type,SA,Schedule of accommodation,approved,2026-11-25,LRV,UK NA (confirm),
+type,SH,Schedule,approved,2026-11-25,LRV,UK NA (confirm),
+type,SN,Snagging list,approved,2026-11-25,LRV,UK NA (confirm),
+type,SP,Specification,approved,2026-11-25,LRV,UK NA (confirm),
+type,SU,Survey,approved,2026-11-25,LRV,UK NA (confirm),
+type,VS,Visualisation,approved,2026-11-25,LRV,UK NA (confirm),
+role,A,Architect,approved,2026-11-25,LRV,UK NA (confirm),
+role,B,Building surveyor,approved,2026-11-25,LRV,UK NA (confirm),
+role,C,Civil engineer,approved,2026-11-25,LRV,UK NA (confirm),
+role,D,"Drainage, highways engineer",approved,2026-11-25,LRV,UK NA (confirm),
+role,E,Electrical engineer,approved,2026-11-25,LRV,UK NA (confirm),
+role,F,Facilities manager,approved,2026-11-25,LRV,UK NA (confirm),
+role,G,Geographical and land surveyor,approved,2026-11-25,LRV,UK NA (confirm),
+role,H,Heating and ventilation designer,approved,2026-11-25,LRV,UK NA (confirm),
+role,I,Interior designer,approved,2026-11-25,LRV,UK NA (confirm),
+role,K,Client,approved,2026-11-25,LRV,UK NA (confirm),
+role,L,Landscape architect,approved,2026-11-25,LRV,UK NA (confirm),
+role,M,Mechanical engineer,approved,2026-11-25,LRV,UK NA (confirm),
+role,P,Public health engineer,approved,2026-11-25,LRV,UK NA (confirm),
+role,Q,Quantity surveyor,approved,2026-11-25,LRV,UK NA (confirm),
+role,S,Structural engineer,approved,2026-11-25,LRV,UK NA (confirm),
+role,T,Town and country planner,approved,2026-11-25,LRV,UK NA (confirm),
+role,W,Contractor,approved,2026-11-25,LRV,UK NA (confirm),
+role,X,Subcontractor,approved,2026-11-25,LRV,UK NA (confirm),
+role,Y,Specialist designer,approved,2026-11-25,LRV,UK NA (confirm),
+role,Z,General (non-disciplinary),approved,2026-11-25,LRV,UK NA (confirm),
+suitability,S0,Work in progress,approved,2026-11-25,LRV,UK NA,"Preliminary revision P01, P02 …"
+suitability,S1,Suitable for coordination,approved,2026-11-25,LRV,UK NA,"Preliminary revision P01, P02 …"
+suitability,S2,Suitable for information,approved,2026-11-25,LRV,UK NA,"Preliminary revision P01, P02 …"
+suitability,S3,Suitable for review and comment,approved,2026-11-25,LRV,UK NA,"Preliminary revision P01, P02 …"
+suitability,S4,Suitable for stage approval,approved,2026-11-25,LRV,UK NA,"Preliminary revision P01, P02 …"
+suitability,A1,Authorised and accepted at RIBA Stage 1,approved,2026-11-25,LRV,UK NA,"Contractual revision C01, C02 …"
+suitability,A2,Authorised and accepted at RIBA Stage 2,approved,2026-11-25,LRV,UK NA,"Contractual revision C01, C02 …"
+suitability,A3,Authorised and accepted at RIBA Stage 3,approved,2026-11-25,LRV,UK NA,"Contractual revision C01, C02 …"
+suitability,A4,Authorised and accepted at RIBA Stage 4,approved,2026-11-25,LRV,UK NA,"Contractual revision C01, C02 …"
+suitability,A5,Authorised and accepted at RIBA Stage 5,approved,2026-11-25,LRV,UK NA,"Contractual revision C01, C02 …"
+suitability,A6,Authorised and accepted at RIBA Stage 6,approved,2026-11-25,LRV,UK NA,"Contractual revision C01, C02 …"
+suitability,A7,Authorised and accepted at RIBA Stage 7,approved,2026-11-25,LRV,UK NA,"Contractual revision C01, C02 …"
+suitability,CR,As-constructed record,approved,2026-11-25,LRV,UK NA,"Contractual revision C01, C02 …"
+revision_prefix,P,Preliminary revision (S1–S4),approved,2026-11-25,LRV,UK NA,
+revision_prefix,C,"Contractual revision (A1–A7, CR)",approved,2026-11-25,LRV,UK NA,
+stage,0,Strategic Definition,approved,2026-11-25,LRV,RIBA Plan of Work 2020,
+stage,1,Preparation and Briefing,approved,2026-11-25,LRV,RIBA Plan of Work 2020,
+stage,2,Concept Design,approved,2026-11-25,LRV,RIBA Plan of Work 2020,
+stage,3,Spatial Coordination,approved,2026-11-25,LRV,RIBA Plan of Work 2020,
+stage,4,Technical Design,approved,2026-11-25,LRV,RIBA Plan of Work 2020,
+stage,5,Manufacturing and Construction,approved,2026-11-25,LRV,RIBA Plan of Work 2020,
+stage,6,Handover,approved,2026-11-25,LRV,RIBA Plan of Work 2020,
+stage,7,Use,approved,2026-11-25,LRV,RIBA Plan of Work 2020,
+exchange,IE1,Stage 4 technical design complete,approved,2026-11-25,LRV,Project,Milestone M-203-S4
+exchange,IE2,Pre-handover,approved,2026-11-25,LRV,Project,Milestone M-203-IE2
+exchange,IE3,Practical completion and handover,approved,2026-11-25,LRV,Project,Milestone M-203-PC
+exchange,IE4,Record information,approved,2026-11-25,LRV,Project,Milestone M-203-REC
